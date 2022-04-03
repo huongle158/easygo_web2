@@ -1,0 +1,790 @@
+
+ <script>
+        let app = angular.module("AngularApp", ['angularUtils.directives.dirPagination']);
+        app.controller("ProductController", function ($scope, $http) {
+            $http({
+                method: "GET",
+                url: "assets/data/products.json"
+            }).then(
+                function success(response) {
+                    $scope.products = response.data;
+                    $scope.totalProduct = response.data.Count;
+                },
+                function error(response) {
+                    $scope.error = response.statusText;
+
+                }
+            )
+        })
+    </script>
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="wide">
+                <div class="main-header">
+                    <div class="header__logo self">
+                        <a href="./index.html" class="header__logo-link">
+                            <img src="./assets/img/EASYGO_logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="header__middle hide-on-mobile">
+                        <div class="header__middle-normal">
+                            <input type="radio" hidden checked id="tab1" name="selection">
+                            <label for="tab1"
+                                class="header__middle-item header__middle-button header__middle-button--active">Places
+                                to Stay</label>
+                            <input type="radio" hidden id="tab2" name="selection">
+                            <a href="./discover.html" class="header__middle-item header__middle-link">
+                                Experiences</a>
+                            <!-- Trai nghiem truc tuyến chức năng rỗng -->
+
+                            <a href="discover.html" class="header__middle-item header__middle-link">Online Experiences</a>
+                        </div>
+
+                        <div class="header__middle-fixed">
+                            <span class="header__middle-fixed-text">Bắt đầu tìm kiếm</span>
+                            <div class="header__middle-fixed-btn">
+                                <i class="header__middle-fixed-btn-icon fas fa-search"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="header__right">
+                        <div class="hide-on-mobile"><a href="#tryhost"
+                                class=" header__right-item header__right-link  ">Becomes Host</a>
+                            <button class="header__right-item header__right-button ">
+                                <i class="header__right-icon fas fa-globe"></i>
+                            </button>
+                        </div>
+
+
+                        <div class="header__right-item header__right-user">
+                            <i class="header__right-menu-icon fas fa-bars hide-on-mobile"></i>
+                            <i class="header__right-user-icon fas fa-user-circle hide-on-mobile"></i>
+                        </div>
+
+
+                        <div class="header__right-user-sub">
+                            <div class="header__right-user-sub-account">
+                                <a href="#" onclick="on()" class="header__right-user-sub-link">Sign in</a>
+                                <a href="#" class="header__right-user-sub-link">Login</a>
+                            </div>
+                            <div class="nav__overlay">
+                                <div class="index__login-sub ">
+                                    <div class="wide-login">
+                                        <div class="login_form">
+                                            <div class="login__header form__row">
+                                                <div>
+                                                    <a href="#" onclick="hideFilter('.nav__overlay')"><i class="far fa-times-circle"></i></a>
+                                                </div>
+                                                <div class="login-header__text">Log in or Sign up</div>
+                                            </div>
+                                            <hr>
+                                            <div class="login-title form__row">Welcome to EasyGo</div>
+                                            <div class="form__row">
+                                                <input class="login__input" type="text" placeholder="Full name">
+                                            </div>
+                                            <div class="form__row">
+                                                <input class="login__input" type="text" placeholder="Phone number">
+                                            </div>
+                                            <p class=" login_text-small">We'll call or text you to confirm your number
+                                            </p>
+                                            <button class="login__btn  "> Continue</button>
+
+                                        </div>
+                                        <div class="form__row b">
+                                            <hr class="hr-or">
+                                            <span class="login_text-or">Or</span>
+                                            <hr class="hr-or">
+                                        </div>
+                                        <div class="login_dif">
+                                            <div class="login_dif-item login__input">
+                                                <a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                    <input class="login_dif-input" type="button"
+                                                        value="Continue with Facebook">
+                                                </a>
+                                            </div>
+                                            <div class="login_dif-item login__input">
+                                                <a href="#">
+                                                    <i class="fab fa-google"></i>
+                                                    <input class="login_dif-input" type="button"
+                                                        value="Continue with Google">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__right-user-sub-bottom">
+                                <a href="#" class="header__right-user-sub-link">Become Host</a>
+                                <a href="#" class="header__right-user-sub-link">Online Experience</a>
+                                <a href="#" class="header__right-user-sub-link">Help</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__search">
+                        <label for="header__search-place" class="header__search-place header__search-item">
+                            <div>
+                                <h6 class="header__search-item-title">Location</h6>
+                                <input type="text" id="header__search-place" class="header__search-item-input hide-on-mobile"
+                                    placeholder="Where do you want to go?">
+                            </div>
+                        </label>
+
+                        <div class="header__search-take-room header__search-item">
+                            <h6 class="header__search-item-title">Date</h6>
+                            <span class="header__search-item-content hide-on-mobile">Choose Date</span>
+                            <span class="header__search-item-day"></span>
+                        </div>
+
+                        <!-- <div class="header__search-check-out header__search-item">
+                                <h6 class="header__search-item-title">Trả phòng</h6>
+                                <span class="header__search-item-content">Thêm ngày</span>  
+                                <span class="header__search-item-day"></span>
+                            </div> -->
+
+                        <div class="header__search-customer header__search-item">
+                            <div class="header__search-customer-left">
+                                <h6 class="header__search-item-title">People</h6>
+                                <span class="header__search-item-content hide-on-mobile">Add People</span>
+                            </div>
+                        </div>
+
+                        <div class="header__search-day header__search-item">
+                            <h6 class="header__search-item-title">Ngày</h6>
+                            <span class="header__search-item-content">Thêm thời điểm bạn muốn tham gia</span>
+                        </div>
+
+                        <div class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                            <span class="header__search-btn-text">Search</span>
+                        </div>
+
+                        <div class="header__search-place-sub">
+                            <div class="header__search-place-sub-tab1">
+                                <h6 class="header__search-place-sub-title">Everytime, Everywhere</h6>
+                                <div class="header__search-place-sub-search">
+                                    <span class="header__search-place-sub-search__text">Tìm kiếm linh hoạt</span>
+                                    <i>
+                                        <video class="header__search-place-sub-search__icon" autoplay preload="auto">
+                                            <source src="assets/img/video.mp4" type="video/mp4">
+                                        </video>
+                                    </i>
+                                </div>
+                            </div>
+
+                            <!-- <div class="header__search-place-sub-tab2">
+                                <ul class="header__search-place-sub-list-place">
+                                    <li class="header__search-place-sub-place-item">
+                                        <div class="header__search-place-sub-place-item-img">
+                                            <img src="./assets/img/map.png" alt="Img">
+                                        </div>
+
+                                        <div class="header__search-place-sub-place-item-name">
+                                            <span>Lân cận</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__search-place-sub-place-item">
+                                        <div class="header__search-place-sub-place-item-img">
+                                            <img src="./assets/img/map.png" alt="Img">
+                                        </div>
+
+                                        <div class="header__search-place-sub-place-item-name">
+                                            <span>Lân cận</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> -->
+                        </div>
+
+                        <div class="header__search-take-room-sub">
+                            <div class="take-room-sub__navbar-container">
+                                <nav class="take-room-sub__navbar">
+                                    <span class="take-room-sub__navbar--active">Lịch</span>
+                                    <span>Ngày linh hoạt</span>
+                                </nav>
+                            </div>
+
+                            <div class="take-room-sub__date">
+                                <div class="take-room-sub__date__item take-room-sub__date__left">
+                                    <nav class="take-room-sub__date__navbar take-room-sub__date__left__navbar">
+                                        <div class="take-room-sub__date__navbar-btn">
+                                            <i
+                                                class="take-room-sub__date__navbar-icon take-room-sub__date__left__navbar-icon fas fa-angle-left"></i>
+                                        </div>
+                                        <span
+                                            class="take-room-sub__date__navbar-date take-room-sub__date__left__navbar-date">tháng
+                                            8 năm 2021</span>
+
+                                        <div class="take-room-sub__date__navbar-btn--mobile">
+                                            <i
+                                                class="take-room-sub__date__navbar-icon take-room-sub__date__right__navbar-icon fas fa-angle-right"></i>
+                                        </div>
+                                    </nav>
+
+                                    <div class="take-room-sub__date__calendar">
+
+                                        <div class="take-room-sub__date__calendar__heading">
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">T2</li>
+                                                <li class="take-room-sub__date__calendar__column">T3</li>
+                                                <li class="take-room-sub__date__calendar__column">T4</li>
+                                                <li class="take-room-sub__date__calendar__column">T5</li>
+                                                <li class="take-room-sub__date__calendar__column">T6</li>
+                                                <li class="take-room-sub__date__calendar__column">T7</li>
+                                                <li class="take-room-sub__date__calendar__column">CN</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="take-room-sub__date__calendar__body" data-type="tháng 8 năm 2021">
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    1</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    2</li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    3</li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    4</li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    5</li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    6</li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    7</li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                    8</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">9</li>
+                                                <li class="take-room-sub__date__calendar__column">10</li>
+                                                <li class="take-room-sub__date__calendar__column">11</li>
+                                                <li class="take-room-sub__date__calendar__column">12</li>
+                                                <li class="take-room-sub__date__calendar__column">13</li>
+                                                <li class="take-room-sub__date__calendar__column">14</li>
+                                                <li class="take-room-sub__date__calendar__column">15</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">16</li>
+                                                <li class="take-room-sub__date__calendar__column">17</li>
+                                                <li class="take-room-sub__date__calendar__column">18</li>
+                                                <li class="take-room-sub__date__calendar__column">19</li>
+                                                <li class="take-room-sub__date__calendar__column">20</li>
+                                                <li class="take-room-sub__date__calendar__column">21</li>
+                                                <li class="take-room-sub__date__calendar__column">22</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">23</li>
+                                                <li class="take-room-sub__date__calendar__column">24</li>
+                                                <li class="take-room-sub__date__calendar__column">25</li>
+                                                <li class="take-room-sub__date__calendar__column">26</li>
+                                                <li class="take-room-sub__date__calendar__column">27</li>
+                                                <li class="take-room-sub__date__calendar__column">28</li>
+                                                <li class="take-room-sub__date__calendar__column">29</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">30</li>
+                                                <li class="take-room-sub__date__calendar__column">31</li>
+                                                <li class="take-room-sub__date__calendar__column"></li>
+                                                <li class="take-room-sub__date__calendar__column"></li>
+                                                <li class="take-room-sub__date__calendar__column"></li>
+                                                <li class="take-room-sub__date__calendar__column"></li>
+                                                <li class="take-room-sub__date__calendar__column"></li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="take-room-sub__date__item take-room-sub__date__right">
+                                    <nav class="take-room-sub__date__navbar take-room-sub__date__right__navbar">
+                                        <div class="take-room-sub__date__navbar-btn--mobile">
+                                            <i
+                                                class="take-room-sub__date__navbar-icon take-room-sub__date__right__navbar-icon fas fa-angle-left"></i>
+                                        </div>
+                                        <span
+                                            class="take-room-sub__date__navbar-date take-room-sub__date__right__navbar-date">tháng
+                                            9 năm 2021</span>
+                                        <div class="take-room-sub__date__navbar-btn">
+                                            <i
+                                                class="take-room-sub__date__navbar-icon take-room-sub__date__right__navbar-icon fas fa-angle-right"></i>
+                                        </div>
+                                    </nav>
+
+                                    <div class="take-room-sub__date__calendar">
+                                        <div class="take-room-sub__date__calendar__heading">
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">T2</li>
+                                                <li class="take-room-sub__date__calendar__column">T3</li>
+                                                <li class="take-room-sub__date__calendar__column">T4</li>
+                                                <li class="take-room-sub__date__calendar__column">T5</li>
+                                                <li class="take-room-sub__date__calendar__column">T6</li>
+                                                <li class="take-room-sub__date__calendar__column">T7</li>
+                                                <li class="take-room-sub__date__calendar__column">CN</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="take-room-sub__date__calendar__body" data-type="tháng 9 năm 2021">
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li
+                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
+                                                </li>
+                                                <li class="take-room-sub__date__calendar__column">1</li>
+                                                <li class="take-room-sub__date__calendar__column">2</li>
+                                                <li class="take-room-sub__date__calendar__column">3</li>
+                                                <li class="take-room-sub__date__calendar__column">4</li>
+                                                <li class="take-room-sub__date__calendar__column">5</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">6</li>
+                                                <li class="take-room-sub__date__calendar__column">7</li>
+                                                <li class="take-room-sub__date__calendar__column">8</li>
+                                                <li class="take-room-sub__date__calendar__column">9</li>
+                                                <li class="take-room-sub__date__calendar__column">10</li>
+                                                <li class="take-room-sub__date__calendar__column">11</li>
+                                                <li class="take-room-sub__date__calendar__column">12</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">12</li>
+                                                <li class="take-room-sub__date__calendar__column">13</li>
+                                                <li class="take-room-sub__date__calendar__column">14</li>
+                                                <li class="take-room-sub__date__calendar__column">15</li>
+                                                <li class="take-room-sub__date__calendar__column">16</li>
+                                                <li class="take-room-sub__date__calendar__column">17</li>
+                                                <li class="take-room-sub__date__calendar__column">18</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">19</li>
+                                                <li class="take-room-sub__date__calendar__column">20</li>
+                                                <li class="take-room-sub__date__calendar__column">21</li>
+                                                <li class="take-room-sub__date__calendar__column">22</li>
+                                                <li class="take-room-sub__date__calendar__column">23</li>
+                                                <li class="take-room-sub__date__calendar__column">24</li>
+                                                <li class="take-room-sub__date__calendar__column">25</li>
+                                            </ul>
+
+                                            <ul class="take-room-sub__date__calendar__row">
+                                                <li class="take-room-sub__date__calendar__column">26</li>
+                                                <li class="take-room-sub__date__calendar__column">27</li>
+                                                <li class="take-room-sub__date__calendar__column">28</li>
+                                                <li class="take-room-sub__date__calendar__column">29</li>
+                                                <li class="take-room-sub__date__calendar__column">30</li>
+                                                <li class="take-room-sub__date__calendar__column">31</li>
+                                                <li class="take-room-sub__date__calendar__column"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__search-customer-sub">
+                            <div class="header__search-customer-sub__item header__search-customer-sub__adult">
+                                <div class="header__search-customer-sub__info">
+                                    <h6 class="header__search-customer-sub__heading">Người lớn</h6>
+                                    <span class="header__search-customer-sub__desc">Từ 13 tuổi trở lên</span>
+                                </div>
+
+                                <div class="header__search-customer-sub__people-number">
+                                    <button
+                                        class="header__search-customer-sub__button header__search-customer-sub__minus">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+
+                                    <span class="header__search-customer-sub__number">0</span>
+
+                                    <button
+                                        class="header__search-customer-sub__button header__search-customer-sub__plus">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="header__search-customer-sub__item header__search-customer-sub__childern">
+                                <div class="header__search-customer-sub__info">
+                                    <h6 class="header__search-customer-sub__heading">Trẻ em</h6>
+                                    <span class="header__search-customer-sub__desc">Độ tuổi 2-12</span>
+                                </div>
+
+                                <div class="header__search-customer-sub__people-number">
+                                    <button
+                                        class="header__search-customer-sub__button header__search-customer-sub__minus">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+
+                                    <span class="header__search-customer-sub__number">0</span>
+
+                                    <button
+                                        class="header__search-customer-sub__button header__search-customer-sub__plus">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="header__search-customer-sub__item header__search-customer-sub__baby">
+                                <div class="header__search-customer-sub__info">
+                                    <h6 class="header__search-customer-sub__heading">Em bé</h6>
+                                    <span class="header__search-customer-sub__desc">Dưới 2 tuổi</span>
+                                </div>
+
+                                <div class="header__search-customer-sub__people-number">
+                                    <button
+                                        class="header__search-customer-sub__button header__search-customer-sub__minus">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+
+                                    <span class="header__search-customer-sub__number">0</span>
+
+                                    <button
+                                        class="header__search-customer-sub__button header__search-customer-sub__plus">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__content hide-on-mobile">
+            <h5 class="header__content__text">Welcome to visit my homepage</h5>
+            <a href="#explore" class="header__content__btn">Visit something?</a>
+        </div>
+
+
+
+        <div class="header-mobile" id="m-header-mobile">
+            <div class="header-mobile-btn">
+                <div class="header-mobile-btn-content">
+                    <i class="fas fa-search"></i>
+                    Bạn sắp đi đâu?
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <a href="#" class="filter-button" onclick="showFilter('.filter')">Filter
+        <i class="fas fa-sort-amount-down"></i>
+    </a>
+
+    <div class="filter">
+        <div class="container">
+            <div class="filter-title">Bộ lọc</div>
+            <div class="filter-section">
+                <div class="filter-section__title">Giá / 1 đêm</div>
+                <div class="filter-section__price">
+                    <span>200.000</span>
+                    <span>2.000.000</span>
+                </div>
+                <input type="range" class="form-range" id="customRange" step="10" name="points">
+            </div>
+            <div class="filter-section">
+                <div class="filter-section__title">Loại chỗ ở</div>
+                <div class="filter-section__checkbox form-check">
+                    <input class="form-check-input" type="checkbox" id="check1" name="check1" value="canho">
+                    <label class="form-check-label" for="check1">Căn hộ</label>
+                </div>
+                <div class="filter-section__checkbox form-check">
+                    <input class="form-check-input" type="checkbox" id="check2" name="check2" value="resort">
+                    <label class="form-check-label" for="check2">Resort</label>
+                </div>
+                <div class="filter-section__checkbox form-check">
+                    <input class="form-check-input" type="checkbox" id="check3" name="check3" value="nhatro">
+                    <label class="form-check-label" for="check3">Nhà trọ</label>
+                </div>
+                <div class="filter-section__checkbox form-check">
+                    <input class="form-check-input" type="checkbox" id="check4" name="check4" value="nhakhach">
+                    <label class="form-check-label" for="check4">Nhà khách</label>
+                </div>
+                <div class="filter-section__checkbox form-check">
+                    <input class="form-check-input" type="checkbox" id="check5" name="check5" value="hotel">
+                    <label class="form-check-label" for="check5">Khách sạn</label>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <hr>
+            <div class="filter-section">
+                <div class="filter-section__title">Số lượng người</div>
+                <div class="range-wrap">
+                    <output class="number"></output>
+                    <input type="range" class="range" name="people" max="20">
+                </div>
+            </div>
+            <hr>
+            <div class="filter-section">
+                <div class="filter-section__title">Tiện nghi</div>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="parking">Chỗ để xe</label>
+                    <input class="form-check-input" type="checkbox" id="parking" name="parking" value="yes" checked>
+                </div>
+                <hr>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="res">Nhà hàng</label>
+                    <input class="form-check-input" type="checkbox" id="res" name="res" value="yes">
+                </div>
+                <hr>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="pool">Hồ bơi</label>
+                    <input class="form-check-input" type="checkbox" id="pool" name="pool" value="yes">
+                </div>
+                <hr>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="pet">Cho phép mang vật nuôi</label>
+                    <input class="form-check-input" type="checkbox" id="pet" name="pet" value="yes">
+                </div>
+                <hr>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="smoke">Phòng không hút thuốc</label>
+                    <input class="form-check-input" type="checkbox" id="smoke" name="smoke" value="yes">
+                </div>
+                <hr>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="spa">Spa</label>
+                    <input class="form-check-input" type="checkbox" id="spa" name="spa" value="yes">
+                </div>
+            </div>
+            <hr>
+            <div class="filter-section">
+                <button class="filter-submit" onclick="hideFilter('.filter');">Lọc</button>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Bị lỗi -->
+    <!-- <div class="hotel-gallery">
+        <div class="wide" ng-app="AngularApp" ng-controller="ProductController">
+            <div class="slides">
+                <div id="item" class="hotel-item" dir-paginate="p in products|itemsPerPage: totalProduct">
+                    <a href="booking.html" target="_blank">
+                        <div class="hotel-item-img">
+                            <img src="{{p.image}} " alt="">
+                        </div>
+                        <div class="hotel-item-info">
+                            <div class="hotel-item-title">
+                                <div>{{p.name}}</div>
+                            </div>
+
+                            <div class="hotel-item-rate">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                                <span>{{p.rate}}</span>
+                            </div>
+
+                            <div class="hotel-item-price">
+                                <div>{{p.price}}</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+
+                <div class="clearfix"></div>
+
+                <dir-pagination-controls onclick="topScroll()" class="page-number-list" max-size="5" direction-links="true" boundary-links="true">
+                </dir-pagination-controls>
+            </div>
+        </div>
+    </div> -->
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+                <div class="footer__logo--img">
+                    <a href="index.html"><img src="./assets/img/EASYGO_logo.png" alt=""></a>
+                </div>
+                <div class="footer__logo--text">
+                    <p>Book your trip in minute, get full control for much longer</p>
+                </div>
+            </div>
+            <div class="footer__link">
+                <div class="footer__link--item">
+                    <ul class="footer__ul">
+                        <li>
+                            <h3>Company</h3>
+                        </li>
+                        <li>
+                            <a href="#"> About </a>
+                        </li>
+                        <li>
+                            <a href="#"> Careers </a>
+                        </li>
+                        <li><a href="#"> Mobile</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__link--item">
+                    <ul class="footer__ul">
+                        <li>
+                            <h3>Contact</h3>
+                        </li>
+                        <li>
+                            <a href="#"> Help/FQA </a>
+                        </li>
+                        <li>
+                            <a href="#"> Press </a>
+                        </li>
+                        <li><a href="#"> Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer__link--item">
+                    <ul class="footer__ul">
+                        <li>
+                            <h3>More</h3>
+                        </li>
+                        <li>
+                            <a href="#"> AirlineFees</a>
+                        </li>
+                        <li>
+                            <a href="#"> Airlines </a>
+                        </li>
+                        <li><a href="#"> Low fare tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__media hide-on-mobile">
+                <div class="footer__media--socialIcon">
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="footer__media--discover">
+                    <h3>Discover our app</h3>
+                    <a href="#" class="footer__img--discover">
+                        <img src="./assets/img/710ae7ca20e600c9c96165ea400042c1.svg" alt="">
+                    </a>
+                    <a href="#" class="footer__img--discover">
+                        <img src="./assets/img/c90225c14bd4b3b9dc24f1eef7ce6260.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__text">
+            <p>All rights Reserved @easygo.com</p>
+        </div>
+    </footer>
+    <div class="search-mobile">
+        <div class="search-mobile-head">
+            <i class="search-mobile-head-icon fa fa-angle-left"></i>
+            <input class="search-mobile-head-input" type="text" placeholder="Bạn sắp đi đâu?">
+        </div>
+
+        <div class="search-mobile-body">
+            <div class="header__search-place-sub-tab1">
+                <h6 class="header__search-place-sub-title">Mọi lúc, mọi nơi</h6>
+                <div class="header__search-place-sub-search">
+                    <span class="header__search-place-sub-search__text">Tìm kiếm linh hoạt</span>
+                    <i>
+                        <video class="header__search-place-sub-search__icon" autoplay preload="auto">
+                            <source src="assets/img/video.mp4" type="video/mp4">
+                        </video>
+                    </i>
+                </div>
+            </div>
+
+            <div class="header__search-place-sub-tab2">
+                <ul class="header__search-place-sub-list-place">
+                    <li class="header__search-place-sub-place-item">
+                        <div class="header__search-place-sub-place-item-img">
+                            <img src="./assets/img/map.png" alt="Img">
+                        </div>
+
+                        <div class="header__search-place-sub-place-item-name">
+                            <span>Lân cận</span>
+                        </div>
+                    </li>
+
+                    <li class="header__search-place-sub-place-item">
+                        <div class="header__search-place-sub-place-item-img">
+                            <img src="./assets/img/map.png" alt="Img">
+                        </div>
+
+                        <div class="header__search-place-sub-place-item-name">
+                            <span>Lân cận</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/sresult.js"></script>
+    <script>
+        function addPagination(x){
+            if(x.matches){
+                document.getElementById("item").removeAttribute("dir-paginate");
+                var item = document.getElementById("item");
+                var att = document.createAttribute("dir-paginate");
+                att.value = "p in products|itemsPerPage: 4";
+                item.setAttributeNode(att);
+            }
+            else{
+                document.getElementById("item").removeAttribute("dir-paginate");
+                var item = document.getElementById("item");
+                var att = document.createAttribute("dir-paginate");
+                att.value = "p in products|itemsPerPage: totalProduct";
+                item.setAttributeNode(att);
+            }
+        }
+        var windowWidth = window.matchMedia("(max-width: 376px)");
+        addPagination(windowWidth);
+        windowWidth.addListener(addPagination);
+    </script>   
+    <script src="./assets/js/main.js"></script>
+
