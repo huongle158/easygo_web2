@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookingComponent } from './booking/booking.component';
-import { DiscoverComponent } from './discover/discover.component';
-import { HomeComponent } from './home/home.component';
-import { LocalhostComponent } from './localhost/localhost.component';
-import { PrivatesiteComponent } from './privatesite/privatesite.component';
-import { SearchresultComponent } from './searchresult/searchresult.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { DiscoverComponent } from './components/discover/discover.component';
+import { HomeComponent } from './components/home/home.component';
+import { LocalhostComponent } from './components/localhost/localhost.component';
+import { PrivatesiteComponent } from './components/privatesite/privatesite.component';
+import { SearchresultComponent } from './components/searchresult/searchresult.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: "full" },
