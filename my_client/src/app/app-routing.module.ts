@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'booking', component: BookingComponent },
   { path: 'discover', component: DiscoverComponent },
-  // Chưa tạo
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
   { path: 'searchresult', component: SearchresultComponent },
