@@ -1,19 +1,50 @@
+<div class="filter text-center m-3">
+    <div class="d-inline filter-group" *ngFor="let filter of filterList">
+        <input type="checkbox" class="btn-check" id="{{filter.inputID}}" autocomplete="off" value="{{filter.inputValue}}" (change)="onChange($event)">
+        <label class="btn btn-outline-dark mx-2 p-3" for="{{filter.inputID}}" >{{filter.name}}</label>
+    </div>
+        <!-- <input type="checkbox" class="btn-check" id="all" autocomplete="off" value="" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="all" >Tất cả</label> -->
+    
+        <!-- <input type="checkbox" class="btn-check" id="wifi" autocomplete="off" value="Wi-fi" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="wifi" >Wi-fi</label>
+      
+        <input type="checkbox" class="btn-check" id="bep" autocomplete="off" value="Bếp" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="bep" >Bếp</label>
+      
+        <input type="checkbox" class="btn-check" id="thangmay" autocomplete="off" value="Thang máy" (change)="onChange($event)"> 
+        <label class="btn btn-outline-dark" for="thangmay" >Thang máy</label>
+        
+        <input type="checkbox" class="btn-check" id="pet" autocomplete="off" value="Cho phép thú cưng" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="pet" >Cho phép thú cưng</label>
+
+        <input type="checkbox" class="btn-check" id="hotwater" autocomplete="off" value="Nước nóng" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="hotwater" >Nước nóng</label>
+        
+        <input type="checkbox" class="btn-check" id="pool" autocomplete="off" value="Bể bơi" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="pool" >Bể bơi</label>
+
+        <input type="checkbox" class="btn-check" id="tv" autocomplete="off" value="TV" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="tv">TV</label>
+
+        <input type="checkbox" class="btn-check" id="san" autocomplete="off" value="Sân hoặc ban công" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="san" >Sân hoặc ban công</label>
+
+        <input type="checkbox" class="btn-check" id="losuoi" autocomplete="off" value="Lò sưởi trong nhà" (change)="onChange($event)">
+        <label class="btn btn-outline-dark" for="losuoi" >Lò sưởi trong nhà</label> -->
+</div>
 
 <div class="container">
     <div class="d-flex flex-wrap flex-sm-row">
-        <div class="card m-3 p-3" *ngFor="let hotel of hotels" style="width: 400px;">
-            <span class="text-center">
-                <img [src]="this.imageURL" class="align-center" width="250" height="250"> 
-            </span>
-            <div class="card-body">
-                <h4 class="card-title text-truncate">{{hotel.name}}</h4>
-                <p class="h4 text-danger">${{hotel.price}}</p>
+        <div class="card m-3" *ngFor="let hotel of hotelArray" style="width: 400px;" >
+            <img src="{{hotel.image[0]}}" class="" width="400" height="300">
+            <div class="card-body m-2">
+                <h3 class="card-title text-truncate">{{hotel.name}}</h3>
                 <div class="d-flex justify-content-between">
-                    <span>&#9733; {{hotel.rating.rate}}</span>
-                    <span>Count: {{hotel.rating.count}}</span>
+                    <h3><span style="color: yellow;">&#9733;</span> {{hotel.rating.rate}} ({{hotel.rating.count}} đánh giá)</h3>
+                    <span class="h3">${{hotel.price}}</span>
                 </div>
             </div>
-            <button class="btn bg-warning text-white text-center">Buy Now</button>
         </div>
     </div>
 </div>
