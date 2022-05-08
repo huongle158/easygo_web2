@@ -1,1052 +1,592 @@
 <!-- Trang chủ -->
- <header class="header">
-        <div class="header-top">
-            <div class="wide">
-                <div class="main-header">
-                    <div class="header__logo self">
-                        <a href="index.html" class="header__logo-link">
-                            <img src="./assets/img/EASYGO_white.png" alt="">
-                        </a>
-                    </div>
+<app-header></app-header>
 
-                    <div class="header__middle hide-on-mobile">
-                        <div class="header__middle-normal">
-                            <input type="radio" hidden checked id="tab1" name="selection">
-                            <label for="tab1"
-                                class="header__middle-item header__middle-button header__middle-button--active">Places
-                                to Stay</label>
-                            <input type="radio" hidden id="tab2" name="selection">
-                            <!-- <label for="tab2" class="header__middle-item header__middle-button">Experiences</label>   -->
-                            <a href="#discover" class="header__middle-item header__middle-link">
-                                Experiences</a>
-                            <!-- Trai nghiem truc tuyến chức năng rỗng -->
-                            <a href="#discover" class="header__middle-item header__middle-link">Online
-                                Experiences</a>
-                        </div>
+<!-- ExploreNearby -->
+<section class="section-item-1 section-item" id="explore">
+  <div class="wide">
+    <h2 class="section-item__heading text center mt-3">Explore nearby</h2>
+    <div class="Explore-slider">
+      <input
+        type="radio"
+        class="display-none"
+        name="explore-radio"
+        id="explore-radio1"
+        checked
+      />
+      <input
+        type="radio"
+        class="display-none"
+        name="explore-radio"
+        id="explore-radio2"
+      />
+      <input
+        type="radio"
+        class="display-none"
+        name="explore-radio"
+        id="explore-radio3"
+      />
 
-                        <div class="header__middle-fixed">
-                            <span class="header__middle-fixed-text">Bắt đầu tìm kiếm</span>
-                            <div class="header__middle-fixed-btn">
-                                <i class="header__middle-fixed-btn-icon fas fa-search"></i>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="header__right">
-                        <div class="hide-on-mobile"><a href="#tryhost"
-                                class=" header__right-item header__right-link  ">Becomes Host</a>
-                            <button class="header__right-item header__right-button ">
-                                <i class="header__right-icon fas fa-globe"></i>
-                            </button>
-                        </div>
-
-                        <div class="header__right-item header__right-user">
-                            <i class="header__right-menu-icon fas fa-bars hide-on-mobile "></i>
-                            <i class="header__right-user-icon fas fa-user-circle hide-on-mobile"></i>
-
-                        </div>
-
-
-                        <div class="header__right-user-sub">
-
-                            <div class="header__right-user-sub-account">
-                                <a href="#" class="header__right-user-sub-link index__login " onclick="on()">Sign up</a>
-                                <a href="#" class="header__right-user-sub-link ">Login</a>
-                            </div>
-
-                            <div class="nav__overlay">
-                                <div class="index__login-sub ">
-                                    <div class="wide-login">
-                                        <div class="login_form">
-                                            <div class="login__header form__row">
-                                                <div><i class="far fa-times-circle"></i></div>
-                                                <div class="login-header__text">Log in or Sign up</div>
-                                            </div>
-                                            <hr>
-                                            <div class="login-title form__row">Welcome to EasyGo</div>
-                                            <div class="form__row">
-                                                <input class="login__input" type="text" placeholder="Full name">
-                                            </div>
-                                            <div class="form__row">
-                                                <input class="login__input" type="text" placeholder="Phone number">
-                                            </div>
-                                            <p class=" login_text-small">We'll call or text you to confirm your number
-                                            </p>
-                                            <button class="login__btn  "> Continue</button>
-
-                                        </div>
-                                        <div class="form__row b">
-                                            <hr class="hr-or">
-                                            <span class="login_text-or">Or</span>
-                                            <hr class="hr-or">
-                                        </div>
-                                        <div class="login_dif">
-                                            <div class="login_dif-item login__input">
-                                                <a href="#">
-                                                    <i class="fa fa-facebook"></i>
-                                                    <input class="login_dif-input" type="button"
-                                                        value="Continue with Facebook">
-                                                </a>
-                                            </div>
-                                            <div class="login_dif-item login__input">
-                                                <a href="#">
-                                                    <i class="fab fa-google"></i>
-                                                    <input class="login_dif-input" type="button"
-                                                        value="Continue with Google">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-                            <div class="header__right-user-sub-bottom">
-                                <a href="#" class="header__right-user-sub-link">Become Host</a>
-                                <a href="#" class="header__right-user-sub-link">Online Experience</a>
-                                <a href="#" class="header__right-user-sub-link">Help</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="header__search">
-                        <label for="header__search-place" class="header__search-place header__search-item">
-                            <div>
-                                <h6 class="header__search-item-title">Location</h6>
-                                <input type="text" id="header__search-place"
-                                    class="header__search-item-input hide-on-mobile"
-                                    placeholder="Where do you want to go?">
-                            </div>
-                        </label>
-
-                        <div class="header__search-take-room header__search-item">
-                            <h6 class="header__search-item-title">Date</h6>
-                            <span class="header__search-item-content hide-on-mobile">Choose Date</span>
-                            <span class="header__search-item-day"></span>
-                        </div>
-
-                        <!-- <div class="header__search-check-out header__search-item">
-                                <h6 class="header__search-item-title">Trả phòng</h6>
-                                <span class="header__search-item-content">Thêm ngày</span>  
-                                <span class="header__search-item-day"></span>
-                            </div> -->
-
-                        <div class="header__search-customer header__search-item">
-                            <div class="header__search-customer-left">
-                                <h6 class="header__search-item-title">People</h6>
-                                <span class="header__search-item-content hide-on-mobile">Add People</span>
-                            </div>
-                        </div>
-
-                        <div class="header__search-day header__search-item">
-                            <h6 class="header__search-item-title">Ngày</h6>
-                            <span class="header__search-item-content">Thêm thời điểm bạn muốn tham gia</span>
-                        </div>
-
-                        <div class="header__search-btn">
-                            <a href="search-result.html">
-                                <i class="header__search-btn-icon fas fa-search"></i>
-                                <span class="header__search-btn-text">Search</span>
-                            </a>
-
-                        </div>
-
-                        <div class="header__search-place-sub">
-                            <div class="header__search-place-sub-tab1">
-                                <h6 class="header__search-place-sub-title">Everytime, Everywhere</h6>
-                                <div class="header__search-place-sub-search">
-                                    <span class="header__search-place-sub-search__text">Tìm kiếm linh hoạt</span>
-                                    <i>
-                                        <video class="header__search-place-sub-search__icon" autoplay preload="auto">
-                                            <!-- <source src="assets/img/video.mp4" type="video/mp4"> -->
-                                        </video>
-                                    </i>
-                                </div>
-                            </div>
-
-                            <!-- <div class="header__search-place-sub-tab2">
-                                    <ul class="header__search-place-sub-list-place">
-                                        <li class="header__search-place-sub-place-item">
-                                            <div class="header__search-place-sub-place-item-img">
-                                                <img src="./assets/img/map.png" alt="Img">
-                                            </div>
-        
-                                            <div class="header__search-place-sub-place-item-name">
-                                                <span>Lân cận</span>
-                                            </div>
-                                        </li>
-        
-                                        <li class="header__search-place-sub-place-item">
-                                            <div class="header__search-place-sub-place-item-img">
-                                                <img src="./assets/img/map.png" alt="Img">
-                                            </div>
-        
-                                            <div class="header__search-place-sub-place-item-name">
-                                                <span>Lân cận</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div> -->
-                        </div>
-
-                        <div class="header__search-take-room-sub">
-                            <div class="take-room-sub__navbar-container">
-                                <nav class="take-room-sub__navbar">
-                                    <span class="take-room-sub__navbar--active">Lịch</span>
-                                    <span>Ngày linh hoạt</span>
-                                </nav>
-                            </div>
-
-                            <div class="take-room-sub__date">
-                                <div class="take-room-sub__date__item take-room-sub__date__left">
-                                    <nav class="take-room-sub__date__navbar take-room-sub__date__left__navbar">
-                                        <div class="take-room-sub__date__navbar-btn">
-                                            <i
-                                                class="take-room-sub__date__navbar-icon take-room-sub__date__left__navbar-icon fas fa-angle-left"></i>
-                                        </div>
-                                        <span
-                                            class="take-room-sub__date__navbar-date take-room-sub__date__left__navbar-date">tháng
-                                            8 năm 2021</span>
-
-                                        <div class="take-room-sub__date__navbar-btn--mobile">
-                                            <i
-                                                class="take-room-sub__date__navbar-icon take-room-sub__date__right__navbar-icon fas fa-angle-right"></i>
-                                        </div>
-                                    </nav>
-
-                                    <div class="take-room-sub__date__calendar">
-
-                                        <div class="take-room-sub__date__calendar__heading">
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">T2</li>
-                                                <li class="take-room-sub__date__calendar__column">T3</li>
-                                                <li class="take-room-sub__date__calendar__column">T4</li>
-                                                <li class="take-room-sub__date__calendar__column">T5</li>
-                                                <li class="take-room-sub__date__calendar__column">T6</li>
-                                                <li class="take-room-sub__date__calendar__column">T7</li>
-                                                <li class="take-room-sub__date__calendar__column">CN</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="take-room-sub__date__calendar__body" data-type="tháng 8 năm 2021">
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    1</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    2</li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    3</li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    4</li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    5</li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    6</li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    7</li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                    8</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">9</li>
-                                                <li class="take-room-sub__date__calendar__column">10</li>
-                                                <li class="take-room-sub__date__calendar__column">11</li>
-                                                <li class="take-room-sub__date__calendar__column">12</li>
-                                                <li class="take-room-sub__date__calendar__column">13</li>
-                                                <li class="take-room-sub__date__calendar__column">14</li>
-                                                <li class="take-room-sub__date__calendar__column">15</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">16</li>
-                                                <li class="take-room-sub__date__calendar__column">17</li>
-                                                <li class="take-room-sub__date__calendar__column">18</li>
-                                                <li class="take-room-sub__date__calendar__column">19</li>
-                                                <li class="take-room-sub__date__calendar__column">20</li>
-                                                <li class="take-room-sub__date__calendar__column">21</li>
-                                                <li class="take-room-sub__date__calendar__column">22</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">23</li>
-                                                <li class="take-room-sub__date__calendar__column">24</li>
-                                                <li class="take-room-sub__date__calendar__column">25</li>
-                                                <li class="take-room-sub__date__calendar__column">26</li>
-                                                <li class="take-room-sub__date__calendar__column">27</li>
-                                                <li class="take-room-sub__date__calendar__column">28</li>
-                                                <li class="take-room-sub__date__calendar__column">29</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">30</li>
-                                                <li class="take-room-sub__date__calendar__column">31</li>
-                                                <li class="take-room-sub__date__calendar__column"></li>
-                                                <li class="take-room-sub__date__calendar__column"></li>
-                                                <li class="take-room-sub__date__calendar__column"></li>
-                                                <li class="take-room-sub__date__calendar__column"></li>
-                                                <li class="take-room-sub__date__calendar__column"></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="take-room-sub__date__item take-room-sub__date__right">
-                                    <nav class="take-room-sub__date__navbar take-room-sub__date__right__navbar">
-                                        <div class="take-room-sub__date__navbar-btn--mobile">
-                                            <i
-                                                class="take-room-sub__date__navbar-icon take-room-sub__date__right__navbar-icon fas fa-angle-left"></i>
-                                        </div>
-                                        <span
-                                            class="take-room-sub__date__navbar-date take-room-sub__date__right__navbar-date">tháng
-                                            9 năm 2021</span>
-                                        <div class="take-room-sub__date__navbar-btn">
-                                            <i
-                                                class="take-room-sub__date__navbar-icon take-room-sub__date__right__navbar-icon fas fa-angle-right"></i>
-                                        </div>
-                                    </nav>
-
-                                    <div class="take-room-sub__date__calendar">
-                                        <div class="take-room-sub__date__calendar__heading">
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">T2</li>
-                                                <li class="take-room-sub__date__calendar__column">T3</li>
-                                                <li class="take-room-sub__date__calendar__column">T4</li>
-                                                <li class="take-room-sub__date__calendar__column">T5</li>
-                                                <li class="take-room-sub__date__calendar__column">T6</li>
-                                                <li class="take-room-sub__date__calendar__column">T7</li>
-                                                <li class="take-room-sub__date__calendar__column">CN</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="take-room-sub__date__calendar__body" data-type="tháng 9 năm 2021">
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li
-                                                    class="take-room-sub__date__calendar__column take-room-sub__date__calendar__column--disabled">
-                                                </li>
-                                                <li class="take-room-sub__date__calendar__column">1</li>
-                                                <li class="take-room-sub__date__calendar__column">2</li>
-                                                <li class="take-room-sub__date__calendar__column">3</li>
-                                                <li class="take-room-sub__date__calendar__column">4</li>
-                                                <li class="take-room-sub__date__calendar__column">5</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">6</li>
-                                                <li class="take-room-sub__date__calendar__column">7</li>
-                                                <li class="take-room-sub__date__calendar__column">8</li>
-                                                <li class="take-room-sub__date__calendar__column">9</li>
-                                                <li class="take-room-sub__date__calendar__column">10</li>
-                                                <li class="take-room-sub__date__calendar__column">11</li>
-                                                <li class="take-room-sub__date__calendar__column">12</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">12</li>
-                                                <li class="take-room-sub__date__calendar__column">13</li>
-                                                <li class="take-room-sub__date__calendar__column">14</li>
-                                                <li class="take-room-sub__date__calendar__column">15</li>
-                                                <li class="take-room-sub__date__calendar__column">16</li>
-                                                <li class="take-room-sub__date__calendar__column">17</li>
-                                                <li class="take-room-sub__date__calendar__column">18</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">19</li>
-                                                <li class="take-room-sub__date__calendar__column">20</li>
-                                                <li class="take-room-sub__date__calendar__column">21</li>
-                                                <li class="take-room-sub__date__calendar__column">22</li>
-                                                <li class="take-room-sub__date__calendar__column">23</li>
-                                                <li class="take-room-sub__date__calendar__column">24</li>
-                                                <li class="take-room-sub__date__calendar__column">25</li>
-                                            </ul>
-
-                                            <ul class="take-room-sub__date__calendar__row">
-                                                <li class="take-room-sub__date__calendar__column">26</li>
-                                                <li class="take-room-sub__date__calendar__column">27</li>
-                                                <li class="take-room-sub__date__calendar__column">28</li>
-                                                <li class="take-room-sub__date__calendar__column">29</li>
-                                                <li class="take-room-sub__date__calendar__column">30</li>
-                                                <li class="take-room-sub__date__calendar__column">31</li>
-                                                <li class="take-room-sub__date__calendar__column"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="header__search-customer-sub">
-                            <div class="header__search-customer-sub__item header__search-customer-sub__adult">
-                                <div class="header__search-customer-sub__info">
-                                    <h6 class="header__search-customer-sub__heading">Người lớn</h6>
-                                    <span class="header__search-customer-sub__desc">Từ 13 tuổi trở lên</span>
-                                </div>
-
-                                <div class="header__search-customer-sub__people-number">
-                                    <button
-                                        class="header__search-customer-sub__button header__search-customer-sub__minus">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <span class="header__search-customer-sub__number">0</span>
-
-                                    <button
-                                        class="header__search-customer-sub__button header__search-customer-sub__plus">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="header__search-customer-sub__item header__search-customer-sub__childern">
-                                <div class="header__search-customer-sub__info">
-                                    <h6 class="header__search-customer-sub__heading">Trẻ em</h6>
-                                    <span class="header__search-customer-sub__desc">Độ tuổi 2-12</span>
-                                </div>
-
-                                <div class="header__search-customer-sub__people-number">
-                                    <button
-                                        class="header__search-customer-sub__button header__search-customer-sub__minus">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <span class="header__search-customer-sub__number">0</span>
-
-                                    <button
-                                        class="header__search-customer-sub__button header__search-customer-sub__plus">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="header__search-customer-sub__item header__search-customer-sub__baby">
-                                <div class="header__search-customer-sub__info">
-                                    <h6 class="header__search-customer-sub__heading">Em bé</h6>
-                                    <span class="header__search-customer-sub__desc">Dưới 2 tuổi</span>
-                                </div>
-
-                                <div class="header__search-customer-sub__people-number">
-                                    <button
-                                        class="header__search-customer-sub__button header__search-customer-sub__minus">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <span class="header__search-customer-sub__number">0</span>
-
-                                    <button
-                                        class="header__search-customer-sub__button header__search-customer-sub__plus">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="row Explore-slider--item explore--item1">
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đà Lạt.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đà Lạt</div>
                 </div>
-            </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đà Nẵng.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đà Nẵng</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Cn_Th.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Cần Thơ</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đảo Phú Quốc</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row Explore-slider--item explore--item2">
+        <div class="col hide-on-mobile">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Hạ Long.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Vịnh Hạ Long</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div>
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Nha Trang.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Hà Nội</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Vũng tàu.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Vũng Tàu</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col hide-on-mobile">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Nha Trang.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Nha Trang</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div>
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row Explore-slider--item explore--item3 display-none">
+        <div class="col display-none display-block">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đà Lạt.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đà Lạt</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
 
-        <div class="header__content hide-on-mobile">
-            <h5 class="header__content__text">Welcome to visit my homepage</h5>
-            <a href="#explore" class="header__content__btn">Visit something?</a>
+        <div class="co display-none display-block">
+          <div class="nearest-place-item display-none display-block">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Phú Quốc</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="explore__lable display-none">
+      <label for="explore-radio1" class="index-manual-btn"></label>
+      <label for="explore-radio2" class="index-manual-btn"></label>
+      <label for="explore-radio3" class="index-manual-btn"></label>
+    </div>
+  </div>
+</section>
+
+<section class="section-item-2 section-item" id="tryhost">
+  <div class="wide">
+    <div class="row">
+      <div class="col section-item-2-content-col hide-on-mobile">
+        <div class="section-item-2-title">
+          <h3>Easy and fast</h3>
+          <div class="section-item__heading">Try Hosting</div>
+        </div>
+        <div class="try-item__row">
+          <div class="try-symbol symbol-1"></div>
+          <div class="try-content">
+            <div class="try-content-title">
+              How we estimate your earnings potential
+            </div>
+            <div class="try-content-script">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+          </div>
+        </div>
+        <div class="try-item__row">
+          <div class="try-symbol symbol-2"></div>
+          <div class="try-content">
+            <div class="try-content-title">
+              How we estimate your earnings potential
+            </div>
+            <div class="try-content-script">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+          </div>
+        </div>
+        <div class="try-item__row">
+          <div class="try-symbol symbol-3"></div>
+          <div class="try-content">
+            <div class="try-content-title">
+              How we estimate your earnings potential
+            </div>
+            <div class="try-content-script">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col section-item-2-box-col hide-on-mobile">
+        <div class="try-box">
+          <a href="localhost.html">
+            <div class="try-hosting-item-img">
+              <img src="./assets/img/main_site/try_hosting.jpg" alt="" />
+            </div>
+            <div class="try-hosting-item-info">
+              <div class="try-hosting-item-title">
+                <div>Lorem ispsum</div>
+                <div>Lorem ipsum</div>
+              </div>
+
+              <div class="try-hosting-item-info-icons">
+                <i class="fas fa-gem"></i>
+                <i class="fas fa-map"></i>
+                <i class="fas fa-location-arrow"></i>
+              </div>
+
+              <div class="try-hosting-item-info-number">
+                <i class="far fa-building"></i>
+                <span>24 people going</span>
+                <i class="far fa-heart" style="float: right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="try-box-background"></div>
+      </div>
+    </div>
+    <div class="try-hosting-mobile display-block">
+      <div class="hosting__text">
+        <p>Try Hosting on EASYGO</p>
+      </div>
+      <div class="try-mobile__img">
+        <img src="./assets/img/local_host/ask question.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-item-3 section-item" id="discover">
+  <div class="wide">
+    <h2 class="section-item__heading">Discover Things To Do</h2>
+    <!-- <h2 class="section-item__heading display-none display-block">Discover Things </h2> -->
+    <div class="Discover-slider">
+      <input
+        type="radio"
+        class="display-none"
+        name="Discover-radio"
+        id="Discover-radio1"
+        checked
+      />
+      <input
+        type="radio"
+        class="display-none"
+        name="Discover-radio"
+        id="Discover-radio2"
+      />
+      <input
+        type="radio"
+        class="display-none"
+        name="Discover-radio"
+        id="Discover-radio3"
+      />
+      <div class="row Discover-slider--item Discover--item1">
+        <div class="col">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_1.jpeg" alt="" />
+              </div>
+
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Bai Dinh Pagoda- Trang An Boat Cave Tour
+                  </div>
+                </div>
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">3 Days Trip</span>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
 
+        <div class="col hide-on-mobile">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_2.jpg" alt="" />
+              </div>
 
-
-        <div class="header-mobile" id="m-header-mobile">
-            <div class="header-mobile-btn">
-                <div class="header-mobile-btn-content">
-                    <i class="fas fa-search"></i>
-                    Bạn sắp đi đâu?
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Learn How to Shoot Film Photos in Hanoi
+                  </div>
                 </div>
-            </div>
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">1 Days Trip</span>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
 
-    </header>
+        <div class="col">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_3.jpeg" alt="" />
+              </div>
 
-    <section class="section-item-1 section-item" id="explore">
-        <div class="wide">
-            <h2 class="section-item__heading">Explore nearby</h2>
-            <div class="Explore-slider">
-
-                <input type="radio" class="display-none" name="explore-radio" id="explore-radio1" checked>
-                <input type="radio" class="display-none" name="explore-radio" id="explore-radio2">
-                <input type="radio" class="display-none" name="explore-radio" id="explore-radio3">
-
-                <div class="row Explore-slider--item explore--item1">
-                    <div class="col">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Đà Lạt.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Đà Lạt</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Đà Nẵng.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Đà Nẵng</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Cn_Th.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Cần Thơ</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Đảo Phú Quốc</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Ha Long Bay Day Cruise With Express Bus
+                  </div>
                 </div>
-
-                <div class="row Explore-slider--item explore--item2 ">
-                    <div class="col hide-on-mobile">
-                        <div class="nearest-place-item ">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Hạ Long.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Vịnh Hạ Long</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div>
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Nha Trang.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title ">Hà Nội</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col ">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Vũng tàu.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Vũng Tàu</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col hide-on-mobile">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Nha Trang.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Nha Trang</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div>
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">2 days trip</span>
                 </div>
-                <div class="row Explore-slider--item explore--item3 display-none ">
-                    <div class="col display-none display-block">
-                        <div class="nearest-place-item">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Đà Lạt.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Đà Lạt</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="co display-none display-block">
-                        <div class="nearest-place-item display-none display-block">
-                            <a href="./search-result.html">
-                                <div class="nearest-place-item-img">
-                                    <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="">
-                                </div>
-                                <div class="nearest-place-item-info">
-                                    <div class="nearest-place-info-line">
-                                        <div class="nearest-place-item-title">Phú Quốc</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div>Lorem ipsum, dolor sit.</div>
-                                    </div>
-                                    <div class="nearest-place-info-line hide-on-mobile">
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span class="discover-item-duration">300km</span>
-                                        </div>
-                                        <div class="hide-on-mobile">
-                                            <i class="fas fa-dollar-sign"></i>
-                                            <span class="discover-item-duration">300/person</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="explore__lable display-none">
-                <label for="explore-radio1" class="index-manual-btn"></label>
-                <label for="explore-radio2" class="index-manual-btn"></label>
-                <label for="explore-radio3" class="index-manual-btn"></label>
-
-            </div>
+              </div>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="row display-none Discover-slider--item Discover--item2">
+        <div class="col display-none display-block">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_2.jpg" alt="" />
+              </div>
 
-    <section class="section-item-2 section-item" id="tryhost">
-        <div class="wide">
-            <div class="row">
-                <div class="col section-item-2-content-col hide-on-mobile">
-                    <div class="section-item-2-title">
-                        <h3>Easy and fast</h3>
-                        <div class="section-item__heading">Try Hosting</div>
-                    </div>
-                    <div class="try-item__row">
-                        <div class="try-symbol symbol-1"></div>
-                        <div class="try-content">
-                            <div class="try-content-title">How we estimate your earnings potential</div>
-                            <div class="try-content-script">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="try-item__row">
-                        <div class="try-symbol symbol-2"></div>
-                        <div class="try-content">
-                            <div class="try-content-title">How we estimate your earnings potential</div>
-                            <div class="try-content-script">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="try-item__row">
-                        <div class="try-symbol symbol-3"></div>
-                        <div class="try-content">
-                            <div class="try-content-title">How we estimate your earnings potential</div>
-                            <div class="try-content-script">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </div>
-                        </div>
-                    </div>
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Learn How to Shoot Film Photos in Hanoi
+                  </div>
                 </div>
-                <div class="col section-item-2-box-col hide-on-mobile">
-                    <div class="try-box">
-                        <a href="localhost.html">
-                            <div class="try-hosting-item-img">
-                                <img src="./assets/img/main_site/try_hosting.jpg" alt="">
-                            </div>
-                            <div class="try-hosting-item-info">
-                                <div class="try-hosting-item-title">
-                                    <div>Lorem ispsum</div>
-                                    <div>Lorem ipsum</div>
-                                </div>
-
-                                <div class="try-hosting-item-info-icons">
-                                    <i class="fas fa-gem"></i>
-                                    <i class="fas fa-map"></i>
-                                    <i class="fas fa-location-arrow"></i>
-                                </div>
-
-                                <div class="try-hosting-item-info-number">
-                                    <i class="far fa-building"></i>
-                                    <span>24 people going</span>
-                                    <i class="far fa-heart" style="float: right;"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="try-box-background">
-                    </div>
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">1 Days Trip</span>
                 </div>
-
-            </div>
-            <div class="  try-hosting-mobile display-block">
-                <div class="hosting__text">
-                    <p> Try Hosting on EASYGO</p>
-                </div>
-                <div class="try-mobile__img">
-
-                    <img src="./assets/img/local_host/ask question.jpg" alt="">
-                </div>
-            </div>
+              </div>
+            </a>
+          </div>
         </div>
 
+        <div class="col display-none display-block">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_3.jpeg" alt="" />
+              </div>
 
-    </section>
-
-    <section class="section-item-3 section-item" id="discover">
-        <div class="wide">
-            <h2 class="section-item__heading ">Discover Things To Do</h2>
-            <!-- <h2 class="section-item__heading display-none display-block">Discover Things </h2> -->
-            <div class="Discover-slider">
-                <input type="radio" class="display-none" name="Discover-radio" id="Discover-radio1" checked>
-                <input type="radio" class="display-none" name="Discover-radio" id="Discover-radio2">
-                <input type="radio" class="display-none" name="Discover-radio" id="Discover-radio3">
-                <div class="row Discover-slider--item Discover--item1">
-                    <div class="col">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_1.jpeg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Bai Dinh Pagoda- Trang An Boat Cave Tour</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">3 Days Trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col hide-on-mobile">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_2.jpg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Learn How to Shoot Film Photos in Hanoi</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">1 Days Trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_3.jpeg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Ha Long Bay Day Cruise With Express Bus</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">2 days trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Ha Long Bay Day Cruise With Express Bus
+                  </div>
                 </div>
-                <div class="row display-none Discover-slider--item Discover--item2">
-
-                    <div class="col display-none display-block">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_2.jpg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Learn How to Shoot Film Photos in Hanoi</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">1 Days Trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col display-none display-block">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_3.jpeg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Ha Long Bay Day Cruise With Express Bus</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">2 days trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">2 days trip</span>
                 </div>
-                <div class="row display-none Discover-slider--item Discover--item3">
-
-                    <div class="col display-none display-block">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_1.jpeg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Shoot Film Photos in Hanoi</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">1 Days Trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col display-none display-block">
-                        <div class="discover-item">
-                            <a href="discover.html">
-                                <div class="discover-item-img">
-                                    <img src="./assets/img/main_site/discover_2.jpg" alt="">
-                                </div>
-
-                                <div class="discover-item-info">
-                                    <div class="discover-item-info-line">
-                                        <div class="discover-item-name">Day Cruise With Express Bus</div>
-                                    </div>
-                                    <div class="discover-item-info-line hide-on-mobile">
-                                        <i class="fas fa-map-marker-alt "></i>
-                                        <span class="discover-item-duration">2 days trip</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="Discover__lable display-none">
-                <label for="Discover-radio1" class="index-manual-btn"></label>
-                <label for="Discover-radio2" class="index-manual-btn"></label>
-                <label for="Discover-radio3" class="index-manual-btn"></label>
-
-            </div>
+              </div>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="row display-none Discover-slider--item Discover--item3">
+        <div class="col display-none display-block">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_1.jpeg" alt="" />
+              </div>
 
-    <section class="section-item-4 section-item">
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Shoot Film Photos in Hanoi
+                  </div>
+                </div>
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">1 Days Trip</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col display-none display-block">
+          <div class="discover-item">
+            <a href="discover.html">
+              <div class="discover-item-img">
+                <img src="./assets/img/main_site/discover_2.jpg" alt="" />
+              </div>
+
+              <div class="discover-item-info">
+                <div class="discover-item-info-line">
+                  <div class="discover-item-name">
+                    Day Cruise With Express Bus
+                  </div>
+                </div>
+                <div class="discover-item-info-line hide-on-mobile">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span class="discover-item-duration">2 days trip</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Discover__lable display-none">
+      <label for="Discover-radio1" class="index-manual-btn"></label>
+      <label for="Discover-radio2" class="index-manual-btn"></label>
+      <label for="Discover-radio3" class="index-manual-btn"></label>
+    </div>
+  </div>
+</section>
+
+<!-- Bỏ phần FeedBack: Huongle 15/4 -->
+<!-- <section class="section-item-4 section-item">
         <div class="wide">
             <div class="row section-item-4__row flex-colum ">
                 <div class="col">
@@ -1092,524 +632,597 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="section-item-5 section-item hide-on-mobile">
-        <div class="wide">
-            <div class="subscribe">
-                <div class="subscribe__icon">
-                    <i class="glyphicon glyphicon-send"></i>
-                </div>
-                <div class="subscribe--item1">
-                    <div class="subscribe--item1--text">
-                        <p>Subscribe to get information, lasted news and other<br>
-                            interesting offers about... </p>
-                    </div>
-                </div>
-                <div class="subscribe__form">
-                    <input type="text" name="confirm" placeholder="Your email" class="subscribe__input--email">
-                    <input type="button" name="Subscribe" value="Subscribe" class="subscribe__button">
-                </div>
-            </div>
+<section class="section-item-5 section-item hide-on-mobile">
+  <div class="wide">
+    <div class="subscribe">
+      <div class="subscribe__icon">
+        <i class="glyphicon glyphicon-send"></i>
+      </div>
+      <div class="subscribe--item1">
+        <div class="subscribe--item1--text">
+          <p>
+            Subscribe to get information, lasted news and other<br />
+            interesting offers about...
+          </p>
         </div>
-
-    </section>
-
-    <footer>
-        <div class="footer">
-            <div class="footer__logo">
-                <div class="footer__logo--img"> <a href="index.html"><img src="./assets/img/EASYGO_logo.png" alt=""></a>
-                </div>
-                <div class="footer__logo--text">
-                    <p>Book your trip in minute, get full control for much longer</p>
-                </div>
-            </div>
-            <div class="footer__link">
-                <div class="footer__link--item">
-                    <ul class="footer__ul">
-                        <li>
-                            <h3>Company</h3>
-                        </li>
-                        <li>
-                            <a href="#"> About </a>
-                        </li>
-                        <li>
-                            <a href="#"> Careers </a>
-                        </li>
-                        <li><a href="#"> Mobile</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__link--item">
-                    <ul class="footer__ul">
-                        <li>
-                            <h3>Contact</h3>
-                        </li>
-                        <li>
-                            <a href="#"> Help/FQA </a>
-                        </li>
-                        <li>
-                            <a href="#"> Press </a>
-                        </li>
-                        <li><a href="#"> Affiliate</a></li>
-                    </ul>
-                </div>
-                <div class="footer__link--item">
-                    <ul class="footer__ul">
-                        <li>
-                            <h3>More</h3>
-                        </li>
-                        <li>
-                            <a href="#"> AirlineFees</a>
-                        </li>
-                        <li>
-                            <a href="#"> Airlines </a>
-                        </li>
-                        <li><a href="#"> Low fare tips</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__media hide-on-mobile">
-                <div class="footer__media--socialIcon">
-                    <a href="#">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fa fa-youtube"></i>
-                    </a>
-                </div>
-                <div class="footer__media--discover">
-                    <h3>Discover our app</h3>
-                    <a href="#" class="footer__img--discover">
-                        <img src="../assets/img/disover_thing/Experience hosted by Hanoi.jpg" alt="">
-                    </a>
-                    <a href="#" class="footer__img--discover">
-                        <img src="../assets/img/disover_thing/Experience hosted by Hanoi.jpg" alt="">
-
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer__text">
-            <p>All rights Reserved @easygo.com</p>
-        </div>
-    </footer>
-
-    <div class="search-mobile">
-        <div class="search-mobile-head">
-            <i class="search-mobile-head-icon fa fa-angle-left"></i>
-            <input class="search-mobile-head-input" type="text" placeholder="Bạn sắp đi đâu?">
-        </div>
-
-        <div class="search-mobile-body">
-            <div class="header__search-place-sub-tab1">
-                <h6 class="header__search-place-sub-title">Mọi lúc, mọi nơi</h6>
-                <div class="header__search-place-sub-search">
-                    <span class="header__search-place-sub-search__text">Tìm kiếm linh hoạt</span>
-                    <i>
-                        <video class="header__search-place-sub-search__icon" autoplay preload="auto">
-                            <!-- <source src="assets/img/video.mp4" type="video/mp4">
-                            <source src="../assets/img/" type="video/mp4"> -->
-                        </video>
-                    </i>
-                </div>
-            </div>
-
-            <div class="header__search-place-sub-tab2">
-                <ul class="header__search-place-sub-list-place">
-                    <li class="header__search-place-sub-place-item">
-                        <div class="header__search-place-sub-place-item-img">
-                            <!-- <img src="./assets/img/map.png" alt="Img"> -->
-                            <img src="../assets/img/privatesite.png" alt="Img">
-                        </div>
-
-                        <div class="header__search-place-sub-place-item-name">
-                            <span>Lân cận</span>
-                        </div>
-                    </li>
-
-                    <li class="header__search-place-sub-place-item">
-                        <div class="header__search-place-sub-place-item-img">
-                            <!-- <img src="./assets/img/map.png" alt="Img"> -->
-                            <img src="../assets/img/privatesite.png" alt="Img">
-
-                        </div>
-
-                        <div class="header__search-place-sub-place-item-name">
-                            <span>Lân cận</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+      </div>
+      <div class="subscribe__form">
+        <input
+          type="text"
+          name="confirm"
+          placeholder="Your email"
+          class="subscribe__input--email"
+        />
+        <input
+          type="button"
+          name="Subscribe"
+          value="Subscribe"
+          class="subscribe__button"
+        />
+      </div>
     </div>
-  <script>
-        
+  </div>
+</section>
 
-const tab1 = document.getElementById('tab1');
-const tab2 = document.getElementById('tab2');
-const takeRoom = document.querySelector('.header__search-take-room');
-const checkOut = document.querySelector('.header__search-check-out');
-const customer = document.querySelector('.header__search-customer');
-const day = document.querySelector('.header__search-day');
-const placeSub = document.querySelector('.header__search-place-sub');
-const takeRoomSub = document.querySelector('.header__search-take-room-sub');
-const header__search = document.querySelector('.header__search');
-const headerSearchItems = document.querySelectorAll('.header__search-item');
-const headerSearchCustomer = document.querySelector('.header__search-customer');
-const headerSearchCustomerSub = document.querySelector('.header__search-customer-sub');
-const headerSearchBtn = document.querySelector('.header__search-btn');
-const headerMobile = document.querySelector('.header-mobile');
-const headerRightBtn = document.querySelector('.header__right-button');
+<footer>
+  <div class="footer">
+    <div class="footer__logo">
+      <div class="footer__logo--img">
+        <a href="index.html"
+          ><img src="./assets/img/EASYGO_logo.png" alt=""
+        /></a>
+      </div>
+      <div class="footer__logo--text">
+        <p>Book your trip in minute, get full control for much longer</p>
+      </div>
+    </div>
+    <div class="footer__link">
+      <div class="footer__link--item">
+        <ul class="footer__ul">
+          <li>
+            <h3>Company</h3>
+          </li>
+          <li>
+            <a href="#"> About </a>
+          </li>
+          <li>
+            <a href="#"> Careers </a>
+          </li>
+          <li><a href="#"> Mobile</a></li>
+        </ul>
+      </div>
 
-let modal = document.querySelector('.language-currency-modal');
+      <div class="footer__link--item">
+        <ul class="footer__ul">
+          <li>
+            <h3>Contact</h3>
+          </li>
+          <li>
+            <a href="#"> Help/FQA </a>
+          </li>
+          <li>
+            <a href="#"> Press </a>
+          </li>
+          <li><a href="#"> Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="footer__link--item">
+        <ul class="footer__ul">
+          <li>
+            <h3>More</h3>
+          </li>
+          <li>
+            <a href="#"> AirlineFees</a>
+          </li>
+          <li>
+            <a href="#"> Airlines </a>
+          </li>
+          <li><a href="#"> Low fare tips</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__media hide-on-mobile">
+      <div class="footer__media--socialIcon">
+        <a href="#">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-youtube"></i>
+        </a>
+      </div>
+      <div class="footer__media--discover">
+        <h3>Discover our app</h3>
+        <a href="#" class="footer__img--discover">
+          <img
+            src="../assets/img/disover_thing/Experience hosted by Hanoi.jpg"
+            alt=""
+          />
+        </a>
+        <a href="#" class="footer__img--discover">
+          <img
+            src="../assets/img/disover_thing/Experience hosted by Hanoi.jpg"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+  </div>
 
-/*----------------Active search item-------------- */
-for (const item of headerSearchItems) {
+  <div class="footer__text">
+    <p>All rights Reserved @easygo.com</p>
+  </div>
+</footer>
+
+<div class="search-mobile">
+  <div class="search-mobile-head">
+    <i class="search-mobile-head-icon fa fa-angle-left"></i>
+    <input
+      class="search-mobile-head-input"
+      type="text"
+      placeholder="Bạn sắp đi đâu?"
+    />
+  </div>
+
+  <div class="search-mobile-body">
+    <div class="header__search-place-sub-tab1">
+      <h6 class="header__search-place-sub-title">Mọi lúc, mọi nơi</h6>
+      <div class="header__search-place-sub-search">
+        <span class="header__search-place-sub-search__text"
+          >Tìm kiếm linh hoạt</span
+        >
+        <i>
+          <video
+            class="header__search-place-sub-search__icon"
+            autoplay
+            preload="auto"
+          >
+            <!-- <source src="assets/img/video.mp4" type="video/mp4">
+                            <source src="../assets/img/" type="video/mp4"> -->
+          </video>
+        </i>
+      </div>
+    </div>
+
+    <div class="header__search-place-sub-tab2">
+      <ul class="header__search-place-sub-list-place">
+        <li class="header__search-place-sub-place-item">
+          <div class="header__search-place-sub-place-item-img">
+            <!-- <img src="./assets/img/map.png" alt="Img"> -->
+            <img src="../assets/img/privatesite.png" alt="Img" />
+          </div>
+
+          <div class="header__search-place-sub-place-item-name">
+            <span>Lân cận</span>
+          </div>
+        </li>
+
+        <li class="header__search-place-sub-place-item">
+          <div class="header__search-place-sub-place-item-img">
+            <!-- <img src="./assets/img/map.png" alt="Img"> -->
+            <img src="../assets/img/privatesite.png" alt="Img" />
+          </div>
+
+          <div class="header__search-place-sub-place-item-name">
+            <span>Lân cận</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  const tab1 = document.getElementById("tab1");
+  const tab2 = document.getElementById("tab2");
+  const takeRoom = document.querySelector(".header__search-take-room");
+  const checkOut = document.querySelector(".header__search-check-out");
+  const customer = document.querySelector(".header__search-customer");
+  const day = document.querySelector(".header__search-day");
+  const placeSub = document.querySelector(".header__search-place-sub");
+  const takeRoomSub = document.querySelector(".header__search-take-room-sub");
+  const header__search = document.querySelector(".header__search");
+  const headerSearchItems = document.querySelectorAll(".header__search-item");
+  const headerSearchCustomer = document.querySelector(
+    ".header__search-customer"
+  );
+  const headerSearchCustomerSub = document.querySelector(
+    ".header__search-customer-sub"
+  );
+  const headerSearchBtn = document.querySelector(".header__search-btn");
+  const headerMobile = document.querySelector(".header-mobile");
+  const headerRightBtn = document.querySelector(".header__right-button");
+
+  let modal = document.querySelector(".language-currency-modal");
+
+  /*----------------Active search item-------------- */
+  for (const item of headerSearchItems) {
     item.onclick = function activeSearchItem() {
-        const active = document.querySelector('.header__search-item--active');
-        if(active != null) {
-            active.classList.remove('header__search-item--active');
-        }
-        const subDisplayed = document.querySelector('.header__search-sub--display');
-        if (subDisplayed) {
-            subDisplayed.classList.remove('header__search-sub--display');
-        }
+      const active = document.querySelector(".header__search-item--active");
+      if (active != null) {
+        active.classList.remove("header__search-item--active");
+      }
+      const subDisplayed = document.querySelector(
+        ".header__search-sub--display"
+      );
+      if (subDisplayed) {
+        subDisplayed.classList.remove("header__search-sub--display");
+      }
 
-        if (item.classList.contains('header__search-place')) {
-            placeSub.classList.add('header__search-sub--display');
-        }
+      if (item.classList.contains("header__search-place")) {
+        placeSub.classList.add("header__search-sub--display");
+      }
 
-        if (item.classList.contains('header__search-take-room') || item.classList.contains('header__search-check-out')|| (item.classList.contains('header__search-day'))) {
-            takeRoomSub.classList.add('header__search-sub--display');
-        }
+      if (
+        item.classList.contains("header__search-take-room") ||
+        item.classList.contains("header__search-check-out") ||
+        item.classList.contains("header__search-day")
+      ) {
+        takeRoomSub.classList.add("header__search-sub--display");
+      }
 
-        if (item.classList.contains('header__search-customer')) {
-            headerSearchCustomerSub.classList.add('header__search-sub--display');
-        }
+      if (item.classList.contains("header__search-customer")) {
+        headerSearchCustomerSub.classList.add("header__search-sub--display");
+      }
 
+      header__search.classList.add("header__search--gray");
+      item.classList.add("header__search-item--active");
 
-        header__search.classList.add('header__search--gray');
-        item.classList.add('header__search-item--active');
+      headerSearchCustomer.classList.add("flex2");
+      headerSearchBtn.classList.add("header__search-btn--full");
+    };
+  }
 
-        headerSearchCustomer.classList.add('flex2');
-        headerSearchBtn.classList.add('header__search-btn--full');
+  /* -------------------------- changeTab ---------------------- */
+
+  function changeTab1() {
+    if (header__search.classList.contains("header__search--gray")) {
+      header__search.classList.remove("header__search--gray");
     }
-}
-
-
-
-/* -------------------------- changeTab ---------------------- */
-
-function changeTab1() {
-    if (header__search.classList.contains('header__search--gray')) {
-        header__search.classList.remove('header__search--gray');
-    }
-    const subDisplayed = document.querySelector('.header__search-sub--display');
+    const subDisplayed = document.querySelector(".header__search-sub--display");
     if (subDisplayed) {
-        subDisplayed.classList.remove('header__search-sub--display');
+      subDisplayed.classList.remove("header__search-sub--display");
     }
 
-    const active = document.querySelector('.header__search-item--active');
-    if(active != null) {
-        active.classList.remove('header__search-item--active');
+    const active = document.querySelector(".header__search-item--active");
+    if (active != null) {
+      active.classList.remove("header__search-item--active");
     }
     // takeRoom.classList.remove('hide');
     // checkOut.classList.remove('hide');
     // customer.classList.remove('hide');
     // day.classList.remove('display-flex');
 
-    const placeSubTab1 = document.querySelector('.header__search-place-sub-tab1');
+    const placeSubTab1 = document.querySelector(
+      ".header__search-place-sub-tab1"
+    );
 
-    if (placeSubTab1.classList.contains('hide')) {
-        placeSubTab1.classList.remove('hide'); 
+    if (placeSubTab1.classList.contains("hide")) {
+      placeSubTab1.classList.remove("hide");
     }
 
-    const placeSubTab2 = document.querySelector('.header__search-place-sub-tab2');
+    const placeSubTab2 = document.querySelector(
+      ".header__search-place-sub-tab2"
+    );
     // placeSubTab2.classList.add('hide');
 
-    if (takeRoomSub.classList.contains('header__search-take-room-sub--tab2')) {
-        takeRoomSub.classList.remove('header__search-take-room-sub--tab2'); 
+    if (takeRoomSub.classList.contains("header__search-take-room-sub--tab2")) {
+      takeRoomSub.classList.remove("header__search-take-room-sub--tab2");
     }
-}
+  }
 
-function changeTab2() {
-    if (header__search.classList.contains('header__search--gray')) {
-        header__search.classList.remove('header__search--gray');
+  function changeTab2() {
+    if (header__search.classList.contains("header__search--gray")) {
+      header__search.classList.remove("header__search--gray");
     }
-    const subDisplayed = document.querySelector('.header__search-sub--display');
+    const subDisplayed = document.querySelector(".header__search-sub--display");
     if (subDisplayed) {
-        subDisplayed.classList.remove('header__search-sub--display');
+      subDisplayed.classList.remove("header__search-sub--display");
     }
-    const active = document.querySelector('.header__search-item--active');
-    if(active != null) {
-        active.classList.remove('header__search-item--active');
+    const active = document.querySelector(".header__search-item--active");
+    if (active != null) {
+      active.classList.remove("header__search-item--active");
     }
 
-    takeRoom.classList.add('hide');
-    checkOut.classList.add('hide');
-    customer.classList.add('hide');
-    day.classList.add('display-flex');
+    takeRoom.classList.add("hide");
+    checkOut.classList.add("hide");
+    customer.classList.add("hide");
+    day.classList.add("display-flex");
 
-    const placeSubTab1 = document.querySelector('.header__search-place-sub-tab1');
-    placeSubTab1.classList.add('hide');
-    const placeSubTab2 = document.querySelector('.header__search-place-sub-tab2');
-    placeSubTab2.classList.remove('hide');
+    const placeSubTab1 = document.querySelector(
+      ".header__search-place-sub-tab1"
+    );
+    placeSubTab1.classList.add("hide");
+    const placeSubTab2 = document.querySelector(
+      ".header__search-place-sub-tab2"
+    );
+    placeSubTab2.classList.remove("hide");
 
-    takeRoomSub.classList.add('header__search-take-room-sub--tab2');
-}
+    takeRoomSub.classList.add("header__search-take-room-sub--tab2");
+  }
 
-if (tab1.checked) {
+  if (tab1.checked) {
     changeTab1();
-}
-tab1.onclick = changeTab1;
-tab2.onclick = changeTab2;
+  }
+  tab1.onclick = changeTab1;
+  tab2.onclick = changeTab2;
 
+  /*-----------Take room sub------------- */
 
-/*-----------Take room sub------------- */
-
-
-const listDay = document.querySelectorAll('.take-room-sub__date__calendar__body .take-room-sub__date__calendar__column:not(.take-room-sub__date__calendar__column--disabled)');
-for (const day of listDay) {
+  const listDay = document.querySelectorAll(
+    ".take-room-sub__date__calendar__body .take-room-sub__date__calendar__column:not(.take-room-sub__date__calendar__column--disabled)"
+  );
+  for (const day of listDay) {
     day.onclick = function () {
-        const activeDay = document.querySelector('.take-room-sub__date__calendar__column--active');
+      const activeDay = document.querySelector(
+        ".take-room-sub__date__calendar__column--active"
+      );
 
-        const dayItem = day.parentElement.parentElement.parentElement.parentElement;
-        const currentMonth = dayItem.querySelector('.take-room-sub__date__navbar-date');
-        
-        const dayItemOld = (activeDay != null) ? activeDay.parentElement.parentElement.parentElement.parentElement : null;
+      const dayItem =
+        day.parentElement.parentElement.parentElement.parentElement;
+      const currentMonth = dayItem.querySelector(
+        ".take-room-sub__date__navbar-date"
+      );
 
-        if (activeDay) {
-            activeDay.classList.remove('take-room-sub__date__calendar__column--active');
-        }
-        /* ------------Check Day--------- */
-        
-        const currentTab = document.querySelector('.header__search-item--active');
-        const searchItemDay = currentTab.querySelector('.header__search-item-day');
-        const searchItemContent = currentTab.querySelector('.header__search-item-content');
-        
-        const currentParent = day.parentElement;
-        const calenderRows = currentParent.parentElement.children;
+      const dayItemOld =
+        activeDay != null
+          ? activeDay.parentElement.parentElement.parentElement.parentElement
+          : null;
 
-        day.classList.add('take-room-sub__date__calendar__column--active');
-        searchItemContent.classList.add('hide');
-        searchItemDay.innerHTML = day.innerHTML +' '+ currentMonth.innerHTML;
-        searchItemDay.classList.add('display');
-    }
-}
+      if (activeDay) {
+        activeDay.classList.remove(
+          "take-room-sub__date__calendar__column--active"
+        );
+      }
+      /* ------------Check Day--------- */
 
+      const currentTab = document.querySelector(".header__search-item--active");
+      const searchItemDay = currentTab.querySelector(
+        ".header__search-item-day"
+      );
+      const searchItemContent = currentTab.querySelector(
+        ".header__search-item-content"
+      );
 
-/** --------------- customer sub--------------- */
+      const currentParent = day.parentElement;
+      const calenderRows = currentParent.parentElement.children;
 
+      day.classList.add("take-room-sub__date__calendar__column--active");
+      searchItemContent.classList.add("hide");
+      searchItemDay.innerHTML = day.innerHTML + " " + currentMonth.innerHTML;
+      searchItemDay.classList.add("display");
+    };
+  }
 
-/** ------------------- Add onclick event----------------------- */
-/**---------------Minus----------------------------------- */
-const minusBtnList = document.querySelectorAll('.header__search-customer-sub__minus');
-for (const minusBtn of minusBtnList) {
+  /** --------------- customer sub--------------- */
+
+  /** ------------------- Add onclick event----------------------- */
+  /**---------------Minus----------------------------------- */
+  const minusBtnList = document.querySelectorAll(
+    ".header__search-customer-sub__minus"
+  );
+  for (const minusBtn of minusBtnList) {
     minusBtn.onclick = function minus() {
-        if (!minusBtn.classList.contains('header__search-customer-sub__button--disabled')) {
-            const customerSubItemCurrent = minusBtn.parentElement.parentElement;
-            const customerSubItemNum = customerSubItemCurrent.querySelector('.header__search-customer-sub__number');
-            const numCurrent = +customerSubItemNum.innerHTML;
-            customerSubItemNum.innerHTML = numCurrent - 1;
-            if (customerSubItemNum.innerHTML == 0) {
-                disabledBtn(minusBtn);
-            }
-        }
-    }
-}
-
-/**-------------------Plus------------------ */
-
-const plusBtnList = document.querySelectorAll('.header__search-customer-sub__plus');
-
-for (const plusBtn of plusBtnList) {
-    plusBtn.onclick = function plus() {
-        const customerSubItemCurrent = plusBtn.parentElement.parentElement;
-        const customerSubItemNum = customerSubItemCurrent.querySelector('.header__search-customer-sub__number');
-      
-        const customerSubItemMinus = customerSubItemCurrent.querySelector('.header__search-customer-sub__minus.header__search-customer-sub__button--disabled');
-       
-        if (customerSubItemMinus) {
-            removeDisabledBtn(customerSubItemMinus);
-        }
+      if (
+        !minusBtn.classList.contains(
+          "header__search-customer-sub__button--disabled"
+        )
+      ) {
+        const customerSubItemCurrent = minusBtn.parentElement.parentElement;
+        const customerSubItemNum = customerSubItemCurrent.querySelector(
+          ".header__search-customer-sub__number"
+        );
         const numCurrent = +customerSubItemNum.innerHTML;
-        customerSubItemNum.innerHTML = numCurrent + 1;
-    }
-}
+        customerSubItemNum.innerHTML = numCurrent - 1;
+        if (customerSubItemNum.innerHTML == 0) {
+          disabledBtn(minusBtn);
+        }
+      }
+    };
+  }
 
-/** --------------Disabled Minus-------------- */
-const customerSubItemList = document.querySelectorAll('.header__search-customer-sub__item');
-for (const customerSubItem of customerSubItemList) {
-    const customerSubItemNum = customerSubItem.querySelector('.header__search-customer-sub__number');
-    const customerSubItemMinus = customerSubItem.querySelector('.header__search-customer-sub__minus');
+  /**-------------------Plus------------------ */
+
+  const plusBtnList = document.querySelectorAll(
+    ".header__search-customer-sub__plus"
+  );
+
+  for (const plusBtn of plusBtnList) {
+    plusBtn.onclick = function plus() {
+      const customerSubItemCurrent = plusBtn.parentElement.parentElement;
+      const customerSubItemNum = customerSubItemCurrent.querySelector(
+        ".header__search-customer-sub__number"
+      );
+
+      const customerSubItemMinus = customerSubItemCurrent.querySelector(
+        ".header__search-customer-sub__minus.header__search-customer-sub__button--disabled"
+      );
+
+      if (customerSubItemMinus) {
+        removeDisabledBtn(customerSubItemMinus);
+      }
+      const numCurrent = +customerSubItemNum.innerHTML;
+      customerSubItemNum.innerHTML = numCurrent + 1;
+    };
+  }
+
+  /** --------------Disabled Minus-------------- */
+  const customerSubItemList = document.querySelectorAll(
+    ".header__search-customer-sub__item"
+  );
+  for (const customerSubItem of customerSubItemList) {
+    const customerSubItemNum = customerSubItem.querySelector(
+      ".header__search-customer-sub__number"
+    );
+    const customerSubItemMinus = customerSubItem.querySelector(
+      ".header__search-customer-sub__minus"
+    );
     if (+customerSubItemNum.innerHTML == 0) {
-        disabledBtn(customerSubItemMinus);
-    } 
-}
-
-
-function disabledBtn(minusBtn) {
-    minusBtn.classList.add('header__search-customer-sub__button--disabled');
-}
-
-function removeDisabledBtn(minusBtn) {
-    minusBtn.classList.remove('header__search-customer-sub__button--disabled');
-}
-
-
-/**-----------------------Header fixed---------------------- */
-let headerTop = document.querySelector('.header-top');
-let headerMainFixed = document.querySelector('.main-header--fixed');
-let headerMiddleFixed = document.querySelector('.header__middle-fixed');
-let headerMiddleNormal = document.querySelector('.header__middle-normal');
-let overlay = document.querySelector('.overlay');
-
-function hideHeaderFixed() {
-    headerMiddleFixed.classList.remove('hide');
-    headerMiddleNormal.classList.remove('display');
-    header__search.classList.remove('display-flex');
-    headerMainFixed.style.paddingBottom = '0px';
-    if (!modal.classList.contains('display')) {
-        overlay.classList.remove('display');
+      disabledBtn(customerSubItemMinus);
     }
-}
+  }
 
+  function disabledBtn(minusBtn) {
+    minusBtn.classList.add("header__search-customer-sub__button--disabled");
+  }
 
+  function removeDisabledBtn(minusBtn) {
+    minusBtn.classList.remove("header__search-customer-sub__button--disabled");
+  }
 
-headerMiddleFixed.onclick = function() {
-    headerMiddleFixed.classList.add('hide');
-    headerMiddleNormal.classList.add('display');
-    header__search.classList.add('display-flex');
-    headerMainFixed.style.paddingBottom = 'calc(var(--padding-bottom) + 90px)';
-    overlay.classList.add('display');
-}
+  /**-----------------------Header fixed---------------------- */
+  let headerTop = document.querySelector(".header-top");
+  let headerMainFixed = document.querySelector(".main-header--fixed");
+  let headerMiddleFixed = document.querySelector(".header__middle-fixed");
+  let headerMiddleNormal = document.querySelector(".header__middle-normal");
+  let overlay = document.querySelector(".overlay");
 
+  function hideHeaderFixed() {
+    headerMiddleFixed.classList.remove("hide");
+    headerMiddleNormal.classList.remove("display");
+    header__search.classList.remove("display-flex");
+    headerMainFixed.style.paddingBottom = "0px";
+    if (!modal.classList.contains("display")) {
+      overlay.classList.remove("display");
+    }
+  }
 
-/**------------------User Sub------------------ */
-let userSub = document.querySelector('.header__right-user-sub');
-let user = document.querySelector('.header__right-user');
-user.onclick = function () {
-    let userSub = document.querySelector('.header__right-user-sub');
-    if (userSub.classList.contains('display')) {
-        userSub.classList.remove('display');
+  headerMiddleFixed.onclick = function () {
+    headerMiddleFixed.classList.add("hide");
+    headerMiddleNormal.classList.add("display");
+    header__search.classList.add("display-flex");
+    headerMainFixed.style.paddingBottom = "calc(var(--padding-bottom) + 90px)";
+    overlay.classList.add("display");
+  };
+
+  /**------------------User Sub------------------ */
+  let userSub = document.querySelector(".header__right-user-sub");
+  let user = document.querySelector(".header__right-user");
+  user.onclick = function () {
+    let userSub = document.querySelector(".header__right-user-sub");
+    if (userSub.classList.contains("display")) {
+      userSub.classList.remove("display");
     } else {
-        userSub.classList.add('display');
+      userSub.classList.add("display");
     }
-}
+  };
 
-
-function notTarget(e) {
+  function notTarget(e) {
     /*---------------Clear Header search-------------- ------- */
     if (!header__search.contains(e.target)) {
-        const active = document.querySelector('.header__search-item--active');
-        if(active != null) {
-            active.classList.remove('header__search-item--active');
-        }
-        const subDisplayed = document.querySelector('.header__search-sub--display');
-        if (subDisplayed) {
-            subDisplayed.classList.remove('header__search-sub--display');
-        }
+      const active = document.querySelector(".header__search-item--active");
+      if (active != null) {
+        active.classList.remove("header__search-item--active");
+      }
+      const subDisplayed = document.querySelector(
+        ".header__search-sub--display"
+      );
+      if (subDisplayed) {
+        subDisplayed.classList.remove("header__search-sub--display");
+      }
 
-        if (header__search.classList.contains('header__search--gray')) {
-            header__search.classList.remove('header__search--gray');
-        }
+      if (header__search.classList.contains("header__search--gray")) {
+        header__search.classList.remove("header__search--gray");
+      }
 
-        if (headerSearchCustomer.classList.contains('flex2')) {
-            headerSearchCustomer.classList.remove('flex2')
-        }
-        
-        if (headerSearchBtn.classList.contains('header__search-btn--full')) {
-            headerSearchBtn.classList.remove('header__search-btn--full');
-        }  
+      if (headerSearchCustomer.classList.contains("flex2")) {
+        headerSearchCustomer.classList.remove("flex2");
+      }
+
+      if (headerSearchBtn.classList.contains("header__search-btn--full")) {
+        headerSearchBtn.classList.remove("header__search-btn--full");
+      }
     }
 
     /**-------------------Header Main Fixed--------------- */
-    headerMainFixed = document.querySelector('.main-header--fixed');
-    if ((headerTop.classList.contains('main-header--fixed'))&&(!headerMainFixed.contains(e.target))) {
-        hideHeaderFixed();
+    headerMainFixed = document.querySelector(".main-header--fixed");
+    if (
+      headerTop.classList.contains("main-header--fixed") &&
+      !headerMainFixed.contains(e.target)
+    ) {
+      hideHeaderFixed();
     }
 
-    let userSub = document.querySelector('.header__right-user-sub');
-    let user = document.querySelector('.header__right-user');
+    let userSub = document.querySelector(".header__right-user-sub");
+    let user = document.querySelector(".header__right-user");
 
-    if (userSub.classList.contains('display') && (!userSub.contains(e.target)) && (!user.contains(e.target))) {
-        userSub.classList.remove('display');
+    if (
+      userSub.classList.contains("display") &&
+      !userSub.contains(e.target) &&
+      !user.contains(e.target)
+    ) {
+      userSub.classList.remove("display");
     }
-}
+  }
 
-document.onclick = notTarget;
+  document.onclick = notTarget;
 
+  /*---------------Modal language- currency--------------------------*/
 
-
-/*---------------Modal language- currency--------------------------*/
-
-/**-----------------Display Modal  + Overlay------------------ */
-// let modal = document.querySelector('.language-currency-modal');
-headerRightBtn.onclick = function () {
-    modal.classList.add('display');
-    overlay.classList.add('display');
-    document.querySelector('body').classList.add('disabled-scroll');
-}
-/**------------------Header-------------------- */
-let navbarModalItems = document.querySelectorAll('.modal-navbar-item');
-let modalLanguageBody = document.querySelector('.language-modal-body');
-let modalCurrencyBody = document.querySelector('.currency-modal-body');
-for (const item of navbarModalItems) {
+  /**-----------------Display Modal  + Overlay------------------ */
+  // let modal = document.querySelector('.language-currency-modal');
+  headerRightBtn.onclick = function () {
+    modal.classList.add("display");
+    overlay.classList.add("display");
+    document.querySelector("body").classList.add("disabled-scroll");
+  };
+  /**------------------Header-------------------- */
+  let navbarModalItems = document.querySelectorAll(".modal-navbar-item");
+  let modalLanguageBody = document.querySelector(".language-modal-body");
+  let modalCurrencyBody = document.querySelector(".currency-modal-body");
+  for (const item of navbarModalItems) {
     item.onclick = function () {
-        if (!item.classList.contains('modal-navbar-item--active')) {
-            let navbarItemActive = document.querySelector('.modal-navbar-item--active');
-            navbarItemActive.classList.remove('modal-navbar-item--active');
-            item.classList.add('modal-navbar-item--active');
+      if (!item.classList.contains("modal-navbar-item--active")) {
+        let navbarItemActive = document.querySelector(
+          ".modal-navbar-item--active"
+        );
+        navbarItemActive.classList.remove("modal-navbar-item--active");
+        item.classList.add("modal-navbar-item--active");
 
-            if (item.classList.contains('modal-navbar-language')) {
-                modalLanguageBody.classList.remove('hide'); 
-                modalCurrencyBody.classList.remove('display');
-            } else if (item.classList.contains('modal-navbar-currency')) {
-                modalLanguageBody.classList.add('hide');
-                modalCurrencyBody.classList.add('display');
-            }
+        if (item.classList.contains("modal-navbar-language")) {
+          modalLanguageBody.classList.remove("hide");
+          modalCurrencyBody.classList.remove("display");
+        } else if (item.classList.contains("modal-navbar-currency")) {
+          modalLanguageBody.classList.add("hide");
+          modalCurrencyBody.classList.add("display");
         }
-    }
-}
-/**----------------Search-mobile------------------- */
-const searchMobile = document.querySelector('.search-mobile');
-const headerSearchMobile = document.querySelector('.header-mobile');
-const searchCloseMobile = document.querySelector('.search-mobile-head-icon');
+      }
+    };
+  }
+  /**----------------Search-mobile------------------- */
+  const searchMobile = document.querySelector(".search-mobile");
+  const headerSearchMobile = document.querySelector(".header-mobile");
+  const searchCloseMobile = document.querySelector(".search-mobile-head-icon");
 
-headerSearchMobile.onclick = function () {
-    searchMobile.classList.add('display');
-    document.querySelector('body').classList.add('disabled-scroll'); 
-}
+  headerSearchMobile.onclick = function () {
+    searchMobile.classList.add("display");
+    document.querySelector("body").classList.add("disabled-scroll");
+  };
 
-searchCloseMobile.onclick = function () {
-    searchMobile.classList.remove('display');
-    document.querySelector('body').classList.remove('disabled-scroll'); 
-}
+  searchCloseMobile.onclick = function () {
+    searchMobile.classList.remove("display");
+    document.querySelector("body").classList.remove("disabled-scroll");
+  };
 
-
-//---login--
-function on() {
+  //---login--
+  function on() {
     document.querySelector(".nav__overlay").style.display = "block";
   }
   let loginModal = document.querySelector(".nav__overlay");
-  let loginClose = document.querySelector('.fa-times-circle');
-  loginClose.onclick = function() {
+  let loginClose = document.querySelector(".fa-times-circle");
+  loginClose.onclick = function () {
     loginModal.style.display = "none";
-  }
+  };
   function off() {
-       document.querySelector(".nav__overlay").style.display = "none";
+    document.querySelector(".nav__overlay").style.display = "none";
   }
-  
 
-  
-// End header
-    </script>
-
+  // End header
+</script>
