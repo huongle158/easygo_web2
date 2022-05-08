@@ -11,6 +11,7 @@ import { LocalhostComponent } from './components/localhost/localhost.component';
 import { PrivatesiteComponent } from './components/privatesite/privatesite.component';
 import { SearchresultComponent } from './components/searchresult/searchresult.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,11 +20,14 @@ import { SearchresultComponent } from './components/searchresult/searchresult.co
   ],
   imports: [
     BrowserModule,
+   
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+   
   ],
   providers: [],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
