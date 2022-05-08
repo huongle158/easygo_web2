@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './components/booking/booking.component';
+import { CityDetailComponentComponent } from './components/city-detail-component/city-detail-component.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocalhostComponent } from './components/localhost/localhost.component';
@@ -10,6 +11,7 @@ import { SearchresultComponent } from './components/searchresult/searchresult.co
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
+  { path: 'home/:city', component: CityDetailComponentComponent },
   { path: 'booking', component: BookingComponent },
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
@@ -24,5 +26,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const RoutingComponents = [
-  BookingComponent, DiscoverComponent,HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent
+  BookingComponent, DiscoverComponent,HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent,CityDetailComponentComponent
 ]

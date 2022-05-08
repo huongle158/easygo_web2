@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Đà Lạt",
+    "place": "Da Lat",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Đà Lạt.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Đà nẵng",
+    "place": "Ho Chi Minh",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Đà Nẵng.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Cần Thơ",
+    "place": "Can Tho",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Cn_Th.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Đảo Phú Quốc",
+    "place": "Phu Quoc",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Cn_Th.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Đảo Phú Quốc",
+    "place": "Phu Quoc",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Cn_Th.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "place": "Ha Noi",
+    "desc": "Lorem Impsum dosit amet icon",
+    "name": "Hà Nội",
+    "image": "./assets/img/search_result/Hilton Hanoi Opera.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Vũng Tàu",
+    "place": "Vung Tau",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Vũng tàu.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Nha Trang",
+    "place": "Nha Trang",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Nha Trang.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  },
+  {
+    "name": "Vịnh Hạ Long",
+    "place": "Ha Long",
+    "desc": "Lorem Impsum dosit amet icon",
+    "image": "./assets/img/main_site/Hạ Long.jpg",
+    "type": "city",
+    "distance": "300km",
+    "price": "$300/person"
+  }
+]

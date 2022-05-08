@@ -10,7 +10,7 @@ import { HeaderComponent } from './components/SubComponents/header/header.compon
   declarations: [
     AppComponent,
     RoutingComponents,
-    HeaderComponent
+    HeaderComponent,
 
   ],
   imports: [
