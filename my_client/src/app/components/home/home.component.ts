@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     this._activatedRoute.paramMap.subscribe((params) => {
       let city = params.get('city');
       if (city != null) {
-        this.selectedCity = parseInt(city);
+        this.selectedCity = city;
       }
     })
     this._service.getCityData().subscribe(
@@ -30,10 +30,10 @@ export class HomeComponent implements OnInit {
     )
   }
   onSelected(data: any) {
-    this._router.navigate(['/drinks', data.place])
+    this._router.navigate(['/home', data.city])
   }
   isSelected(data: any) {
-    return data.place === this.selectedCity;
+    return data.city === this.selectedCity;
   }
 
 }

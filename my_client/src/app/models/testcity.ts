@@ -1,4 +1,4 @@
-export interface ICity {
+export class TestCity {
     "city": string;
     "place": string;
     "desc": string;

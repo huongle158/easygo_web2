@@ -7,7 +7,7 @@ import { ICity } from '../models/city';
   providedIn: 'root'
 })
 export class CityService {
-  url_city: string = "../../assets/data/products.json";
+  url_city: string = "../../assets/data/city.json";
 
 
   constructor(private _http: HttpClient) { }

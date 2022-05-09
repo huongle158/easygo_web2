@@ -1,83 +1,100 @@
 [
   {
-    "name": "Đà Lạt",
+    "city": "Đà Lạt",
     "place": "Da Lat",
     "desc": "Lorem Impsum dosit amet icon",
     "image": "./assets/img/main_site/Đà Lạt.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person",
+    "hotel":[
+      {
+        "nameHotel": "Hilton Hanoi Opera",
+        "imageHotel": "./assets/img/search_result/Hilton Hanoi Opera.jpg",
+        "rate": "(10)",
+        "priceHotel": "491,520.47 VND",
+        "type": "resort",
+        "numberPeople": 2
+      },
+      {
+        "nameHotel": "InterContinental Hanoi Westlake",
+        "imageHotel": "assets/img/search_result/InterContinental-Hanoi-Landmark72.jpg",
+        "rate": "(10)",
+        "priceHotel": "291,520.47 VND",
+        "type": "resort",
+        "numberPeople": 2
+      },
+      {
+        "nameHotel": "Lotte Hotel Hanoi",
+        "imageHotel": "./assets/img/search_result/Lotte-Hotel-Hanoi.jpg",
+        "rate": "(10)",
+        "priceHotel": "351,520.47 VND",
+        "type": "resort",
+        "numberPeople": 2
+      }
+    ]
   },
   {
-    "name": "Đà nẵng",
+    "city": "Đà nẵng",
     "place": "Ho Chi Minh",
     "desc": "Lorem Impsum dosit amet icon",
     "image": "./assets/img/main_site/Đà Nẵng.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   },
   {
-    "name": "Cần Thơ",
+    "city": "Cần Thơ",
     "place": "Can Tho",
     "desc": "Lorem Impsum dosit amet icon",
     "image": "./assets/img/main_site/Cn_Th.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   },
   {
-    "name": "Đảo Phú Quốc",
+    "city": "Đảo Phú Quốc",
     "place": "Phu Quoc",
     "desc": "Lorem Impsum dosit amet icon",
-    "image": "./assets/img/main_site/Cn_Th.jpg",
+    "image": "./assets/img/main_site/Đảo Phú Quốc.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
-  },
-  {
-    "name": "Đảo Phú Quốc",
-    "place": "Phu Quoc",
-    "desc": "Lorem Impsum dosit amet icon",
-    "image": "./assets/img/main_site/Cn_Th.jpg",
-    "type": "city",
-    "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   },
   {
     "place": "Ha Noi",
     "desc": "Lorem Impsum dosit amet icon",
-    "name": "Hà Nội",
-    "image": "./assets/img/search_result/Hilton Hanoi Opera.jpg",
+    "city": "Hà Nội",
+    "image": "./assets/img/main_site/hà nội.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   },
   {
-    "name": "Vũng Tàu",
+    "city": "Vũng Tàu",
     "place": "Vung Tau",
     "desc": "Lorem Impsum dosit amet icon",
     "image": "./assets/img/main_site/Vũng tàu.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   },
   {
-    "name": "Nha Trang",
+    "city": "Nha Trang",
     "place": "Nha Trang",
     "desc": "Lorem Impsum dosit amet icon",
     "image": "./assets/img/main_site/Nha Trang.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   },
   {
-    "name": "Vịnh Hạ Long",
+    "city": "Vịnh Hạ Long",
     "place": "Ha Long",
     "desc": "Lorem Impsum dosit amet icon",
     "image": "./assets/img/main_site/Hạ Long.jpg",
     "type": "city",
     "distance": "300km",
-    "price": "$300/person"
+    "price": "300/person"
   }
 ]

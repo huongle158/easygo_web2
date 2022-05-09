@@ -1,10 +1,15 @@
 <!-- Trang chủ -->
 <app-header></app-header>
+<!-- Test sample -->
+<!-- <section class="bg-dark text-white" *ngFor="let d of citys">
+  Hello
+  <p>{{d.city}}</p>
+</section> -->
 
 <!-- ExploreNearby -->
 <section class="section-item-1 section-item" id="explore">
-  <div class="wide">
-    <h2 class="section-item__heading text center mt-3">Explore nearby</h2>
+  <div class="wide container">
+    <h2 class="section-item__heading text center my-4">Explore nearby</h2>
     <div class="Explore-slider">
       <input
         type="radio"
@@ -26,35 +31,36 @@
         id="explore-radio3"
       />
 
-      <div class="row Explore-slider--item explore--item1">
-        <div class="col">
+      <!-- Render city -->
+      <div class="row Explore-slider--item explore--item1 d-flex flex-wrap">
+         <div class="col" *ngFor="let item of citys ;let i = index" (click)="onSelected(item)">
           <div class="nearest-place-item">
             <a href="./search-result.html">
               <div class="nearest-place-item-img">
-                <img src="./assets/img/main_site/Đà Lạt.jpg" alt="" />
+                <img src={{item.image}} alt="" />
               </div>
               <div class="nearest-place-item-info">
                 <div class="nearest-place-info-line">
-                  <div class="nearest-place-item-title">Đà Lạt</div>
+                  <div class="nearest-place-item-title">{{item.city}}</div>
                 </div>
                 <div class="nearest-place-info-line hide-on-mobile">
-                  <div>Lorem ipsum, dolor sit.</div>
+                  <div>{{item.desc}}</div>
                 </div>
                 <div class="nearest-place-info-line hide-on-mobile">
                   <div class="hide-on-mobile">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="discover-item-duration">300km</span>
+                    <span class="discover-item-duration">{{item.distance}}</span>
                   </div>
                   <div class="hide-on-mobile">
                     <i class="fas fa-dollar-sign"></i>
-                    <span class="discover-item-duration">300/person</span>
+                    <span class="discover-item-duration">{{item.price}}</span>
                   </div>
                 </div>
               </div>
             </a>
           </div>
         </div>
-        <div class="col">
+         <!-- <div class="col">
           <div class="nearest-place-item">
             <a href="./search-result.html">
               <div class="nearest-place-item-img">
@@ -108,6 +114,33 @@
             </a>
           </div>
         </div>
+        <div class="col ">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đảo Phú Quốc</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> 
         <div class="col">
           <div class="nearest-place-item">
             <a href="./search-result.html">
@@ -134,10 +167,10 @@
               </div>
             </a>
           </div>
-        </div>
+        </div>  -->
       </div>
 
-      <div class="row Explore-slider--item explore--item2">
+      <!-- <div class="row Explore-slider--item explore--item2">
         <div class="col hide-on-mobile">
           <div class="nearest-place-item">
             <a href="./search-result.html">
@@ -246,7 +279,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row Explore-slider--item explore--item3 display-none">
         <div class="col display-none display-block">
           <div class="nearest-place-item">
@@ -312,14 +345,14 @@
     </div>
   </div>
 </section>
-
+<!-- Try hosting -->
 <section class="section-item-2 section-item" id="tryhost">
   <div class="wide">
     <div class="row">
       <div class="col section-item-2-content-col hide-on-mobile">
         <div class="section-item-2-title">
-          <h3>Easy and fast</h3>
           <div class="section-item__heading">Try Hosting</div>
+          <h3 class="text-center mb-3">Easy and fast</h3>
         </div>
         <div class="try-item__row">
           <div class="try-symbol symbol-1"></div>

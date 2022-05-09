@@ -1,3 +1,341 @@
-<app-header></app-header>
-<p>Bạn đã chọn sản phẩm #{{selectedCity}}</p>
 
+<p>Bạn đã chọn thành phố {{selectedCity}}</p>
+
+<section class="section-item-1 section-item" id="explore">
+  <div class="wide container">
+    <h2 class="section-item__heading text center my-4">Explore nearby</h2>
+    <div class="Explore-slider">
+      <input
+        type="radio"
+        class="display-none"
+        name="explore-radio"
+        id="explore-radio1"
+        checked
+      />
+      <input
+        type="radio"
+        class="display-none"
+        name="explore-radio"
+        id="explore-radio2"
+      />
+      <input
+        type="radio"
+        class="display-none"
+        name="explore-radio"
+        id="explore-radio3"
+      />
+
+      <!-- Render city -->
+      <div class="row Explore-slider--item explore--item1 d-flex flex-wrap">
+         <div class="col" *ngFor="let item of hotelList ;let i = index" >
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src={{item.imageHotel}} alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">{{item.nameHotel}}</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>{{item.rate}}</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">{{item.type}}</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">{{item.priceHotel}}</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+         <!-- <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đà Nẵng.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đà Nẵng</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Cn_Th.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Cần Thơ</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col ">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đảo Phú Quốc</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div> 
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đảo Phú Quốc</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>  -->
+      </div>
+
+      <!-- <div class="row Explore-slider--item explore--item2">
+        <div class="col hide-on-mobile">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Hạ Long.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Vịnh Hạ Long</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div>
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Nha Trang.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Hà Nội</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Vũng tàu.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Vũng Tàu</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col hide-on-mobile">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Nha Trang.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Nha Trang</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div>
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div> -->
+      <div class="row Explore-slider--item explore--item3 display-none">
+        <div class="col display-none display-block">
+          <div class="nearest-place-item">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đà Lạt.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Đà Lạt</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="co display-none display-block">
+          <div class="nearest-place-item display-none display-block">
+            <a href="./search-result.html">
+              <div class="nearest-place-item-img">
+                <img src="./assets/img/main_site/Đảo Phú Quốc.jpg" alt="" />
+              </div>
+              <div class="nearest-place-item-info">
+                <div class="nearest-place-info-line">
+                  <div class="nearest-place-item-title">Phú Quốc</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div>Lorem ipsum, dolor sit.</div>
+                </div>
+                <div class="nearest-place-info-line hide-on-mobile">
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="discover-item-duration">300km</span>
+                  </div>
+                  <div class="hide-on-mobile">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="discover-item-duration">300/person</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="explore__lable display-none">
+      <label for="explore-radio1" class="index-manual-btn"></label>
+      <label for="explore-radio2" class="index-manual-btn"></label>
+      <label for="explore-radio3" class="index-manual-btn"></label>
+    </div>
+  </div>
+</section>

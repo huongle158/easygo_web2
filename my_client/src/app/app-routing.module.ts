@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
-  { path: 'searchresult', component: SearchresultComponent },
+  // { path: 'searchresult', component: SearchresultComponent },
 
 ];
 
@@ -26,5 +26,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const RoutingComponents = [
-  BookingComponent, DiscoverComponent,HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent,CityDetailComponentComponent
+  BookingComponent, DiscoverComponent, HomeComponent, CityDetailComponentComponent, LocalhostComponent,PrivatesiteComponent,SearchresultComponent
 ]
