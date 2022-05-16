@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent} from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { UploadComponent } from './components/upload/upload.component';
+import { RegisterComponent } from './components/admin/register/register.component';
+import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UploadComponent,
+    RegisterComponent,
+    ForgotPwdComponent,
+    DashboardComponent
 
   ],
   imports: [
@@ -20,6 +28,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

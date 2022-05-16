@@ -16,6 +16,7 @@ export class SearchresultComponent implements OnInit {
   arrays: any = [];
   eMessage: string = '';
   filterList: any = [];
+  city: string = 'Thành phố Đà Lạt';
 
   constructor(private _hotelService: HotelService, private _filterService: FilterService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
@@ -27,9 +28,12 @@ export class SearchresultComponent implements OnInit {
 
   getAllHotels() {
     this._hotelService.getHotels().subscribe({
-      next: data => { this.hotelArray = data; this.arrays = data },
+      next: data => {this.hotelArray = data; this.arrays = data },
       error: err => this.eMessage = err
     })
+    // this.hotelArray = this.hotelArray.filter((a:any) => a.place.city == 'Thành phố Đà Lạt');
+    // this.hotelArray = this.arrays;
+    console.log(this.hotelArray);
   }
 
   filterArray: any = [];
@@ -47,7 +51,6 @@ export class SearchresultComponent implements OnInit {
         var firstArray = this.tempArray[i];
         for (let i = 0; i < firstArray.length; i++) {
           var obj = firstArray[i];
-          // this.hotelArray.push(obj);
           if (this.hotelArray.includes(obj) === false) { this.hotelArray.push(obj) }
         }
       }
@@ -73,8 +76,9 @@ export class SearchresultComponent implements OnInit {
     console.log(this.hotelArray)
 
   }
+
   getHotelHaveFilter(dacdiem: string) {
-    return this.arrays.filter((a: any) => {
+    return this.hotelArray.filter((a: any) => {
       if (a.convenient.includes(dacdiem) || dacdiem == '') {
         return a;
       }
