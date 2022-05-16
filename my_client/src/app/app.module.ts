@@ -17,20 +17,19 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
     RoutingComponents,
     HeaderComponent,
     FooterComponent,
-    UploadComponent,
-    RegisterComponent,
-    ForgotPwdComponent,
-    DashboardComponent
+    
 
   ],
   imports: [
     BrowserModule,
+   
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

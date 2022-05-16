@@ -8,13 +8,6 @@ padding:20px  ;
   display: flex;
   justify-content: space-around;
 }
-.flex{
-    display: flex;
-}
-.flexcol{
-    display: flex;
-    flex-direction: column;
-}
 
 
 .header--menu__ul{
@@ -22,10 +15,10 @@ padding:20px  ;
     display: flex;
     font-size: 20px;
     justify-content: space-around;
-    flex-wrap: wrap;
+   width: 70%;
     
 }
-.header--menu >ul>li:hover{
+.header--menu__ul>li:hover{
  
   font-weight: bold;
   background-color: var(--btn-color);
@@ -39,11 +32,11 @@ hr{
     margin: 0;
 }
 
-
+/* 
 .header--menu>ul>li>a{
     margin:0 45px  ;
     display: block;
-}
+} */
 .fa-user-o{
     font-size: 30px !important;
     padding: 0 3px;
@@ -63,7 +56,8 @@ hr{
     position: relative;
     
 }
-
+.sss{height:100%
+}
 .hotel-quality{
     font-size: 28px;
     justify-content: space-between;
@@ -73,42 +67,18 @@ hr{
     color: #febb02;
 }
 
-.hotel-img__item{
-    border: 2px black;
-    width: 30%;
-    margin-right: 5px;
-   
-    /* min-width: 100px; */
 
-}
-.img3{
-    width: 15%; 
-}
-.section1__btn{
-    position: absolute;
-    right: 10px;
-    bottom: 5px;
-   color: var(--text-Color);  
-}
-.s1_btn--item{
-    border-radius: 15px;
-    width: 100px;
-    height: 40px;
-}
 
+
+/* 
 .btn--hover button:hover{
     background-color:var(--btn-color);
     transition: ease-in 0.35s;
     -moz-transition: ease-in 0.35s;
     -webkit-transition: ease-in 0.35s;
-}
+} */
 /* section2 */
-.booking--section2 {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+
   .booking__feedback{
     height: 300px;
     box-shadow:rgb(194, 191, 191);
@@ -202,77 +172,51 @@ hr{
 
   
 /* filter*/
-.booking-filter__container{
-    width: 30%;
+.section2-right{
+    width: 80%;
     min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    border-radius: 8px ;
-    border:2px  rgb(253, 251, 251) outset;
+    height: 300px;
     font-size: 18px;
-    margin-right: 10px;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 .booking--border{
-    margin:15px 25px 5px  25px;
     border:1px solid;
     border-radius: 8px ;
 }
+.check-date{
+    /* height: 120px; */
+}
+.Number-people{
+    height: 30x;
+}
 .filter-find{
     display: flex;
-    
-  
 }
-.filter__search-item::before {
+
+
+
+.filter__btn{
+    width: 70%;
+    height: 35px;
+    text-align: center;
+  font-weight: bold;
+  background-color: #6246E5;
+  transform:translateX(25%);
+}
+
+.glyphicon-search:hover{
+    cursor:auto;
+    color: #6246E5;
+}
+/* .filter__search-item::before {
     content: "";
     display: block;
     width: 1px;
     height: 25px;
     background-color: #ddd;
     position: absolute;
-} 
-#add-date {
-    width: 80%;
-}
-.add-date{
-    width: 55%;
-    text-align: center;
-    
-}
-.place-text{
-   margin-left: 5px;
-    width: 35%;
-    font-weight: bold;
-    font-size: 20px;
-}
-.place-text >input{
-    width: 80%;
-    text-align: center;
-}
-.filter-places{
-    height: 110px;
-    overflow-y: hidden;
-}
-.filter-place{
-    padding-left: 10px;
-}
-.filter__btn{
-    text-align: center;
-  font-weight: bold;
-  width: 30%;
-  height: 35px;
-  background-color: #FFFFFF;
-  margin-left: 50%;
-  transform:translateX(-50%);
-}
-.glyphicon-search{
-    padding: 5px;
-}
-.glyphicon-search:hover{
-    cursor:auto;
-    color: #6246E5;
-}
+}  */
 /* section3 */
 .section3{
     max-height:420px ;
@@ -558,4 +502,111 @@ margin-left: 15px;
       margin-right: 30px;
        min-width: 80%; 
     }
+}
+.container {
+    margin-top: 20px;
+}
+
+/* Carousel Styles */
+.carousel-indicators .active {
+    background-color: #2980b9;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-image: none;
+	background-repeat: no-repeat;
+	text-shadow: none;
+}
+
+.carousel-control.left span {
+	padding: 0;
+}
+
+.carousel-control.right span {
+	padding: 0;
+}
+
+.carousel-control .glyphicon-chevron-left, 
+.carousel-control .glyphicon-chevron-right, 
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+	position: absolute;
+	top: 45%;
+	z-index: 5;
+	display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
+	left: 0;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+	right: 0;
+}
+
+.carousel-control.left span,
+.carousel-control.right span {
+	background-color: #000;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover {
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+
+/* Carousel Header Styles */
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+
+.header-text h2 {
+    font-size: 40px;
+}
+
+.header-text h2 span {
+    background-color: #2980b9;
+	padding: 10px;
+}
+
+.header-text h3 span {
+	background-color: #000;
+	padding: 15px;
+}
+
+.btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+
+.btn-theme {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.btn-theme:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
 }

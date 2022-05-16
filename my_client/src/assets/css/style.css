@@ -6,7 +6,7 @@
 
 /* =============== SECTION 1 ================ */
 .section-item-1 {
-    --col-number: 5;
+    --col-number: 4;
     --space-col: 25px;
 
 }
@@ -14,7 +14,8 @@
     display: none;
 }
 .section-item-1 .row {
-    flex-wrap: nowrap !important;
+    /* flex-wrap: nowrap !important; */
+    flex-wrap: nowrap ;
 
 }
 

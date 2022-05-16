@@ -3,6 +3,7 @@ import { RegisterComponent } from './components/admin/register/register.componen
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './components/booking/booking.component';
+import { CityDetailComponentComponent } from './components/city-detail-component/city-detail-component.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocalhostComponent } from './components/localhost/localhost.component';
@@ -10,6 +11,7 @@ import { LoginComponent } from './components/admin/login/login.component';
 import { PrivatesiteComponent } from './components/privatesite/privatesite.component';
 import { SearchresultComponent } from './components/searchresult/searchresult.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
@@ -37,5 +39,8 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const RoutingComponents = [
-  BookingComponent, DiscoverComponent,HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent
+  BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent,
+  RegisterComponent,
+  ForgotPwdComponent,
+  DashboardComponent
 ]

@@ -1,2 +1,4 @@
 node_modules/
+.history/
+.angular/
 desktop.ini
