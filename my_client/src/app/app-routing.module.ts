@@ -19,10 +19,6 @@ const routes: Routes = [
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
-<<<<<<< HEAD
-  {path:'home/_id',component:BookingComponent},
-  // { path: 'searchresult', component: SearchresultComponent },
-=======
 
   //Client
   { path: 'hotel', component: SearchresultComponent },
@@ -34,7 +30,6 @@ const routes: Routes = [
   { path: 'admin/forgot-pwd', component: ForgotPwdComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
 
->>>>>>> 10c4f1589f3d1928145590c39f6297d870031c2f
 
 ];
 
