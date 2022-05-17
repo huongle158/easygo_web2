@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
+  {path:'home/_id',component:BookingComponent},
   // { path: 'searchresult', component: SearchresultComponent },
 
 ];

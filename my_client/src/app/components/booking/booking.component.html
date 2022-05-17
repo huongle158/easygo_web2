@@ -82,7 +82,7 @@
     <p class="text-title">Your personal Photographer in Hotel</p>
     <div class="hotel-quality flex" >
         <div class="hotel-start"> 
-            <i class="fa fa-star"></i> 4</div>
+            <i class="fa fa-star"></i> {{hotel[0].rating.rate}}</div>
         <div class="section1--icon text-right">
             <i class="fa fa-gift"></i>
             <i class="fa fa-share-square-o"></i>
@@ -93,7 +93,8 @@
         <div class="row ">
           <div class="col-xl-7  ">
             <div class=" col-sm-6 p-2 ">
-                <img src="../../assets/img/booking_site/khachSan1.jpg"  alt="5">
+                <!-- <img src="../../assets/img/booking_site/khachSan1.jpg"  alt="5"> -->
+                {{hotel[0].image[0]}}
               </div>
               <div class="col-sm-6 p-2">
                 <img src="../../assets/img/booking_site/khachSan2.jpg"  alt="5">
@@ -122,10 +123,10 @@
 <!-- section2 -->
 <div class="section2">
     <div class="row">
-        <div class="col-xl-8 ">
+        <div class="col-xl-8 " >
             <div class="para1">
                 <p class="text-title">
-                    Apartment overview
+                    {{hotel[0].name}}
                 </p>
                 <p>3 living rooms,1 bed, 1 bathroom</p>
                 <hr>
@@ -151,18 +152,18 @@
                 <div class="row">
                     <div class="para2-1 col-6">
                         <ul style="list-style-type:disc;">
-                            <li> A kitchen</li>
-                            <li>Wifi</li>
-                            <li>Free parking</li>
-                            <li>Elevator.</li>
+                            <li> {{hotel[0].convenient[0]}}</li>
+                            <li> {{hotel[0].convenient[1]}}</li>
+                            <li> {{hotel[0].convenient[2]}}</li>
+                            <li> {{hotel[0].convenient[3]}}</li>
                         </ul>
                     </div>
                     <div  class="para2-2 col-6">
                         <ul style="list-style-type:disc;">
-                            <li> Washing machine</li>
-                            <li>Air conditioner</li>
-                            <li> Courtyard or balcony</li>
-                            <li>Indoor security camera</li>
+                            <li> {{hotel[0].convenient[4]}}</li>
+                            <li>{{hotel[0].convenient[5]}}</li>
+                            <li> {{hotel[0].convenient[6]}}</li>
+                            <li>{{hotel[0].convenient[7]}}</li>
                         </ul>
                     </div>
                 </div>
@@ -182,7 +183,7 @@
                         <li> Self check-in by keyboard</li>
                         <li>No smoking</li>
                         <li>  No pets</li>
-                        <li>No parties or events are allowed</li>
+                        <li>No parties or events are allowed</li>y
                     </ul>
                 </div>
                 <div class="col-4">
@@ -210,22 +211,23 @@
         <div class="col-xl-4">
             <div class="section2-right shadow p-3 mb-5 bg-white rounded">
                 <p><span class="font-weight-bold">From 2.000VND</span>/day</p>
-                <div class=" check-date row flex  booking--border ">
-                    <div class=" col-5 ">
-                        <label for="Check_in" class="">Check in</label>
-                        <input id="Check_in" type="text" placeholder="thêm ngày">
+                <div class=" booking-inf row flex  booking--border ">
+                    <div class=" row ">
+                        <label for="Check_in" class="col-5">Check in</label>
+                        <label class="col-5" for="Check_out">Check out</label>
+                       
                     </div>
-                    <div class="col-5">
-                        <label for="Check_out">Check out</label>
-                        <input id="Check_out" type="text" placeholder="Thêm ngày">
+                    <div class="row">
+                        <input id="Check_in" class="col-5" type="text" placeholder="thêm ngày">
+                        <input class="col-5" id="Check_out" type="text" placeholder="Thêm ngày">
                     </div>
                     <div class="col-2">
                         <span class="glyphicon glyphicon-search"></span>
                     </div>
                 </div>
-                <div class="row booking--border number-people ">
+                <div class="row booking--border booking-inf ">
                     <label for="Number-people">Number People</label>
-                    <select id="Number-people" name="Number-people">
+                    <select class="" id="Number-people" name="Number-people">
                         <option value ="none">1 people</option>
                         <option value ="guava">2 people</option>
                         <option value ="lychee">4 people</option>
@@ -241,28 +243,6 @@
      <hr>
 </div>
 
-<!-- section3 -->
-<div id="carouselExampleControls" class="carousel slide" data-mdb-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="Wild Landscape"/>
-      </div>
-      <div class="carousel-item">
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="Camera"/>
-      </div>
-      <div class="carousel-item">
-        <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="Exotic Fruits"/>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleControls" data-mdb-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
  <!-- section3 -->
     <div class="booking--section3 wide"id="Location">
         <p class="text-title">Similar hotel</p>
@@ -271,57 +251,92 @@
                 <input type="radio" name="similar-radio" id="similar-radio2" >
                 <input type="radio" name="similar-radio" id="similar-radio3" >
                 <input type="radio" name="similar-radio" id="similar-radio4" >
-        
-                <div class="similar-hotel--item similar--item1">
-                    <div class="similar-slider">
-                        <div class="similar-slider--item">
+                <div class="similar-hotel--item  similar--item1">
+                    <div class="row similar--item">
+                        <div class="col-lg-4 p-3 mt-2">
                             <a href="">
-                                <div class="similar-hotel__img">
-                                    <img src="../../assets/img/booking_site/KhachSan2.jpg" alt="">
+                                <div class="card p-3  shadow-sm">
+                                    <span class="text-center">
+                                        <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                    </span>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                        <p class="h4 text-danger">$1900</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span>&#9733;</span>
+                                            <span>Count:</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn bg-warning text-white text-center">Buy Now</button>
                                 </div>
-                                <div class="similar-hotel__text">
-                                    <p>Mango Bay Resort</p>
-                                </div>
+                                
                             </a>
                         </div> 
-                        <div class="similar-slider--item">
+                        <div class="col-lg-4 p-3 mt-2 ">
                             <a href="">
-                                <div class="similar-hotel__img">
-                                    <img src="./assets/img/booking_site/KhachSan3.jpg" alt="">
-                                </div>
-                                <div class="similar-hotel__text">
-                                    <p>VinOasis Phu Quoc </p>
+                                <div class="card  p-3 shadow-sm">
+                                    <span class="text-center">
+                                        <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                    </span>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                        <p class="h4 text-danger">$1900</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span>&#9733;</span>
+                                            <span>Count:</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn bg-warning text-white text-center">Buy Now</button>
                                 </div>
                             </a>
                         </div>   
-                        <div class="similar-slider--item">
+                        <div class="col-lg-4 p-3 mt-2  ">
                             <a href="">
-                                <div class="similar-hotel__img  ">
-                                    <img src="./assets/img/booking_site/KhachSan1.jpg" alt="">
-                                </div>
-                                <div class="similar-hotel__text">
-                                    <p>Princess Beach Resort</p>
+                                <div class="card p-3 shadow-sm">
+                                    <span class="text-center">
+                                        <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                    </span>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                        <p class="h4 text-danger">$1900</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span>&#9733;</span>
+                                            <span>Count:</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn bg-warning text-white text-center">Buy Now</button>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="similar-hotel--item  similar--item2">
+               
+                <!-- <div class="similar-hotel--item  similar--item2">
                     <div class="similar-slider">
                         <div class="similar-slider--item">
                             <a href="">
-                                <div class="similar-hotel__img">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" alt="">
+                                <div>
+                                    
+                                    <span class="text-center">
+                                        <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                    </span>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                        <p class="h4 text-danger">$1900</p>
+                                        <div class="d-flex justify-content-between">
+                                            <span>&#9733;</span>
+                                            <span>Count:</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn bg-warning text-white text-center">Buy Now</button>
                                 </div>
-                                <div class="similar-hotel__text">
-                                    <p>Mango Bay Resort 1</p>
-                                </div>
+                                
                             </a>
                         </div> 
                         <div class="similar-slider--item">
                             <a href="">
                                 <div class="similar-hotel__img">
-                                    <img src="./assets/img/booking_site/KhachSan2.jpg" alt="">
+                                    <img src="./assets/img/booking_site/KhachSan4.jpg" alt="">
                                 </div>
                                 <div class="similar-hotel__text">
                                     <p>VinOasis Phu Quoc 1</p>
@@ -345,7 +360,7 @@
                         <div class="similar-slider--item">
                             <a href="">
                                 <div class="similar-hotel__img">
-                                    <img src="./assets/img/booking_site/KhachSan2.jpg" alt="">
+                                    <img src="./assets/img/booking_site/KhachSan4.jpg" alt="">
                                 </div>
                                 <div class="similar-hotel__text">
                                     <p>Mango Bay Resort 1</p>
@@ -355,7 +370,7 @@
                         <div class="similar-slider--item">
                             <a href="">
                                 <div class="similar-hotel__img">
-                                    <img src="./assets/img/booking_site/KhachSan3.jpg" alt="">
+                                    <img src="./assets/img/booking_site/KhachSan4.jpg" alt="">
                                 </div>
                                 <div class="similar-hotel__text">
                                     <p>VinOasis Phu Quoc 1</p>
@@ -365,7 +380,7 @@
                         <div class="similar-slider--item">
                             <a href="">
                                 <div class="similar-hotel__img  ">
-                                    <img src="./assets/img/booking_site/KhachSan1.jpg" alt="">
+                                    <img src="./assets/img/booking_site/KhachSan4.jpg" alt="">
                                 </div>
                                 <div class="similar-hotel__text">
                                     <p>Dusit Princess Resort 3</p>
@@ -379,7 +394,7 @@
                         <div class="similar-slider--item">
                             <a href="">
                                 <div class="similar-hotel__img">
-                                    <img src="./assets/img/booking_site/KhachSan2.jpg" alt="">
+                                    <img src="./assets/img/booking_site/KhachSan4.jpg" alt="">
                                 </div>
                                 <div class="similar-hotel__text">
                                     <p>Mango  Resort </p>
@@ -399,7 +414,7 @@
                         <div class="similar-slider--item">
                             <a href="">
                                 <div class="similar-hotel__img  ">
-                                    <img src="./assets/img/booking_site/KhachSan1.jpg" alt="">
+                                    <img src="./assets/img/booking_site/KhachSan4.jpg" alt="">
                                 </div>
                                 <div class="similar-hotel__text">
                                     <p>Dusit Princess Resort 4</p>
@@ -407,7 +422,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             
         </div>
         <div class="similar__lables">
@@ -418,9 +433,8 @@
         </div>
     </div>
 
-<p class="text-title">
-    Other suggestions:
-</p>
+
+  
 <!-- <div class="p-3 mb-2 bg-dark">
     <h2 class="text-center text-white">Product List</h2>
 </div>
@@ -469,85 +483,9 @@
            
         
     </div> -->
-<div class="container">
-	<div class="row">
-		<!-- Carousel -->
-    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-			  	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			</ol>
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-			    <div class="item active">
-			    	<img src="https://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="First slide">
-                    <!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                            	<span>Welcome to <strong>LOREM IPSUM</strong></span>
-                            </h2>
-                            <br>
-                            <h3>
-                            	<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
-                        </div>
-                    </div><!-- /header-text -->
-			    </div>
-			    <div class="item">
-			    	<img src="https://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Second slide">
-			    	<!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                                <span>Welcome to LOREM IPSUM</span>
-                            </h2>
-                            <br>
-                            <h3>
-                            	<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
-                        </div>
-                    </div><!-- /header-text -->
-			    </div>
-			    <div class="item">
-			    	<img src="https://unsplash.s3.amazonaws.com/batch%209/barcelona-boardwalk.jpg" alt="Third slide">
-			    	<!-- Static Header -->
-                    <div class="header-text hidden-xs">
-                        <div class="col-md-12 text-center">
-                            <h2>
-                                <span>Welcome to LOREM IPSUM</span>
-                            </h2>
-                            <br>
-                            <h3>
-                            	<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                            </h3>
-                            <br>
-                            <div class="">
-                                <a class="btn btn-theme btn-sm btn-min-block" href="#">Login</a><a class="btn btn-theme btn-sm btn-min-block" href="#">Register</a></div>
-                        </div>
-                    </div><!-- /header-text -->
-			    </div>
-			</div>
-			<!-- Controls -->
-			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-		    	<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-		    	<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
-		</div><!-- /carousel -->
-	</div>
-</div>
+
 <!-- footer -->
-<!-- <footer>
+ <footer>
     <div class="footer">
         <div class="footer__logo">
             <div class="footer__logo--img"> <a href="./index.html"><img src="./assets/img/EASYGO_logo.png" alt=""></a></div>
@@ -628,7 +566,7 @@
         <p>All rights Reserved @easygo.com</p>
     </div>
 </footer>
- <script>
+ <!-- <script>
 
   function billingOn(){
   document.querySelector(".billing__overlay").style.display = "block";
@@ -679,6 +617,5 @@ for (i = 0; i < span.length; i++) {
     }
 }
 }
-</script> -->
+</script> --> 
 
-</div>
