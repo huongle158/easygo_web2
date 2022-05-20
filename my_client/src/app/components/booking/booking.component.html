@@ -1,120 +1,138 @@
-<div class=" wide"><header class="booking-header">
-    <div class="booking-header--container ">
-        <div>
-        <!-- <div class="header--logo"> -->
-            <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                <img
-                  src="./assets/img/EASYGO_logo.png" 
-                  height="15"
-                  alt="MDB Logo"
-                  loading="lazy"
-                />
-            </a>
+<div class=" wide">
+    <nav class=" navbar fixed-top  navbar-expand-lg navbar-light bg-light">
+      <div class="wide">
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+            src="./assets/img/EASYGO_logo.png" 
+            height="15"
+            alt="MDB Logo"
+            loading="lazy"
+        />
+        </a>
+    
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Photos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Amenities</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Location</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Review</a>
+          </li>
+      </ul>
+      <ul class="navbar-right ">
+            <li class="nav-item dropdown text-end">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              </svg>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+      
+      </div>
+            
         </div>
+      </nav>
+  
         
-        <ul class=" header--menu__ul">
-                    <li class="nav-item">
-                      <a class="nav-link"href="#Photos">Photos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#Amenities" href="#">Amenities</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link"href="#Location">Location</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Review">Review</a>
-                      </li>
-        </ul>
+            <!-- <div >   <i class="fa fa-user-o  index__login" onclick="on()"></i></div>
+            <div class="nav__overlay" onclick="off()" id="nav__overlay" >
+                <div class="index__login-sub ">
+                    <FORM class="wide-login">
+                        <div class="login_form" >
+                            <div class="login__header form__row">
+                                <div><i class="far fa-times-circle"></i></div>
+                                <div class="login-header__text">Log in or Sign up</div>
+                            </div>
+                            <hr>
+                            <div class="login-title form__row" >Welcome to EasyGo</div>
+                            <div class="form__row">
+                                <input class="login__input" type="text" placeholder="Full name">
+                            </div>
+                            <div class="form__row">
+                                <input class="login__input" type="text" placeholder="Phone number">
+                            </div>
+                            <p class=" login_text-small">We'll call or text you to confirm your number</p>
+                            <button  class="login__btn"> Continue</button>
+                        
+                        </div>
+                        <div class="form__row b">
+                            <hr class="hr-or">
+                            <span class="login_text-or">Or</span>
+                            <hr class="hr-or">
+                        </div>
+                        <div class="login_dif">
+                            <div class="login_dif-item login__input">
+                                <a href="#">
+                                    <i class="fa fa-facebook" ></i> 
+                                    <input class="login_dif-input"  type="button" value="Continue with Facebook">
+                                </a>
+                            </div>
+                            <div class="login_dif-item login__input">
+                                <a href="#">
+                                    <i class="fab fa-google"></i>
+                                    <input class="login_dif-input" type="button" value="Continue with Google">
+                                </a>
+                            </div>
+                        </div>
+                    </FORM>>
+                </div> 
+            </div>-->
         
-       
-        <!-- <div >   <i class="fa fa-user-o  index__login" onclick="on()"></i></div>
-        <div class="nav__overlay" onclick="off()" id="nav__overlay" >
-            <div class="index__login-sub ">
-                <FORM class="wide-login">
-                    <div class="login_form" >
-                        <div class="login__header form__row">
-                            <div><i class="far fa-times-circle"></i></div>
-                            <div class="login-header__text">Log in or Sign up</div>
-                        </div>
-                        <hr>
-                        <div class="login-title form__row" >Welcome to EasyGo</div>
-                        <div class="form__row">
-                            <input class="login__input" type="text" placeholder="Full name">
-                        </div>
-                        <div class="form__row">
-                            <input class="login__input" type="text" placeholder="Phone number">
-                        </div>
-                        <p class=" login_text-small">We'll call or text you to confirm your number</p>
-                        <button  class="login__btn"> Continue</button>
-                    
-                    </div>
-                    <div class="form__row b">
-                        <hr class="hr-or">
-                        <span class="login_text-or">Or</span>
-                        <hr class="hr-or">
-                    </div>
-                    <div class="login_dif">
-                        <div class="login_dif-item login__input">
-                            <a href="#">
-                                <i class="fa fa-facebook" ></i> 
-                                <input class="login_dif-input"  type="button" value="Continue with Facebook">
-                            </a>
-                        </div>
-                        <div class="login_dif-item login__input">
-                            <a href="#">
-                                <i class="fab fa-google"></i>
-                                <input class="login_dif-input" type="button" value="Continue with Google">
-                            </a>
-                        </div>
-                     </div>
-                </FORM>>
-            </div> 
-        </div>-->
-    </div>
-     <hr>
-     <a href=""><p class="header--text">Hanoi,VietNam > Art and Culture > Art > Photography</p>   </a>
-</header>
+        <hr class="hr-top">
+        <a href=""><p class="fs-2">Hanoi,VietNam > Art and Culture > Art > Photography</p>   </a>
+   
 <!-- section1 -->
 
 <div class="booking--section1"id="Photos"> 
    
-    <p class="text-title">Your personal Photographer in Hotel</p>
-    <div class="hotel-quality flex" >
-        <div class="hotel-start"> 
+    <p class="fs-1 fw-bold"> {{hotel[0].name}}</p>
+    <div class="row hotel-quality " >
+        <div  class=" col-6 text-warning"> 
             <i class="fa fa-star"></i> {{hotel[0].rating.rate}}</div>
-        <div class="section1--icon text-right">
+        <div class=" col-6  text-end ">
             <i class="fa fa-gift"></i>
             <i class="fa fa-share-square-o"></i>
             <i class="fa fa-heart-o"></i>
         </div>
     </div>
-    <div class="container">
-        <div class="row ">
-          <div class="col-xl-7  ">
-            <div class=" col-sm-6 p-2 ">
+ 
+    <div class="containe hotel_img">
+        <div class="row justify-content-around ">
+          <div class="col-xl-3 p-2 ">
+          
                 <!-- <img src="../../assets/img/booking_site/khachSan1.jpg"  alt="5"> -->
-                {{hotel[0].image[0]}}
-              </div>
-              <div class="col-sm-6 p-2">
+                <!-- {{hotel[0].image[0]}} -->
+           
                 <img src="../../assets/img/booking_site/khachSan2.jpg"  alt="5">
-              </div>
+            
           </div>
-          <div class="col-xl-5">
-            <div class=" col-sm-4 ">
-                    <div class=" row mb-2">
-                        <img src="../../assets/img/booking_site/khachSan3.jpg" alt="5">
-                      </div>
-                    <div class="row ">
-                        <img src="../../assets/img/booking_site/khachSan4.jpg" alt="5">
-                    </div>
-            </div>
-            <div class="col-sm-8 ">
-                <img src="../../assets/img/booking_site/khachSan9.jpg" alt="5">
-              </div>
-               
-          </div>
+            <div class="col-xl-3 p-2 ">     
+                <img src="../../assets/img/booking_site/khachSan2.jpg"  alt="5">
         
+            </div>
+          <div class="col-xl-3  p-2 ">
+                   
+             <img src="../../assets/img/booking_site/khachSan4.jpg" alt="5">
+           
+            </div>
+            <div class="col-sm-3 p-2">
+                <img src="../../assets/img/booking_site/khachSan9.jpg" alt="5">
+            </div>
         </div>
       </div>
  
@@ -126,28 +144,44 @@
         <div class="col-xl-8 " >
             <div class="para1">
                 <p class="text-title">
-                    {{hotel[0].name}}
+                   Toàn bộ căn hộ cho thuê
                 </p>
-                <p>3 living rooms,1 bed, 1 bathroom</p>
+                <p>{{hotel[0].numberofpeople}} người,{{hotel[0].bed}} phòng ngủ,{{hotel[0].bathroom}} phồng tắm</p>
+                <p>{{hotel[0].place.city}}, {{hotel[0].place.province}}, {{hotel[0].place.country}}</p>
                 <hr>
             </div>
             <div class="para2">
                 <p class="text-title">
-                    Introduce about accommodation
+                   Ưu điểm:
                 </p>
                 <ul style="list-style-type:disc;">
+                    <li class="fw-bold">{{hotel[0].characteristic[0].title}}
+                        </li>
+                    <p>{{hotel[0].characteristic[0].content}}</p>
+                    <li  class="fw-bold">{{hotel[0].characteristic[1].title}}</li>
+                    <p>{{hotel[0].characteristic[1].content}}</p>
+                   
+                </ul>
+                <hr>
+            </div>
+            <div class="para3">
+                <p class="text-title">
+                   Giới thiệu về chỗ ở:
+                </p>
+                <p>{{hotel[0].description}}</p>
+                <!-- <ul style="list-style-type:disc;">
                     <li> Local, safe, cultural neighbourhood</li>
                     <li>Full of local restaurants and street food down the road</li>
                     <li> Spotlessly clean.</li>
                     <li>Working desk. High speed WIFI.</li>
                     <li>Fully-equipped kitchen</li>
                     <li> 24/7 check-in/check-out</li>
-                </ul>
+                </ul> -->
                 <hr>
             </div>
-            <div class="para1">
+            <div class="para4">
                 <p class="text-title">
-                    Features of the accommodation
+                    Tính năng của nơi ở:
                 </p>
                 <div class="row">
                     <div class="para2-1 col-6">
@@ -169,36 +203,37 @@
                 </div>
                 <hr>
             </div>
-            <div class="para1">
+            <div class="para5">
                 <p class="text-title">
-                    Things need to notice:
+                   Những điều cần lưu ý:
                 </p>
             </div>
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="col-4">
-                    <h5>The housing regulation </h5>
+                    <h5>Nội quy nhà</h5>
                     <ul style="list-style-type:disc;">
-                        <li>Check-in: After 14:00</li>
-                        <li>Check out: 12:00</li>
-                        <li> Self check-in by keyboard</li>
-                        <li>No smoking</li>
-                        <li>  No pets</li>
-                        <li>No parties or events are allowed</li>y
+                        <li>{{hotel[0].rule[0]}}</li>
+                        <li>{{hotel[0].rule[1]}}</li>
+                        <li> {{hotel[0].rule[2]}}</li>
+                        <li>{{hotel[0].rule[3]}}</li>
+                        <li>  {{hotel[0].rule[4]}}</li>
+                        <li>{{hotel[0].rule[5]}}</li>y
                     </ul>
                 </div>
-                <div class="col-4">
-                    <h5>Health and safety</h5>
+                <div class="col-5 ">
+                    <h5>Y tế và An toàn</h5>
                     <ul style="list-style-type:disc;">
-                        <li>Apply Airbnb's social distancing and other COVID-19 guidelines</li>
-                        <li>No information about having a CO detector Show more</li>
-                        <li>Security cameras/recorders Show more
-                            Smoke alarms</li> 
+                        <li>{{hotel[0].safety[0]}}</li>
+                        <li>{{hotel[0].safety[1]}}</li>
+                        <li>{{hotel[0].safety[2]}}</li> 
+                        <li>{{hotel[0].safety[3]}}</li>
+                        <li>{{hotel[0].safety[4]}}</li> 
                     </ul>
                 </div>
-                <div class="col-4">
-                    <h5>Cancellation Policy</h5>
+                <div class="col-3">
+                    <h5>Chính sách hủy phòng</h5>
                     <ul style="list-style-type:disc;">
-                        <li> Add dates for your trip to receive information about the cancellation policy for this booking.</li>
+                        <li>Thêm ngày cho chuyến đi của bạn để nhận thông tin về chính sách hủy cho đặt phòng này.</li>
                     </ul>
                 
                 </div>
@@ -243,10 +278,216 @@
      <hr>
 </div>
 
+<div class="section3">
+    <p class="text-title"> Những gợi ý khác</p>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel indicators -->
+    
+    
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+               <div class="row justify-content-around">
+                <div class="col-lg-3 p-3 mt-2">
+                    <a href="">
+                        <div class="card p-3  shadow-sm">
+                            <span class="text-center">
+                                <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                            </span>
+                            <div class="card-body">
+                                <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                <p class="h4 text-danger">$1900</p>
+                                <div class="d-flex justify-content-between">
+                                    <span>&#9733;</span>
+                                    <span>Count:</span>
+                                </div>
+                            </div>
+                            <button class="btn bg-warning text-white text-center">Buy Now</button>
+                        </div>
+                        
+                    </a>
+                </div> 
+                <div class="col-lg-3 p-3 mt-2 ">
+                    <a href="">
+                        <div class="card  p-3 shadow-sm">
+                            <span class="text-center">
+                                <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                            </span>
+                            <div class="card-body">
+                                <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                <p class="h4 text-danger">$1900</p>
+                                <div class="d-flex justify-content-between">
+                                    <span>&#9733;</span>
+                                    <span>Count:</span>
+                                </div>
+                            </div>
+                            <button class="btn bg-warning text-white text-center">Buy Now</button>
+                        </div>
+                    </a>
+                </div>   
+                <div class="col-lg-3 p-3 mt-2  ">
+                    <a href="">
+                        <div class="card p-3 shadow-sm">
+                            <span class="text-center">
+                                <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                            </span>
+                            <div class="card-body">
+                                <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                <p class="h4 text-danger">$1900</p>
+                                <div class="d-flex justify-content-between">
+                                    <span>&#9733;</span>
+                                    <span>Count:</span>
+                                </div>
+                            </div>
+                            <button class="btn bg-warning text-white text-center">Buy Now</button>
+                        </div>
+                    </a>
+                </div>
+               </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="row justify-content-around">
+                    <div class="col-lg-3 p-3 mt-2">
+                        <a href="">
+                            <div class="card p-3  shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                    <p class="h4 text-danger">$1900</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>&#9733;</span>
+                                        <span>Count:</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-warning text-white text-center">Buy Now</button>
+                            </div>
+                            
+                        </a>
+                    </div> 
+                    <div class="col-lg-3 p-3 mt-2 ">
+                        <a href="">
+                            <div class="card  p-3 shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                    <p class="h4 text-danger">$1900</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>&#9733;</span>
+                                        <span>Count:</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-warning text-white text-center">Buy Now</button>
+                            </div>
+                        </a>
+                    </div>   
+                    <div class="col-lg-3 p-3 mt-2  ">
+                        <a href="">
+                            <div class="card p-3 shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                    <p class="h4 text-danger">$1900</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>&#9733;</span>
+                                        <span>Count:</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-warning text-white text-center">Buy Now</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item  ">
+                <div class="row justify-content-around">
+                    <div class="col-lg-3 p-3 mt-2">
+                        <a href="">
+                            <div class="card p-3  shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                    <p class="h4 text-danger">$1900</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>&#9733;</span>
+                                        <span>Count:</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-warning text-white text-center">Buy Now</button>
+                            </div>
+                            
+                        </a>
+                    </div> 
+                    <div class="col-lg-3 p-3 mt-2 ">
+                        <a href="">
+                            <div class="card  p-3 shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                    <p class="h4 text-danger">$1900</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>&#9733;</span>
+                                        <span>Count:</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-warning text-white text-center">Buy Now</button>
+                            </div>
+                        </a>
+                    </div>   
+                    <div class="col-lg-3 p-3 mt-2  ">
+                        <a href="">
+                            <div class="card p-3 shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">Mango Bay Resort 1</h4>
+                                    <p class="h4 text-danger">$1900</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>&#9733;</span>
+                                        <span>Count:</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-warning text-white text-center">Buy Now</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    
+        <!-- Carousel controls -->
+       
+            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+      <div class="control">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+</div>
+
+
+
  <!-- section3 -->
-    <div class="booking--section3 wide"id="Location">
+    <!-- <div class="booking--section3 wide"id="Location">
         <p class="text-title">Similar hotel</p>
-        <div class="similar-hotel"><!--slider-->
+        <div class="similar-hotel">
                 <input type="radio" name="similar-radio" id="similar-radio1" checked>
                 <input type="radio" name="similar-radio" id="similar-radio2" >
                 <input type="radio" name="similar-radio" id="similar-radio3" >
@@ -309,7 +550,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                
                 <!-- <div class="similar-hotel--item  similar--item2">
                     <div class="similar-slider">
@@ -424,14 +665,14 @@
                     </div>
                 </div> -->
             
-        </div>
+        <!-- </div>
         <div class="similar__lables">
             <label for="similar-radio1" class="hotel__label-slider"></label>
             <label for="similar-radio2"  class="hotel__label-slider"></label>
             <label for="similar-radio3"  class="hotel__label-slider"></label>
             <label for="similar-radio4"  class="hotel__label-slider"></label>
         </div>
-    </div>
+    </div> -->
 
 
   
@@ -485,54 +726,57 @@
     </div> -->
 
 <!-- footer -->
- <footer>
-    <div class="footer">
-        <div class="footer__logo">
-            <div class="footer__logo--img"> <a href="./index.html"><img src="./assets/img/EASYGO_logo.png" alt=""></a></div>
-            <div class="footer__logo--text">
-            <p>Book your trip in minute, get full control for much longer</p>
+<footer class="wide">
+    <div class="row">
+        <div class="col-xl-3	col-md-6 text-center footer-logo">
+            <div class=""> <a href="./index.html"><img src="./assets/img/EASYGO_logo.png" alt=""></a></div>
+            <div class="fs-5">
+            <p class="text-wrap" >Book your trip in minute, get full control for much longer</p>
             </div>
         </div>
-        <div class="footer__link">
-            <div class="footer__link--item">
-                <ul class="footer__ul" >
-                    <li><h3>Company</h3></li>
-                    <li>
-                        <a href="#"> About </a>
-                    </li>
-                    <li>
-                        <a href="#"> Careers </a>
-                    </li>
-                    <li><a href="#"> Mobile</a></li>
-                </ul>
+        <div class="col-xl-6 col-lg-8 col-md-8">
+            <div class="row">
+                <div class="col-4">
+                    <ul class="footer__ul fs-3" >
+                        <li><h3 class="fw-bold ">Company</h3></li>
+                        <li>
+                            <a href="#"> About </a>
+                        </li>
+                        <li>
+                            <a href="#"> Careers </a>
+                        </li>
+                        <li><a href="#"> Mobile</a></li>
+                    </ul>
+                </div>
+               
+                <div class="col-4">
+                    <ul class="footer__ul fs-3">
+                        <li><h3 class="fw-bold ">Contact</h3></li>
+                        <li>
+                            <a href="#"> Help/FQA </a>
+                        </li>
+                        <li>
+                            <a href="#"> Press </a>
+                        </li>
+                        <li><a href="#"> Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul class="footer__ul fs-3" >
+                        <li><h3 class="fw-bold ">More</h3></li>
+                        <li>
+                            <a href="#"> AirlineFees</a>
+                        </li>
+                        <li>
+                            <a href="#"> Airlines </a>
+                        </li>
+                        <li><a href="#"> Low fare tips</a></li>
+                    </ul>
+                </div>
             </div>
-           
-            <div class="footer__link--item">
-                <ul class="footer__ul">
-                    <li><h3>Contact</h3></li>
-                    <li>
-                        <a href="#"> Help/FQA </a>
-                    </li>
-                    <li>
-                        <a href="#"> Press </a>
-                    </li>
-                    <li><a href="#"> Affiliate</a></li>
-                </ul>
-            </div>
-            <div class="footer__link--item">
-                <ul class="footer__ul" >
-                    <li><h3>More</h3></li>
-                    <li>
-                        <a href="#"> AirlineFees</a>
-                    </li>
-                    <li>
-                        <a href="#"> Airlines </a>
-                    </li>
-                    <li><a href="#"> Low fare tips</a></li>
-                </ul>
-            </div>
+          
         </div>
-        <div class="footer__media hide-booking-mobile">
+        <div class="col-xl-3 col-lg-4 col-md-4">
            <div class="footer__media--socialIcon">
                 <a href="#">
                     <i class="fa fa-facebook" ></i> 
@@ -548,24 +792,31 @@
                 </a>
            </div>
            <div class="footer__media--discover">
-               <h3>Discover our app</h3>
-               <a href="#" class="footer__img--discover">-
-                 
-                   <img src="../../assets/img/bia.jpg" alt="">
-               </a>
-                <a href="#" class="footer__img--discover">
-                   
-                   <img src="../../assets/img/bia.jpg" alt="">
-
-                </a>
+               <p class="fw-bold fs-2">Discover our app</p>
+               <div class="row">
+                   <div class="col-6">
+                        <a href="#" class="footer__img--discover">
+                            <img src="./assets/img/AppStore.PNG" alt="">
+                        </a>
+                   </div>
+                   <div class="col-6">
+                        <a href="#" class="footer__img--discover">
+                            <img src="./assets/img/CHplay.PNG" alt="">
+        
+                        </a>
+                   </div>
+               </div>
+               
+               
             </div>
         </div>
     </div>
     
-    <div class="footer__text">
+    <div class="text-center mt-15 font-weight-bold fs-5">
         <p>All rights Reserved @easygo.com</p>
     </div>
 </footer>
+
  <!-- <script>
 
   function billingOn(){
@@ -618,4 +869,31 @@ for (i = 0; i < span.length; i++) {
 }
 }
 </script> --> 
+<script>
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $("#myCarousel").carousel("cycle");
+        });
+    });
+</script>
+<!-- <script>
+    $(document).ready(function(){
+        $("#myCarousel").carousel({
+            interval: false
+        });
+    });
+    </script> -->
+    <!-- <script>
+        $(document).ready(function(){
+            $("#myCarousel").carousel({
+                wrap: false
+            });
+        });
+        </script> -->
+        <!-- Center alignment using text alignment classes -->
 
+<script>
+    $(document).ready(function(){
+        $("#myCarousel").carousel("nextWhenVisible");
+    });
+    </script>

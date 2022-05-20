@@ -8,7 +8,7 @@ import { HotelService } from 'src/app/services/hotel.service';
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css', '../../../assets/css/booking.css', '../../../assets/css/base.css']
+  styleUrls: ['./booking.component.css', '../../../assets/css/booking.css', '../../../assets/css/base.css','../../shared/footer/footer.component.css']
 })
 export class BookingComponent implements OnInit {
   hotel= new Hotel();

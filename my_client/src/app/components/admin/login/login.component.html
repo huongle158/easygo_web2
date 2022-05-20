@@ -1,21 +1,21 @@
 <!-- Button to Open the Modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
     Open modal
-  </button>
+  </button> -->
   
   <!-- The Modal -->
-  <div class="modal fade" id="myModal">
+  <!-- <div class="modal fade" id="myModal">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content"> -->
   
         <!-- Modal Header -->
-        <div class="modal-header">
+        <!-- <div class="modal-header">
           <h4 class="modal-title">Modal Heading</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
+        </div> -->
   
         <!-- Modal body -->
-        <div class="modal-body signin_modal">
+        <!-- <div class="modal-body signin_modal">
             <ul class="nav nav-tabs" id="home-tab" role="tablist">
                 <li class="nav-item">
                     <a href="#signup" class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Sign Up</a>
@@ -24,13 +24,54 @@
                     <a href="#signin" class="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Sign In</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
   
         <!-- Modal footer -->
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div>
   
       </div>
     </div>
+  </div> -->
+<div class="wide">
+  <div class="img-logo p-3">
+    <a>
+      <img src="./assets/img/EASYGO_logo.png" alt="Logo EasyGo">
+    </a>
   </div>
+  <div class="form col-6">
+    <div class="container-fluid">
+      <p class="text-center fw-bold fs-1 mb-20">Đăng Nhập</p>   
+      <form #registerForm="ngForm">
+      
+       <div class="mb-3 ">
+          <!-- <label for="email">Email</label> -->
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          
+            <input type="text" [email]="true" #email="ngModel" name="email" id="email" class="form-control" placeholder="Enter Email" 
+            [(ngModel)]="user.email" required [class.is-invalid]="email.invalid && email.touched">
+          </div>
+          
+           <!--<small class="text-danger" [class.d-none]="email.valid || email.touched" > Bạn chưa nhập email</small>-->
+           <div *ngIf="email.errors && (email.invalid || email.touched)">
+              <small class="text-danger" *ngIf="email.errors['required']">Bạn chưa nhập email</small>
+              <small  class="text-danger" *ngIf="email.errors['email']">Email không hợp lệ</small>
+          </div>
+          
+        </div> 
+        <div class="mb-3 input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" id="password" class="form-control" formControlName="pass" placeholder="Enter PassWord">
+        </div>
+        <div class=" mt-20  ">
+          <input type="button" class="btn btn-primary btn-login mt-20 fw-bold fs-2" value="Đăng nhập">
+        </div>
+      </form>
+    </div>
+    
+  </div>
+ 
+</div>
+ 
