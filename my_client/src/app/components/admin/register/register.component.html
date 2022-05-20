@@ -1,1 +1,37 @@
-<p>register works!</p>
+<div class="wide">
+    <div class="img-logo p-3">
+      <a>
+        <img src="./assets/img/EASYGO_logo.png" alt="Logo EasyGo">
+      </a>
+    </div>
+    <div class="form col-6">
+      <div class="container-fluid">
+        <p class="text-center fw-bold fs-1 mb-20">Đăng Nhập</p>   
+        <form #registerForm="ngForm">
+         
+      
+         <div class="mb-3 ">
+            <!-- <label for="email">Email</label> -->
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            
+              <input type="text" [email]="true" #email="ngModel" name="email" id="email" class="form-control" placeholder="Enter Email" 
+              [(ngModel)]="user.email" required [class.is-invalid]="email.invalid && email.touched">
+            </div>
+            
+             <!--<small class="text-danger" [class.d-none]="email.valid || email.touched" > Bạn chưa nhập email</small>-->
+             <div *ngIf="email.errors && (email.invalid || email.touched)">
+                <small class="text-danger" *ngIf="email.errors['required']">Bạn chưa nhập email</small>
+                <small  class="text-danger" *ngIf="email.errors['email']">Email không hợp lệ</small>
+            </div>
+            
+          </div> 
+          <div class="mb-3">
+            <input type="button" class="btn btn-primary btn-login mt-20 fw-bold fs-2" value="Lấy mã OTP">
+          </div>
+        </form>
+      </div>
+      
+    </div>
+   
+  </div>
