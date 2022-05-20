@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'hotel/:id', component: BookingComponent },
 
   //Admin
+  { path: 'admin/upload', component: UploadComponent },
   { path: 'admin/login', component: LoginComponent },
   { path: 'admin/register', component: RegisterComponent },
   { path: 'admin/forgot-pwd', component: ForgotPwdComponent },

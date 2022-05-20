@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingComponent implements OnInit {
 
-  constructor() { }
+  selectedId: any;
+
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe((param)=>{
+      let id = param.get('_id');
+      if(id != null)
+        this.selectedId = parseInt(id);
+    })
   }
 
 }

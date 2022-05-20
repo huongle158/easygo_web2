@@ -7,7 +7,7 @@ const Upload = require('../models/Upload');
 var storage = multer.diskStorage({
     destination: "images",
     filename: (req, file, cb) => {
-        cb(null, file.originalname)
+        cb(null, `${Date.now()}--${file.originalname}`)
     }
 })
 
@@ -25,15 +25,30 @@ router.route('/')
     })
 
 router.post('/upFile', (req, res) => {
-    upload(req, res, err => {
+    upload(req, res, async(err) => {
         if(err){
             res.json({message: err.message})
         }
         else{
-            console.log("File received: ", req.file.filename)
+            // console.log("File received: ", req.file.filename)
+
+            let productInfo = new Upload({
+                name: req.body.name,
+                thumbPath: req.file.filename
+            });
+            await productInfo.save();
             res.json({message: "Success"})
         }
     })
+})
+
+router.get('/uploadedFile', async(req, res) => {
+    try{
+        let products = await Upload.find({});
+        res.json(products);
+    }catch(err){
+        res.json({message: err.message})
+    }
 })
 
 // router.get('/uploadedFile', function (req, res) {

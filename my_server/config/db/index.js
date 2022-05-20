@@ -5,7 +5,7 @@ async function connect(){
     try{
         await mongoose.connect(process.env.DB_URL, {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true    
         })
         console.log("Connect Successfully!")
     }
@@ -14,5 +14,5 @@ async function connect(){
     }
 }
 
-
-module.exports = { connect }
+module.exports = { connect,
+    secretOrKey: 'yoursecret' }

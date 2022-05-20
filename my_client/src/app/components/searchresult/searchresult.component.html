@@ -8,8 +8,8 @@
 
 <div class="container">
     <div class="d-flex flex-wrap flex-sm-row">
-        <div class="card m-3" *ngFor="let hotel of hotelArray" style="width: 400px;" >
-            <img src="{{hotel.image[0]}}" class="" width="400" height="300">
+        <div class="card m-3" *ngFor="let hotel of hotelArray" style="width: 350px;" (onclick)="onSelect(hotel)">
+            <img src="{{hotel.image[0]}}" class="" width="350" height="250">
             <div class="card-body m-2">
                 <h3 class="card-title text-truncate">{{hotel.name}}</h3>
                 <div class="d-flex justify-content-between">

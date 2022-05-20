@@ -31,9 +31,6 @@ export class SearchresultComponent implements OnInit {
       next: data => {this.hotelArray = data; this.arrays = data },
       error: err => this.eMessage = err
     })
-    // this.hotelArray = this.hotelArray.filter((a:any) => a.place.city == 'Thành phố Đà Lạt');
-    // this.hotelArray = this.arrays;
-    console.log(this.hotelArray);
   }
 
   filterArray: any = [];
@@ -54,6 +51,7 @@ export class SearchresultComponent implements OnInit {
           if (this.hotelArray.includes(obj) === false) { this.hotelArray.push(obj) }
         }
       }
+      console.log(this.hotelArray)
     }
     else {
       this.filterArray = this.filterArray.filter((a: any) => a != event.target.value);
@@ -73,17 +71,19 @@ export class SearchresultComponent implements OnInit {
         this.hotelArray = this.arrays;
       }
     }
-    console.log(this.hotelArray)
-
   }
 
   getHotelHaveFilter(dacdiem: string) {
-    return this.hotelArray.filter((a: any) => {
+    return this.arrays.filter((a: any) => {
       if (a.convenient.includes(dacdiem) || dacdiem == '') {
         return a;
       }
     })
     // Trả về chuỗi chứa các ks có đặc điểm muốn lọc
+  }
+
+  onSelect(data:any){
+    this.router.navigate(['/hotel', data._id])
   }
 
 }
