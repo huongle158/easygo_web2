@@ -23,4 +23,9 @@ export class HotelService {
   handleError(err:HttpErrorResponse){
     return throwError(() => new Error(err.message))
   }
+  find(_id:any):Observable<Hotel>{
+    return this._http.get<Hotel>(`${this.baseUrl}/hotel`).pipe(
+    
+    )
+  }
 }

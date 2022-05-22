@@ -8,28 +8,27 @@ padding:20px  ;
   display: flex;
   justify-content: space-around;
 }
-
-
-.header--menu__ul{
-   
-    display: flex;
-    font-size: 20px;
-    justify-content: space-around;
-   width: 70%;
-    
+.text-title{
+    font-weight: bold;
+    font-size: 25px;
 }
-.header--menu__ul>li:hover{
- 
-  font-weight: bold;
-  background-color: var(--btn-color);
-  transition: ease-in 0.35s;
-  -moz-transition: ease-in 0.35s;
-  -webkit-transition: ease-in 0.35s;
+img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+ }
+
+.hr-top{
+    color: var(--gray-color);
+   border: 1px solid;
+    margin-top: 70px;
 }
 hr{
     color: var(--gray-color);
    border: 1px solid;
-    margin: 0;
+    margin-top: 20px;
 }
 
 /* 
@@ -42,16 +41,9 @@ hr{
     padding: 0 3px;
 
 }
-.header--text{
-  font-size: 20px;
 
-}
 /* section1 */
-.text-title{
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 35px;
-}
+
 .booking--section1{
     position: relative;
     
@@ -181,20 +173,25 @@ hr{
     margin-right: auto;
 }
 .booking--border{
+    margin: 5px;
     border:1px solid;
     border-radius: 8px ;
 }
-.check-date{
-    /* height: 120px; */
+.booking-inf{
+  
+   min-height: 80px;
+
 }
-.Number-people{
-    height: 30x;
+.number-people{
+
 }
 .filter-find{
     display: flex;
 }
 
-
+select{
+    border: none;
+}
 
 .filter__btn{
     width: 70%;
@@ -235,16 +232,19 @@ hr{
    position: absolute;
 
 }
-
-.similar-slider{
+.similar--item{
     display: flex;
+    justify-content: space-between;
 }
-.similar-slider--item{
+/* .similar-slider{
+    display: flex;
+} */
+/* .similar-slider--item{
     width: 30%;
     margin: 25px;
     border-radius: 25px;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
-}
+} */
 
 .similar-hotel input{
 display: none;
@@ -255,10 +255,10 @@ display: none;
 .similar-hotel__img >img{
     border-radius: 25px;
 }
-.similar-hotel__text{
+/* .similar-hotel__text{
     font-size: 27px;
     font-weight: bold;
-}
+} */
 .similar__lables {
     display: flex;
     justify-content: center;
@@ -436,9 +436,7 @@ margin-left: 15px;
    .hotel-img__item{
        width: 60%;
    }
-   .img3{
-       width: 30%;
-   }
+
    .section1__btn{
        
     right:10%;

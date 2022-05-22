@@ -1,0 +1,29 @@
+<div class="wide">
+    <div class="img-logo p-3">
+      <a>
+        <img src="./assets/img/EASYGO_logo.png" alt="Logo EasyGo">
+      </a>
+    </div>
+    <div class="form col-6">
+      <div class="container-fluid">
+        <p class="text-center fw-bold fs-1 mb-20">Đăng Nhập</p>   
+        <form #registerForm="ngForm">
+        
+         <div class="mb-3 input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="text" id="otpCode" class="form-control" formControlName="otpCode" placeholder="Nhập mã OTP">
+          </div> 
+          <div class="mb-3 input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" id="password" class="form-control" formControlName="pass" placeholder="Nhập Mật Khẩu">
+          </div>
+          <div class=" mt-20  ">
+            <input type="button" class="btn btn-primary btn-login mt-20 fw-bold fs-2" value="Xác Nhận">
+          </div>
+        </form>
+      </div>
+      
+    </div>
+   
+  </div>
+   
