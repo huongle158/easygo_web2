@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/admin';
+import User from '../../../models/admin';
 
 @Component({
   selector: 'app-register',

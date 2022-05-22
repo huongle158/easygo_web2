@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './components/booking/booking.component';
 import { CityDetailComponentComponent } from './components/city-detail-component/city-detail-component.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+// import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocalhostComponent } from './components/localhost/localhost.component';
@@ -13,17 +13,15 @@ import { PrivatesiteComponent } from './components/privatesite/privatesite.compo
 import { SearchresultComponent } from './components/searchresult/searchresult.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { UploadComponent } from './components/upload/upload.component';
-
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
-<<<<<<< HEAD
-  { path: 'dashboard', component: DashboardComponent  },
-  // { path: 'searchresult', component: SearchresultComponent },
-=======
+
+ 
 
   //Client
   { path: 'hotel', component: SearchresultComponent },
@@ -36,22 +34,20 @@ const routes: Routes = [
   { path: 'admin/forgot-pwd', component: ForgotPwdComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
 
->>>>>>> 82f634304885baab89f2b24fa8d0947ecdff912d
+
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), IvyCarouselModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
 export const RoutingComponents = [
-<<<<<<< HEAD
-  DiscoverComponent, HomeComponent, CityDetailComponentComponent, LocalhostComponent, PrivatesiteComponent, SearchresultComponent,BookingComponent,DashboardComponent
-=======
-  BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent,
+
+  BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent, CityDetailComponentComponent,
   RegisterComponent,
   ForgotPwdComponent,
   DashboardComponent
->>>>>>> 82f634304885baab89f2b24fa8d0947ecdff912d
+
 ]
