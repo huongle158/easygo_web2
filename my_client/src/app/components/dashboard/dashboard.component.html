@@ -1,0 +1,274 @@
+<div class="container-fulid">
+  <div class="wrapprt d-flex py-5">
+    <!-- Cột  admin menu-->
+    <div class="col-3 admin-menu">
+      <!-- Logo -->
+      <div class="logo text-center mb-5">
+        <img
+          class="mw-100"
+          [style]="{ width: '70%', 'margin-left': '-25%' }"
+          src="./assets/img/EASYGO_logo.png"
+          alt=""
+        />
+      </div>
+
+      <!-- Chức năng -->
+      <div class="d-flex flex-column mx-5" [style]="{ 'margin-top': '80px' }">
+        <div class="booking my-3">
+          <p class="font-weight-bold">
+            <a href="#" class="pe-auto">
+              <i class="fa fa-calendar-plus"></i>
+              <span> Đặt phòng</span>
+            </a>
+          </p>
+        </div>
+        <div class="booking my-3">
+          <p class="font-weight-bold">
+            <a href="#" class="pe-auto">
+              <i class="fa fa-cog"></i>
+              <span> Thông tin phòng</span>
+            </a>
+          </p>
+        </div>
+        <!-- Info avatar -->
+        <div class="admin-ava my-3 d-flex">
+          <img
+            [style]="{ width: '50px' }"
+            class="mw-100 img-profile rounded-circle"
+            src="./assets/img/admin.png"
+            alt=""
+          />
+          <div class="name d-flex flex-column mx-2">
+            <h5>Thanh Lam</h5>
+            <span>Chủ phòng</span>
+          </div>
+          <span class="my-auto" [style]="{ 'font-size': '14px' }"
+            ><i class="glyphicon glyphicon-log-out"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột dashboard -->
+    <div class="col-9 d-flex flex-column">
+      <div class="info-satistics mb-5 d-flex">
+        <div class="data-part d-flex">
+          <div
+            [style]="{ background: '#4D44B5', 'border-radius': '100%' }"
+            class="px-3 text-center d-flex justify-content-center align-items-center"
+          >
+            <i
+              class="text-white"
+              [style]="{ 'font-size': '25px', color: '#FFFFFF' }"
+              class="fab fa-blogger"
+            ></i>
+          </div>
+          <div
+            class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
+          >
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
+          </div>
+        </div>
+        <div class="data-part d-flex">
+          <div
+            [style]="{ background: '#4D44B5', 'border-radius': '100%' }"
+            class="px-3 text-center d-flex justify-content-center align-items-center"
+          >
+            <i
+              class="text-white"
+              [style]="{ 'font-size': '25px', color: '#FFFFFF' }"
+              class="fab fa-blogger"
+            ></i>
+          </div>
+          <div
+            class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
+          >
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
+          </div>
+        </div>
+        <div class="data-part d-flex">
+          <div
+            [style]="{ background: '#4D44B5', 'border-radius': '100%' }"
+            class="px-3 text-center d-flex justify-content-center align-items-center"
+          >
+            <i
+              class="text-white"
+              [style]="{ 'font-size': '25px', color: '#FFFFFF' }"
+              class="fab fa-blogger"
+            ></i>
+          </div>
+          <div
+            class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
+          >
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
+          </div>
+        </div>
+        <div class="data-part d-flex">
+          <div
+            [style]="{ background: '#4D44B5', 'border-radius': '100%' }"
+            class="px-3 text-center d-flex justify-content-center align-items-center"
+          >
+            <i
+              class="text-white"
+              [style]="{ 'font-size': '25px', color: '#FFFFFF' }"
+              class="fab fa-blogger"
+            ></i>
+          </div>
+          <div
+            class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
+          >
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
+          </div>
+        </div>
+      </div>
+      <!-- All booking -->
+      <div class="booking" [style]="{ color: '#303972' }">
+        <h3 class="my-5">All Bookings</h3>
+        <carousel [cellWidth]="'100%'" [dots]=true class="p-3">
+          <div class="carousel-cell">
+            <table
+              class="table table-borderless text-center w-70" 
+              [style]="{
+                'font-size': '18px',
+                'font-weight': '500',
+                'color': '#303972'
+              }"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Guests</th>
+                  <th scope="col">Room ID</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>
+                    <a class="mx-3" [style]="{ 'font-size': '22px' }">
+                      <i class="fa fa-phone"></i>
+                    </a>
+                    <a [style]="{ 'font-size': '22px' }">
+                      <i class="fa fa-envelope"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="carousel-cell">
+            <table
+              class="table table-borderless text-center"
+              [style]="{
+                'font-size': '18px',
+                'font-weight': '500',
+                'color': '#303972'
+              }"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Guests</th>
+                  <th scope="col">Room ID</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>
+                    <a class="mx-3" [style]="{ 'font-size': '22px' }">
+                      <i class="fa fa-phone"></i>
+                    </a>
+                    <a [style]="{ 'font-size': '22px' }">
+                      <i class="fa fa-envelope"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="carousel-cell">
+            <table
+              class="table table-borderless text-center"
+              [style]="{
+                'font-size': '18px',
+                'font-weight': '500',
+                'color': '#303972'
+              }"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Guests</th>
+                  <th scope="col">Room ID</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>
+                    <a class="mx-3" [style]="{ 'font-size': '22px' }">
+                      <i class="fa fa-phone"></i>
+                    </a>
+                    <a [style]="{ 'font-size': '22px' }">
+                      <i class="fa fa-envelope"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </carousel>
+        <!-- <table class="table table-borderless w-75 text-center" [style]='{"font-size":"18px","font-weight":"500","color":"#303972"}'>
+          <thead>
+            <tr>
+              <th scope="col">Guests</th>
+              <th scope="col">Room ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Payment</th>
+              <th scope="col">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mark</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>
+                <a class="mx-3" [style]='{"font-size":"22px"}'>
+                  <i class="fa fa-phone"></i>
+                </a>
+                <a  [style]='{"font-size":"22px"}'>
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </td>
+            </tr>
+           
+          </tbody>
+        </table> -->
+        <!--  -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [style]='{"font-size":"15px","height":"75px","font-weight":"bold"}' -->

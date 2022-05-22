@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './components/booking/booking.component';
 import { CityDetailComponentComponent } from './components/city-detail-component/city-detail-component.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocalhostComponent } from './components/localhost/localhost.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
+  { path: 'dashboard', component: DashboardComponent  },
   // { path: 'searchresult', component: SearchresultComponent },
 
 ];
@@ -26,5 +28,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const RoutingComponents = [
-  BookingComponent, DiscoverComponent, HomeComponent, CityDetailComponentComponent, LocalhostComponent,PrivatesiteComponent,SearchresultComponent
+  DiscoverComponent, HomeComponent, CityDetailComponentComponent, LocalhostComponent, PrivatesiteComponent, SearchresultComponent,BookingComponent,DashboardComponent
 ]

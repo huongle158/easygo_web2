@@ -5,21 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent} from './app.component';
 import { HeaderComponent } from './components/SubComponents/header/header.component';
-
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
     HeaderComponent,
+   
 
   ],
   imports: [
     BrowserModule,
-   
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    IvyCarouselModule
    
   ],
   providers: [],
