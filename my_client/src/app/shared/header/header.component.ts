@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../../../../assets/css/base.css', '../../../../assets/css/responsive.css', '../../../../assets/css/style.css', './header.component.css']
+  styleUrls: ['../../../assets/css/base.css', '../../../assets/css/responsive.css', '../../../assets/css/style.css', './header.component.css']
 })
 export class HeaderComponent implements OnInit {
 
