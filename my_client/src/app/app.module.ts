@@ -6,7 +6,7 @@ import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent} from './app.component';
 
 // import { HeaderComponent } from './components/SubComponents/header/header.component';
-//import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -28,7 +28,7 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    // IvyCarouselModule,
+    IvyCarouselModule,
     ReactiveFormsModule
 
   ],

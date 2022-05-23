@@ -13,7 +13,7 @@ import { PrivatesiteComponent } from './components/privatesite/privatesite.compo
 import { SearchresultComponent } from './components/searchresult/searchresult.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { UploadComponent } from './components/upload/upload.component';
-//import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
@@ -39,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), IvyCarouselModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
