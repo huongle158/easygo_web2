@@ -1,3 +1,4 @@
+// import { AppRoutingModule } from './app-routing.module';
 import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { NgModule } from '@angular/core';
@@ -42,7 +43,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes), IvyCarouselModule],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
 export const RoutingComponents = [
 
   BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent, CityDetailComponentComponent,
