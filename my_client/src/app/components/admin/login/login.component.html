@@ -10,9 +10,7 @@
       <form #registerForm="ngForm">
 
         <div class="mb-3 ">
-          <label for="username">Username:
-
-          </label>
+          
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 
@@ -20,8 +18,6 @@
               placeholder="Enter username" [(ngModel)]="admin.username" required
               [class.is-invalid]="username.invalid && username.touched">
           </div>
-
-          <small class="text-danger" [class.d-none]="username.valid || username.touched"> Bạn chưa nhập username</small>
           <div *ngIf="username.errors && (username.invalid || username.touched)">
             <small class="text-danger" *ngIf="username.errors['required']">Bạn chưa nhập username</small>
             <small class="text-danger" *ngIf="username.errors['username']">username không hợp lệ</small>

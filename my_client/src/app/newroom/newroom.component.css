@@ -1,0 +1,48 @@
+.wide{
+    background-color: #E5E5E5;
+}
+.cl-bg{
+    /* background-color: #6e749c; */
+    background-color: #303972;
+}
+.cl-text{
+    color:  #303972;
+    font-size: 20px;
+    font-weight: bold;
+}
+.admin-img{
+    width: 100px;
+    height: 100px;
+    
+}
+.img-logo{
+    width: 80%;
+}
+.cl-left{
+    color: #0600F0;
+}
+.admin-avt {
+    width: 30px;
+    height: 30px;
+}
+.room-detail{
+    border-radius: 25px;
+}
+.margin-l{
+
+}
+.textarea{
+height: 100px;
+max-block-size:120px ;
+    overflow-y:hidden;
+}
+.header-room{
+    border-start-start-radius: 25px;
+    border-start-end-radius: 25px;
+}
+.btn-save{
+    width: 20%;
+    height: 50px;
+    color: #ffff;
+    
+}

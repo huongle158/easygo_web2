@@ -19,6 +19,7 @@ import { UploadComponent } from './components/upload/upload.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { NewroomComponent } from './newroom/newroom.component';
 
 import { AllroomComponent } from './components/admin/allroom/allroom.component';
 
@@ -30,6 +31,8 @@ import { AllroomComponent } from './components/admin/allroom/allroom.component';
     HeaderComponent,
     FooterComponent,
     AllroomComponent,
+    NewroomComponent,
+
   ],
   imports: [
     BrowserModule,
