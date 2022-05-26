@@ -3,7 +3,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
-import { AppComponent} from './app.component';
+import { AppComponent } from './app.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+
 
 // import { HeaderComponent } from './components/SubComponents/header/header.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
@@ -15,6 +20,8 @@ import { RegisterComponent } from './components/admin/register/register.componen
 import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 
+import { AllroomComponent } from './components/admin/allroom/allroom.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +29,7 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
     RoutingComponents,
     HeaderComponent,
     FooterComponent,
+    AllroomComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +37,12 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
     FormsModule,
     HttpClientModule,
     IvyCarouselModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzButtonModule,
+    NzTableModule,
+    NzDividerModule,
+    NzIconModule
+
 
   ],
   providers: [],

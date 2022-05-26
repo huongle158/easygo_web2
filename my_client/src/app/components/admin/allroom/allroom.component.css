@@ -1,0 +1,24 @@
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+a {
+    text-decoration: none;
+    color: #030229ba;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.admin-menu,
+.admin-menu div {
+    background: #FFFFFF;
+    border-radius: 15px;
+}
+
+p {
+    color: #030229;
+    font-family: "Poppins";
+}
+
+table {
+    font-family: "Poppins";
+}

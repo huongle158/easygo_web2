@@ -14,6 +14,7 @@ import { SearchresultComponent } from './components/searchresult/searchresult.co
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { AllroomComponent } from './components/admin/allroom/allroom.component';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'admin/register', component: RegisterComponent },
   { path: 'admin/forgot-pwd', component: ForgotPwdComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
+  { path: 'admin/allroom', component: AllroomComponent },
 
 
 
@@ -48,6 +50,6 @@ export const RoutingComponents = [
   BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent, CityDetailComponentComponent,
   RegisterComponent,
   ForgotPwdComponent,
-  DashboardComponent
+  DashboardComponent,AllroomComponent
 
 ]
