@@ -1,6 +1,4 @@
-* {
-    /* background: #F7F7F8; */
-}
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
 
 a {
     text-decoration: none;

@@ -33,7 +33,11 @@
   position: relative;
 }
 .card img{
-  border-radius: 10px;
+  border-radius: 25px;
+}
+.shadow-sm{
+  background-color: #EDEDED;
+  border-radius: 25px;
 }
 .carousel-indicators{
   position: absolute;

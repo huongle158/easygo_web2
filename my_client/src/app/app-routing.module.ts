@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './components/booking/booking.component';
 import { CityDetailComponentComponent } from './components/city-detail-component/city-detail-component.component';
+// import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocalhostComponent } from './components/localhost/localhost.component';
@@ -11,13 +12,17 @@ import { PrivatesiteComponent } from './components/privatesite/privatesite.compo
 import { SearchresultComponent } from './components/searchresult/searchresult.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { UploadComponent } from './components/upload/upload.component';
-
+// import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { AllroomComponent } from './components/admin/allroom/allroom.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
   { path: 'discover', component: DiscoverComponent },
   { path: 'localhost', component: LocalhostComponent },
   { path: 'privatesite', component: PrivatesiteComponent },
+
+ 
 
   //Client
   { path: 'hotel', component: SearchresultComponent },
@@ -30,17 +35,21 @@ const routes: Routes = [
   { path: 'admin/login', component: LoginComponent },
   { path: 'admin/register', component: RegisterComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
+  { path: 'admin/allroom', component: AllroomComponent },
+
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), IvyCarouselModule],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
 export const RoutingComponents = [
-  BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent,
+
+  BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent, CityDetailComponentComponent,
   RegisterComponent,
-  DashboardComponent
+  DashboardComponent,AllroomComponent
+
 ]

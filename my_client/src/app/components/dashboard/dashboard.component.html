@@ -18,7 +18,7 @@
           <p class="font-weight-bold">
             <a href="#" class="pe-auto">
               <i class="fa fa-calendar-plus"></i>
-              <span> Booking Analyst</span>
+              <span> Đặt phòng</span>
             </a>
           </p>
         </div>
@@ -26,7 +26,7 @@
           <p class="font-weight-bold">
             <a href="#" class="pe-auto">
               <i class="fa fa-cog"></i>
-              <span> Room Detail</span>
+              <span> Thông tin phòng</span>
             </a>
           </p>
         </div>
@@ -67,7 +67,7 @@
             class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
           >
             <p [style]="{ 'font-size': '15px' }">Total Booking</p>
-            <h3 class="font-weight-bold text-center">932K</h3>
+            <h3 class="font-weight-bold text-center">932</h3>
           </div>
         </div>
         <div class="data-part d-flex">
@@ -84,8 +84,8 @@
           <div
             class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
           >
-            <p [style]="{ 'font-size': '15px' }">New Booking (today)</p>
-            <h3 class="font-weight-bold text-center">40K</h3>
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
           </div>
         </div>
         <div class="data-part d-flex">
@@ -102,8 +102,8 @@
           <div
             class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
           >
-            <p [style]="{ 'font-size': '15px' }">Total cancel</p>
-            <h3 class="font-weight-bold text-center">54K</h3>
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
           </div>
         </div>
         <div class="data-part d-flex">
@@ -120,8 +120,8 @@
           <div
             class="desc-part d-flex flex-column justify-content-around align-items-center mx-3"
           >
-            <p [style]="{ 'font-size': '15px' }">Total Earning</p>
-            <h3 class="font-weight-bold text-center">32K</h3>
+            <p [style]="{ 'font-size': '15px' }">Total Booking</p>
+            <h3 class="font-weight-bold text-center">932</h3>
           </div>
         </div>
       </div>
@@ -238,38 +238,35 @@
             </table>
           </div>
         </carousel> -->
-
-        <!-- Table Customer -->
-        <nz-table #basicTable [nzData]="listOfCustomer" [nzPageSize]="5">
+        <!-- <table class="table table-borderless w-75 text-center" [style]='{"font-size":"18px","font-weight":"500","color":"#303972"}'>
           <thead>
             <tr>
-              <th>Guests</th>
-              <th>Room ID</th>
-              <th>Date</th>
-              <th>Payment</th>
-              <th>Contact</th>
+              <th scope="col">Guests</th>
+              <th scope="col">Room ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Payment</th>
+              <th scope="col">Contact</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let data of basicTable.data">
-              <td>{{ data.guest }}</td>
-              <td>{{ data.roomId }}</td>
-              <td>{{ data.date }}</td>
-              <td>{{ data.payment }}</td>
+            <tr>
+              <td>Mark</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
               <td>
-                <a
-                  href="#"
-                  [style]="{ 'font-size': '22px', 'margin-right': '10px' }"
-                >
+                <a class="mx-3" [style]='{"font-size":"22px"}'>
                   <i class="fa fa-phone"></i>
                 </a>
-                <a href="#" [style]="{ 'font-size': '22px' }">
-                  <i class="fa fa-edit"></i>
+                <a  [style]='{"font-size":"22px"}'>
+                  <i class="fa fa-envelope"></i>
                 </a>
               </td>
             </tr>
+           
           </tbody>
-        </nz-table>
+        </table> -->
+        <!--  -->
       </div>
     </div>
   </div>
