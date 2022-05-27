@@ -1,3 +1,15 @@
+.card, .card img{
+  border-radius: 25px;
+}
+.card-body{
+  font-size: 20px;
+}
+.card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: 0.25s;
+  transition-timing-function: ease;
+}
 
 .navbar-nav{
     display: flex;

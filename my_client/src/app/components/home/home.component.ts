@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     )
   }
   onSelected(data: any) {
-    this._router.navigate(['/home', data.city])
+    this._router.navigate(['/hotel', data.place])
   }
   isSelected(data: any) {
     return data.city === this.selectedCity;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/admin';
+import { Admin } from 'src/app/models/admin';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +7,7 @@ import { User } from 'src/app/models/admin';
   styleUrls: ['../login/login.component.css']
 })
 export class RegisterComponent implements OnInit {
-  user = new User();
+  admin = new Admin();
   constructor() { }
 
   ngOnInit(): void {

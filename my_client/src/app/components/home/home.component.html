@@ -33,8 +33,8 @@
 
       <!-- Render city -->
       <div class="row Explore-slider--item explore--item1 d-flex flex-wrap">
-         <div class="col" *ngFor="let item of citys ;let i = index" (click)="onSelected(item)">
-          <div class="nearest-place-item">
+         <div *ngFor="let item of citys ;let i = index" (click)="onSelected(item)" class="m-3" style="width: 24%">
+          <div class="nearest-place-item" >
             <a href="./search-result.html">
               <div class="nearest-place-item-img">
                 <img src={{item.image}} alt="" />

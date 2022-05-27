@@ -1,4 +1,3 @@
-import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -23,12 +22,13 @@ const routes: Routes = [
   //Client
   { path: 'hotel', component: SearchresultComponent },
   { path: 'hotel/:id', component: BookingComponent },
+  { path: 'booking', component: BookingComponent },
+
 
   //Admin
   { path: 'admin/upload', component: UploadComponent },
   { path: 'admin/login', component: LoginComponent },
   { path: 'admin/register', component: RegisterComponent },
-  { path: 'admin/forgot-pwd', component: ForgotPwdComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
 
 
@@ -42,6 +42,5 @@ export class AppRoutingModule { }
 export const RoutingComponents = [
   BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent,
   RegisterComponent,
-  ForgotPwdComponent,
   DashboardComponent
 ]

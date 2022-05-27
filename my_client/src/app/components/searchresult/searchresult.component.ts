@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HotelService } from 'src/app/services/hotel.service';
 import { FilterService } from 'src/app/services/filter.service';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 @Component({
   selector: 'app-searchresult',
   templateUrl: './searchresult.component.html',
@@ -16,15 +16,24 @@ export class SearchresultComponent implements OnInit {
   arrays: any = [];
   eMessage: string = '';
   filterList: any = [];
-  city: string = 'Thành phố Đà Lạt';
+  city: any;
+  p: number = 1;
 
   constructor(private _hotelService: HotelService, private _filterService: FilterService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getAllHotels();
-    this.filterList = this._filterService.getFilterList();
-  }
+    
+    this.activatedRoute.paramMap.subscribe((param) => {
+      console.log(param)
+      // let id = param.get('id');
+      // if (id != null)
+      //   this.city = id
+    })
 
+    this.filterList = this._filterService.getFilterList();
+
+  }
 
   getAllHotels() {
     this._hotelService.getHotels().subscribe({
@@ -33,10 +42,15 @@ export class SearchresultComponent implements OnInit {
     })
   }
 
+  getHotelsByCity(city: any){
+    return this._hotelService.getByPlace(city)
+  }
+
   filterArray: any = [];
   tempArray: any = [];
 
   onChange(event: any) {
+  this.p = 1;
     if (event.target.checked) {
       this.filterArray.push(event.target.value);
       this.tempArray = [];
@@ -83,7 +97,13 @@ export class SearchresultComponent implements OnInit {
   }
 
   onSelect(data:any){
-    this.router.navigate(['/hotel', data._id])
+    this.router.navigate(['/hotel', data._id]);
+      
+  }
+
+  pageScroll(){
+    window.scroll(0,0);
+
   }
 
 }
