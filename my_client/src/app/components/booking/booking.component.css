@@ -1,4 +1,10 @@
 
+.logo-img{
+  width: 60%;
+  padding: 5px;
+ 
+}
+
 .navbar-nav{
     display: flex;
     font-size: 20px;
@@ -31,4 +37,60 @@
   position: absolute;
   bottom: -10px;
   margin: auto;
+}
+
+.btn-status{
+  width: 90%;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #BFC2E8;
+}
+
+.select{
+  border: none;
+}
+
+/* -----Modal----- */
+.cl-bg{
+  /* background-color: #6e749c; */
+  background-color: #6e749c;
+}
+.cl-text{
+  color:  #6e749c;
+  font-size: 20px;
+  font-weight: bold;
+}
+.room-detail{
+  max-height: 700px;
+  width: 800px;
+  /* overflow-y:; */
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  left: 50%;
+  transform:translateX(50%);
+
+}
+.modal-content{
+border: 1px solid;
+}
+.header-room, .modal-content, .room-detail {
+  border-start-start-radius: 25px;
+  border-start-end-radius: 25px;
+}
+.textarea{
+height: 100px;
+max-block-size:120px ;
+  overflow-y:hidden;
+}
+
+.btn-save{
+  width: 20%;
+  height: 50px;
+  color: #ffff;
+  border-radius: 10px;
+}
+.form_booking-right{
+  top: 40%;
+  transform:translateY(40%);
 }

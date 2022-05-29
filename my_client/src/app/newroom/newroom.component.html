@@ -122,17 +122,17 @@
                                     <label class="cl-text" for="safety">safety *</label>
                                     <textarea class="form-control textarea" aria-label="With textarea"id="safety" formControlName="safety" [class.is-invalid]="safetyInput.invalid && safetyInput.touched" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nulla consequuntur fuga temporibus dolorum distinctio itaque esse, deleniti quo ipsam officiis vel consectetur minima aliquam eius voluptate necessitatibus cumque minus."></textarea>
                                     <div *ngIf=" addressInput.invalid &&  safetyInput.touched">
-                                        <small class="text-danger" *ngIf="safetyInput.errors?.['required']">Address không được để trống</small>
-                                        <small class="text-danger" *ngIf=" safetyInput.errors?.['minlength']">Address phải có tối thiểu 10 ký tự</small>
+                                        <small class="text-danger" *ngIf="safetyInput.errors?.['required']">safety không được để trống</small>
+                                        <small class="text-danger" *ngIf=" safetyInput.errors?.['minlength']">safety phải có tối thiểu 10 ký tự</small>
         
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="cl-text" for="address">Rule *</label>
-                                    <input type="text" id="rule" class="form-control" formControlName="rule" [class.is-invalid]=" ruleInput.invalid &&  ruleInput.touched " placeholder="abcbbbbbb">
+                                    <label class="cl-text" for="rule">Rule *</label>
+                                    <input type="text" id="rule" name="rule" class="form-control" formControlName="rule" [class.is-invalid]=" ruleInput.invalid &&  ruleInput.touched " placeholder="abcbbbbbb">
                                     <div *ngIf="ruleInput.invalid &&  ruleInput.touched">
-                                        <small class="text-danger" *ngIf="ruleInput.errors?.['required']">Address không được để trống</small>
-                                        <small class="text-danger" *ngIf=" ruleInput.errors?.['minlength']">Address phải có tối thiểu 10 ký tự</small>
+                                        <small class="text-danger" *ngIf="ruleInput.errors?.['required']">Nội quy không được để trống</small>
+                                        <small class="text-danger" *ngIf=" ruleInput.errors?.['minlength']">Nội quy phải có tối thiểu 10 ký tự</small>
         
                                     </div>
                                 </div>
@@ -159,9 +159,7 @@
                                     <label class="cl-text" for="number">Number of People *</label>
                                     <input type="text" id="number" class="form-control" formControlName="number" [class.is-invalid]=" numberInput.invalid &&  numberInput.touched ">
                                     <div *ngIf="numberInput.invalid &&  numberInput.touched">
-                                        <small class="text-danger" *ngIf="numberInput.errors?.['required']">Address không được để trống</small>
-                                        
-        
+                                        <small class="text-danger" *ngIf="numberInput.errors?.['required']"> Number of People không được để trống</small>
                                     </div>
                                 </div>
                             </div>

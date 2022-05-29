@@ -1,22 +1,8 @@
-<script>
-    $(document).ready(function() {
-        $("#myModal").modal("show");
-    });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("#myBtn").click(function() {
-                var modal = bootstrap.Modal.getOrCreateInstance($("#myModal")[0]);
-                console.log(modal);
-                // {_element: div#myModal.modal.fade, _config: {…}, _dialog: div.modal-dialog, _backdrop: ke, _isShown: false, …}
-            });
-        });
-    </script>
 <div class=" wide">
-    <nav class=" navbar fixed-top  navbar-expand-lg navbar-light bg-light">
-      <div class="wide">
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
-            <img
+    <nav class=" navbar fixed-top  navbar-expand-lg navbar-light bg-light justify-content-around">
+     
+        <a class="navbar-brand mt-2 mt-lg-0 col-3" href="#">
+            <img class="logo-img"
             src="./assets/img/EASYGO_logo.png" 
             height="15"
             alt="MDB Logo"
@@ -24,88 +10,43 @@
         />
         </a>
     
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Photos <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Amenities</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Location</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Review</a>
-          </li>
-      </ul>
-      <ul class="navbar-right ">
-            <li class="nav-item dropdown text-end">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-              </svg>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-      
-      </div>
-            
-        </div>
-      </nav>
-  
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class=" col-9 collapse navbar-collapse " id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Photos <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Amenities</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Location</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Review</a>
+            </li>
+        </ul>
+        <!-- <ul class="navbar-right ">
+                <li class="nav-item dropdown text-end">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                </svg>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+            </li>
+        </ul> -->
         
-            <!-- <div >   <i class="fa fa-user-o  index__login" onclick="on()"></i></div>
-            <div class="nav__overlay" onclick="off()" id="nav__overlay" >
-                <div class="index__login-sub ">
-                    <FORM class="wide-login">
-                        <div class="login_form" >
-                            <div class="login__header form__row">
-                                <div><i class="far fa-times-circle"></i></div>
-                                <div class="login-header__text">Log in or Sign up</div>
-                            </div>
-                            <hr>
-                            <div class="login-title form__row" >Welcome to EasyGo</div>
-                            <div class="form__row">
-                                <input class="login__input" type="text" placeholder="Full name">
-                            </div>
-                            <div class="form__row">
-                                <input class="login__input" type="text" placeholder="Phone number">
-                            </div>
-                            <p class=" login_text-small">We'll call or text you to confirm your number</p>
-                            <button  class="login__btn"> Continue</button>
-                        
-                        </div>
-                        <div class="form__row b">
-                            <hr class="hr-or">
-                            <span class="login_text-or">Or</span>
-                            <hr class="hr-or">
-                        </div>
-                        <div class="login_dif">
-                            <div class="login_dif-item login__input">
-                                <a href="#">
-                                    <i class="fa fa-facebook" ></i> 
-                                    <input class="login_dif-input"  type="button" value="Continue with Facebook">
-                                </a>
-                            </div>
-                            <div class="login_dif-item login__input">
-                                <a href="#">
-                                    <i class="fab fa-google"></i>
-                                    <input class="login_dif-input" type="button" value="Continue with Google">
-                                </a>
-                            </div>
-                        </div>
-                    </FORM>>
-                </div> 
-            </div>-->
+        </div>
+            
+       
+     </nav>
         
         <hr class="hr-top">
         <a href=""><p class="fs-2">Hanoi,VietNam > Art and Culture > Art > Photography</p>   </a>
@@ -127,7 +68,7 @@
  
     <div class="containe hotel_img">
         <div class="row justify-content-around ">
-          <div class="col-xl-3 p-2 ">
+          <div class="col-xl-3 col-lg-3  col-md-3 col-sm-6 col-6 p-2">
           
                 <!-- <img src="../../assets/img/booking_site/khachSan1.jpg"  alt="5"> -->
                 <!-- {{hotel[0].image[0]}} -->
@@ -135,16 +76,16 @@
                 <img src="../../assets/img/booking_site/khachSan2.jpg"  alt="5">
             
           </div>
-            <div class="col-xl-3 p-2 ">     
+            <div class="col-xl-3 col-lg-3  col-md-3 col-sm-6 col-6 p-2">     
                 <img src="../../assets/img/booking_site/khachSan2.jpg"  alt="5">
         
             </div>
-          <div class="col-xl-3  p-2 ">
+          <div class="col-xl-3 col-lg-3  col-md-3 col-sm-6 col-6 p-2">
                    
              <img src="../../assets/img/booking_site/khachSan4.jpg" alt="5">
            
             </div>
-            <div class="col-sm-3 p-2">
+            <div class="ccol-xl-3 col-lg-3  col-md-3 col-sm-6 col-6 p-2">
                 <img src="../../assets/img/booking_site/khachSan9.jpg" alt="5">
             </div>
         </div>
@@ -223,18 +164,18 @@
                 </p>
             </div>
             <div class="row justify-content-between">
-                <div class="col-4">
+                <div class=" col-xl-3 col-md-6 col-6">
                     <h5>Nội quy nhà</h5>
                     <ul style="list-style-type:disc;">
                         <li>{{hotel[0].rule[0]}}</li>
                         <li>{{hotel[0].rule[1]}}</li>
                         <li> {{hotel[0].rule[2]}}</li>
-                        <li>{{hotel[0].rule[3]}}</li>
+                        <!-- <li>{{hotel[0].rule[3]}}</li>
                         <li>  {{hotel[0].rule[4]}}</li>
-                        <li>{{hotel[0].rule[5]}}</li>y
+                        <li>{{hotel[0].rule[5]}}</li> -->
                     </ul>
                 </div>
-                <div class="col-5 ">
+                <div class=" col-xl-6 col-md-12 col-12">
                     <h5>Y tế và An toàn</h5>
                     <ul style="list-style-type:disc;">
                         <li>{{hotel[0].safety[0]}}</li>
@@ -244,7 +185,7 @@
                         <li>{{hotel[0].safety[4]}}</li> 
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class=" col-xl-3 col-md-6 col-6">
                     <h5>Chính sách hủy phòng</h5>
                     <ul style="list-style-type:disc;">
                         <li>Thêm ngày cho chuyến đi của bạn để nhận thông tin về chính sách hủy cho đặt phòng này.</li>
@@ -257,25 +198,27 @@
         
         </div>
    
-        <div class="col-xl-4">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
             <div class="section2-right shadow p-3 mb-5 bg-white rounded">
                 <p><span class="font-weight-bold">From 2.000VND</span>/day</p>
-                <div class=" booking-inf row flex  booking--border ">
-                    <div class=" row m-3">
-                        <label for="Check_in" class="col-5">Check in</label>
-                        <label class="col-5" for="Check_out">Check out</label>
+                <div class=" booking-inf row flex  booking--border">
+                    <div class=" row m-2">
+                        <p for="Check_in " class="col-5 fw-bold">Nhận phòng</p>
+                        <p class="col-5 fw-bold" for="Check_out">Trả phòng</p>
                        
                     </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control col-5 text-center" placeholder="thêm ngày">
-                        <input type="text" class="form-control col-5 text-center" placeholder="Thêm ngày">
-                        <span class="glyphicon glyphicon-search input-group-addon col-2"></span>
+                    <div class="input-group  p-2 fs">
+                        <input type="date" class="input-date form-control col-5 text-center" placeholder="thêm ngày">
+                        <input type="date" class="input-date form-control col-5 text-center" placeholder="Thêm ngày">
+                        <span class="input-group-addon col-2  bg-white p-2"><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></span>
                     </div>
                    
                 </div>
-                <div class="row booking--border booking-inf m-3">
-                    <label for="Number-people">Number People</label>
-                    <select class="" id="Number-people" name="Number-people">
+                <div class="row booking--border booking-inf mt-4">
+                    <p class="fw-bold" for="Number-people">Number People</p>
+                    <select class="mb-2 select" id="Number-people" name="Number-people">
                         <option value ="none">1 people</option>
                         <option value ="guava">2 people</option>
                         <option value ="lychee">4 people</option>
@@ -283,60 +226,168 @@
                     </select> 
                 </div>
               
-                <a href="#myModal" class="btn btn-lg btn-primary" data-bs-toggle="modal"> Check room status</a>
+                <a href="#myModal" class="" data-bs-toggle="modal"><button class="filter__btn mt-4 "> Kiểm tra </button></a>
+                <!-- Modal HTML -->
                 <div id="myModal" class="modal fade" tabindex="-1">
                     <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Send Us a Message</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class=" room-detail bg-white">
+                            <div class="modal-content ">
+                                <div class="header-room text-start cl-bg text-light lh-lg">
+                                    <p class="text-white fs-2 fw-bold text-center">Request</p>
+                                   </div> 
+                                   <form [formGroup]="testForm" (ngSubmit)="onSubmit(testForm.value)">
+                                        <div class="row">  
+                
+                                            <div class="col-lg-8 col-md-12 p-3">
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="guestName">Guest Name </label>
+                                                    <input class="form-control" type="text" id="guestName" name="guestName" formControlName="guestName" [class.is-invalid]="guestNameInput.invalid && guestNameInput.touched" placeholder="Dalat hotel">
+                                                    <div *ngIf="guestNameInput.invalid && guestNameInput.touched">
+                                                        <small class="text-danger" *ngIf="guestNameInput.errors?.['required']">
+                                                            Room Name is required
+                                                        </small>
+                                                        <small class="text-danger" *ngIf="guestNameInput.errors?.['minlength']">
+                                                        Room Name must contain at least 3 characters
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="name">Room Name </label>
+                                                    <input class="form-control" type="text" id="name" formControlName="name" [class.is-invalid]="nameInput.invalid && nameInput.touched" placeholder="Dalat hotel">
+                                                    <div *ngIf="nameInput.invalid && nameInput.touched">
+                                                        <small class="text-danger" *ngIf="nameInput.errors?.['required']">
+                                                            Room Name is required
+                                                        </small>
+                                                        <small class="text-danger" *ngIf="nameInput.errors?.['minlength']">
+                                                        Room Name must contain at least 3 characters
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="email">Email *</label>
+                                                    <input type="email" id="email" name="email" class="form-control" formControlName="email" [class.is-invalid]=" emailInput.invalid &&  emailInput.touched " placeholder="abc@"> 
+                                                    <div *ngIf=" emailInput.invalid &&  emailInput.touched">
+                                                        <small class="text-danger" *ngIf="emailInput.errors?.['required']">Email không được để trống</small>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="phone">Phone *</label>
+                                                    <input type="tel" id="phone" name="phone" class="form-control" formControlName="phone" [class.is-invalid]=" phoneInput.invalid &&  phoneInput.touched " placeholder="0374178623"> 
+                                                    <div *ngIf=" phoneInput.invalid &&  phoneInput.touched">
+                                                        <small class="text-danger" *ngIf="phoneInput.errors?.['required']">Phone không được để trống</small>
+                                                        <!-- <small class="text-danger" *ngIf=" addressInput.errors?.['pattern']">Address phải có tối thiểu 10 ký tự</small> -->
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="address">Address *</label>
+                                                    <input type="text" id="address" name="address" class="form-control" formControlName="address" [class.is-invalid]=" addressInput.invalid &&  addressInput.touched " placeholder="Ho Chi Minh">
+                                                    <div *ngIf=" addressInput.invalid &&  addressInput.touched">
+                                                        <small class="text-danger" *ngIf="addressInput.errors?.['required']">Address không được để trống</small>
+                                                        <small class="text-danger" *ngIf=" addressInput.errors?.['minlength']">Address phải có tối thiểu 10 ký tự</small>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="roomName">Room Name </label>
+                                                    <input class="form-control" type="text" id="roomName" name="roomName" formControlName="roomName" [class.is-invalid]="roomNameInput.invalid && roomNameInput.touched" placeholder="Dalat hotel">
+                                                    <div *ngIf="roomNameInput.invalid && roomNameInput.touched">
+                                                        <small class="text-danger" *ngIf="roomNameInput.errors?.['required']">
+                                                            Room Name is required
+                                                        </small>
+                                                        <small class="text-danger" *ngIf="roomNameInput.errors?.['minlength']">
+                                                        Room Name must contain at least 3 characters
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-between">
+                                                    <div class="col-5 form--date">
+                                                        <div class="mb-3">
+                                                            <label class="cl-text" for="date">Date * </label>
+                                                            <input class="form-control" type="date" id="date" name="date" formControlName="name" [class.is-invalid]="dateInput.invalid && dateInput.touched" placeholder="Dalat hotel">
+                                                            <div *ngIf="dateInput.invalid && dateInput.touched">
+                                                                <small class="text-danger" *ngIf="dateInput.errors?.['required']">
+                                                                   Date is required
+                                                                </small>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="col-5 checktime_input">
+                                                        <div class="mb-3">
+                                                            <label class="cl-text" for="checkIn">Check in *</label>
+                                                            <select class="form-control" name="checkIn" id="checkIn">
+                                                                <option>12 PM</option>
+                                                                <option >6 AM</option>
+                                                                <option>6 PM</option>
+                                                                <option>15 PM</option>
+                                                              </select>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="requires">Requires *</label>
+                                                    <textarea class="form-control textarea" aria-label="With textarea"id="requires" name="requires" formControlName="safety" [class.is-invalid]="requiresInput.invalid && requiresInput.touched" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nulla consequuntur fuga temporibus dolorum distinctio itaque esse, deleniti quo ipsam officiis vel consectetur minima aliquam eius voluptate necessitatibus cumque minus."></textarea>
+                                                    <div *ngIf=" requiresInput.invalid &&  requiresInput.touched">
+                                                        <small class="text-danger" *ngIf="requiresInput.errors?.['required']">Address không được để trống</small>
+                                                        <small class="text-danger" *ngIf=" requiresInput.errors?.['minlength']">Address phải có tối thiểu 10 ký tự</small>
+                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="form_booking-right col-lg-3 col-md-12 p-3">
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="address">Room Type *</label>
+                                                    <select class="form-control">
+                                                        <option>Standard</option>
+                                                        <option>Large</option>
+                                                        <option>Small</option>
+                                                        <option>custom</option>
+                                                      </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="price">Price *</label>
+                                                    <input type="text" id="price" class="form-control" formControlName="price" [class.is-invalid]=" priceInput.invalid &&  priceInput.touched " placeholder="USD">
+                                                    <div *ngIf="priceInput.invalid &&  priceInput.touched">
+                                                        <small class="text-danger" *ngIf="priceInput.errors?.['required']">Price không được để trống</small>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="cl-text" for="number">Number of People *</label>
+                                                    <input type="text" id="number" class="form-control" formControlName="number" [class.is-invalid]=" numberInput.invalid &&  numberInput.touched ">
+                                                    <div *ngIf="numberInput.invalid &&  numberInput.touched">
+                                                        <small class="text-danger" *ngIf="numberInput.errors?.['required']">Address không được để trống</small>
+    
+                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                   
+                                         </div>
+                                         <div class=" row p-3 justify-content-around text-center">
+                                            <button type="button" class="btn cl-bg btn-save fw-bold fs-3" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn cl-bg btn-save fw-bold fs-3" type="submit" [disabled]="testForm.invalid ||!file">Accept</button>
+                                        </div>
+                                    </form>
                             </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>First Name</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label>Last Name</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label>Email</label>
-                                            <input type="email" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label>Comments</label>
-                                            <textarea class="form-control"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary">Send Email</button>
-                            </div>
+                           
                         </div>
+                            
+                     
                     </div>
                 </div>
+                <!-- jQuery Code (to Show Modal on Page Load) -->
+              
             </div>   
         </div>
     </div>
      <hr>
 </div>
 
-<div class="section3">
+<div class="section3 ">
     <p class="text-title"> Những gợi ý khác</p>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <!-- Carousel indicators -->
@@ -344,62 +395,9 @@
     
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
-            <div class="carousel-item active ">
-               <div class="row justify-content-around">
-                <div class="col-lg-3 p-3 mt-2 ">
-                    <a href="">
-                        <div class="card  shadow-sm">
-                            <span class="text-center">
-                                <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                            </span>
-                            <div class="card-body p-3">
-                                <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                <div class="d-flex justify-content-between">
-                                    <i class="fa fa-star text-warning fs-3"> 4</i>
-                                </div>
-                                <p class="h4 text-danger">$1900</p>
-                            </div>
-                        </div>
-                        
-                    </a>
-                </div> 
-                <div class="col-lg-3 p-3 mt-2 ">
-                    <a href="">
-                        <div class="card  shadow-sm">
-                            <span class="text-center">
-                                <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                            </span>
-                            <div class="card-body p-3">
-                                <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                <div class="d-flex justify-content-between">
-                                    <i class="fa fa-star text-warning fs-3"> 4</i>
-                                </div>
-                                <p class="h4 text-danger">$1900</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>   
-                <div class="col-lg-3 p-3 mt-2  ">
-                    <a href="">
-                        <div class="card  shadow-sm">
-                            <span class="text-center">
-                                <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                            </span>
-                            <div class="card-body p-3">
-                                <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                <div class="d-flex justify-content-between">
-                                    <i class="fa fa-star text-warning fs-3"> 4</i>
-                                </div>
-                                <p class="h4 text-danger">$1900</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-               </div>
-            </div>
-            <div class="carousel-item ">
+            <div class="carousel-item active">
                 <div class="row justify-content-around">
-                    <div class="col-lg-3 p-3 mt-2">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2">
                         <a href="">
                             <div class="card  shadow-sm">
                                 <span class="text-center">
@@ -415,7 +413,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-lg-3 p-3 mt-2 ">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2 ">
                         <a href="">
                             <div class="card  shadow-sm">
                                 <span class="text-center">
@@ -431,7 +429,7 @@
                             </div>
                         </a>
                     </div>   
-                    <div class="col-lg-3 p-3 mt-2  ">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2  ">
                         <a href="">
                             <div class="card  shadow-sm">
                                 <span class="text-center">
@@ -451,7 +449,7 @@
             </div>
             <div class="carousel-item  ">
                 <div class="row justify-content-around">
-                    <div class="col-lg-3 p-3 mt-2">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2">
                         <a href="">
                             <div class="card  shadow-sm">
                                 <span class="text-center">
@@ -467,7 +465,7 @@
                             </div>
                         </a>
                     </div> 
-                    <div class="col-lg-3 p-3 mt-2 ">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2 ">
                         <a href="">
                             <div class="card  shadow-sm">
                                 <span class="text-center">
@@ -483,7 +481,58 @@
                             </div>
                         </a>
                     </div>   
-                    <div class="col-lg-3 p-3 mt-2  ">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2  ">
+                        <a href="">
+                            <div class="card  shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body p-3">
+                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-star text-warning fs-3"> 4</i>
+                                    </div>
+                                    <p class="h4 text-danger">$1900</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            <div class="carousel-item  ">
+                <div class="row justify-content-around">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2">
+                        <a href="">
+                            <div class="card  shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body p-3">
+                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-star text-warning fs-3"> 4</i>
+                                    </div>
+                                    <p class="h4 text-danger">$1900</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2 ">
+                        <a href="">
+                            <div class="card  shadow-sm">
+                                <span class="text-center">
+                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
+                                </span>
+                                <div class="card-body p-3">
+                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <i class="fa fa-star text-warning fs-3"> 4</i>
+                                    </div>
+                                    <p class="h4 text-danger">$1900</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>   
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2  ">
                         <a href="">
                             <div class="card  shadow-sm">
                                 <span class="text-center">
@@ -522,10 +571,10 @@
 
 
 <!-- footer -->
-<footer class="wide">
+<footer class="wide mt-5">
     <div class="row">
         <div class="col-xl-3	col-md-6 text-center footer-logo">
-            <div class=""> <a href="./index.html"><img src="./assets/img/EASYGO_logo.png" alt=""></a></div>
+            <div class=""> <a href="./index.html"><img class="logo-img" src="./assets/img/EASYGO_logo.png" alt=""></a></div>
             <div class="fs-5">
             <p class="text-wrap" >Book your trip in minute, get full control for much longer</p>
             </div>
@@ -613,59 +662,16 @@
     </div>
 </footer>
 
- <!-- <script>
 
-  function billingOn(){
-  document.querySelector(".billing__overlay").style.display = "block";
-  }
-  let billingModal = document.querySelector(".billing__overlay");
-  let billingClose = document.querySelector('.billingClose');
-  billingClose.onclick = function() {
-    billingModal.style.display = "none";
-  }
-  function off() {
-    document.querySelector(".nav__overlay").style.display = "none";
-  }
-var modal = document.getElementById("billing__overlay");
-
-
-window.onclick = function(event) {
-if (event.target == modal) {
-    modal.style.display = "none";
-}
-}
-function on() {
-    document.querySelector(".nav__overlay").style.display = "block";
-  }
-  let loginModal = document.querySelector(".nav__overlay");
-  let loginClose = document.querySelector('.fa-times-circle');
-  loginClose.onclick = function() {
-    loginModal.style.display = "none";
-  }
-var LoginModal = document.getElementById("nav__overlay");
-window.onclick = function(event) {
-if (event.target == LoginModal) {
-LoginModal.style.display = "none";
-}
-}
-function myFunction() {
-var input, filter, places, a, i, txtValue;
-input = document.getElementById("myInput");
-filter = input.value.toUpperCase();
-places = document.getElementById("filter-place");
-span = places.getElementsByTagName("p");
-for (i = 0; i < span.length; i++) {
-    a = span[i].getElementsByTagName("span")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        span[i].style.display = "";
-    } else {
-        span[i].style.display = "none";
-    }
-}
-}
-</script> --> 
-
+<script>
+    $(document).ready(function() {
+        $("#myBtn").click(function() {
+            var modal = bootstrap.Modal.getOrCreateInstance($("#myModal")[0]);
+            console.log(modal);
+            // {_element: div#myModal.modal.fade, _config: {…}, _dialog: div.modal-dialog, _backdrop: ke, _isShown: false, …}
+        });
+    });
+    </script>>
 <script>
     $(document).ready(function(){
         $("#myBtn").click(function(){
@@ -673,21 +679,6 @@ for (i = 0; i < span.length; i++) {
         });
     });
 </script>
-<!-- <script>
-    $(document).ready(function(){
-        $("#myCarousel").carousel({
-            interval: false
-        });
-    });
-    </script> -->
-    <!-- <script>
-        $(document).ready(function(){
-            $("#myCarousel").carousel({
-                wrap: false
-            });
-        });
-        </script> -->
-        <!-- Center alignment using text alignment classes -->
 
 <script>
     $(document).ready(function(){

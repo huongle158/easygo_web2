@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import Admin from '../models/admin';
-import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-newroom',
@@ -17,7 +15,10 @@ export class NewroomComponent implements OnInit {
     address: ['', [Validators.required, Validators.minLength(10)]],
     email: ['', [Validators.required],Validators.email],
     phone: ['', [Validators.required]],
-
+     price:['', [Validators.required]],
+     number:['', [Validators.required]],
+     rule: ['', [Validators.required, Validators.minLength(3)]],
+     safety: ['', [Validators.required, Validators.minLength(3)]],
     file: ['']
   })
 
@@ -63,7 +64,7 @@ get phoneInput(){
   return this.testForm.controls["phone"];
 }
 get safetyInput(){
-  return this.testForm.controls["name"];
+  return this.testForm.controls["safety"];
 }
 get ruleInput(){
   return this.testForm.controls["rule"];
@@ -72,7 +73,7 @@ get priceInput(){
   return this.testForm.controls["price"];
 }
 get numberInput(){
-  return this.testForm.controls["price"];
+  return this.testForm.controls["number"];
 }
 get descriptionInput(){
   return this.testForm.controls["description"];

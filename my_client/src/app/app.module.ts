@@ -15,6 +15,7 @@ import { RegisterComponent } from './components/admin/register/register.componen
 import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { NewroomComponent } from './newroom/newroom.component';
+import { FormBookingComponent } from './form-booking/form-booking.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { NewroomComponent } from './newroom/newroom.component';
     HeaderComponent,
     FooterComponent,
     NewroomComponent,
+    FormBookingComponent,
   ],
   imports: [
     BrowserModule,
