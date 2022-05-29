@@ -1,5 +1,3 @@
-// import { AppRoutingModule } from './app-routing.module';
-import { ForgotPwdComponent } from './components/admin/forgot-pwd/forgot-pwd.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +12,8 @@ import { PrivatesiteComponent } from './components/privatesite/privatesite.compo
 import { SearchresultComponent } from './components/searchresult/searchresult.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { UploadComponent } from './components/upload/upload.component';
+// import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { AllroomComponent } from './components/admin/allroom/allroom.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
@@ -27,13 +27,15 @@ const routes: Routes = [
   //Client
   { path: 'hotel', component: SearchresultComponent },
   { path: 'hotel/:id', component: BookingComponent },
+  { path: 'booking', component: BookingComponent },
+
 
   //Admin
   { path: 'admin/upload', component: UploadComponent },
   { path: 'admin/login', component: LoginComponent },
   { path: 'admin/register', component: RegisterComponent },
-  { path: 'admin/forgot-pwd', component: ForgotPwdComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
+  { path: 'admin/allroom', component: AllroomComponent },
 
 
 
@@ -48,7 +50,6 @@ export const RoutingComponents = [
 
   BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent, CityDetailComponentComponent,
   RegisterComponent,
-  ForgotPwdComponent,
-  DashboardComponent
+  DashboardComponent,AllroomComponent
 
 ]

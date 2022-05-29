@@ -41,8 +41,10 @@ router.post('/register', (req, res, next) => {
     // })
 });
 
+
 // Authenticate
 router.post('/authenticate', (req, res, next) => {
+    
     const username = req.body.username;
     const password = req.body.password;
 

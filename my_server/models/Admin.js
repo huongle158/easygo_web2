@@ -10,16 +10,6 @@ var AdminSchema = new mongoose.Schema({
     updatedAt: { type: Date, default: Date.now }
 })
 
-
-module.exports.getAdminById = function (id, callback) {
-    Admin.findById(id, callback);
-}
-
-module.exports.getAdminByUsername = function (username, callback) {
-    const query = { username: username }
-    Admin.findOne(query, callback);
-}
-
 AdminSchema.pre('save', function (next) {
     bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(this.password, salt, (err, hash) => {
@@ -31,6 +21,9 @@ AdminSchema.pre('save', function (next) {
     })
 }) 
 
+
+const Admin = module.exports = mongoose.model('Admin', AdminSchema);
+
 module.exports.comparePassword = function (candidatePassword, hash, callback) {
     bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
         if (err) throw err;
@@ -38,4 +31,12 @@ module.exports.comparePassword = function (candidatePassword, hash, callback) {
     });
 }
 
-const Admin = module.exports = mongoose.model('Admin', AdminSchema);
+module.exports.getAdminById = function (id, callback) {
+    Admin.findById(id, callback);
+}
+
+module.exports.getAdminByUsername = function (username, callback) {
+    const query = { username: username }
+    Admin.findOne(query, callback);
+}
+

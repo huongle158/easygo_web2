@@ -53,20 +53,21 @@
    
 <!-- section1 -->
 
-<div class="booking--section1"id="Photos"> 
-   
-    <p class="fs-1 fw-bold"> {{hotel[0].name}}</p>
-    <div class="row hotel-quality " >
-        <div  class=" col-6 text-warning"> 
-            <i class="fa fa-star"></i> {{hotel[0].rating.rate}}</div>
+<div class="booking--section1 ms-5" id="Photos">
+
+    <p class="fs-1 fw-bold"> {{hotel.name}}</p>
+    <div class="row hotel-quality ">
+        <div class=" col-6 text-warning">
+            <i class="fa fa-star"></i> {{hotel.rating.rate}}
+        </div>
         <div class=" col-6  text-end ">
             <i class="fa fa-gift"></i>
             <i class="fa fa-share-square-o"></i>
             <i class="fa fa-heart-o"></i>
         </div>
     </div>
- 
-    <div class="containe hotel_img">
+
+    <div class="container hotel_img">
         <div class="row justify-content-around ">
           <div class="col-xl-3 col-lg-3  col-md-3 col-sm-6 col-6 p-2">
           
@@ -89,41 +90,41 @@
                 <img src="../../assets/img/booking_site/khachSan9.jpg" alt="5">
             </div>
         </div>
-      </div>
- 
+    </div>
+
 </div>
 
 <!-- section2 -->
-<div class="section2">
+<div class="ms-5">
     <div class="row">
-        <div class="col-xl-8 " >
+        <div class="col-xl-8 ">
             <div class="para1">
                 <p class="text-title">
-                   Toàn bộ căn hộ cho thuê
+                    Toàn bộ căn hộ cho thuê
                 </p>
-                <p>{{hotel[0].numberofpeople}} người,{{hotel[0].bed}} phòng ngủ,{{hotel[0].bathroom}} phồng tắm</p>
-                <p>{{hotel[0].place.city}}, {{hotel[0].place.province}}, {{hotel[0].place.country}}</p>
+                <p>{{hotel.numberofpeople}} người, {{hotel.bed}} phòng ngủ, {{hotel.bathroom}} phòng tắm</p>
+                <p>{{hotel.city}}, {{hotel.place.province}}, {{hotel.place.country}}</p>
                 <hr>
             </div>
             <div class="para2">
                 <p class="text-title">
-                   Ưu điểm:
+                    Ưu điểm:
                 </p>
                 <ul style="list-style-type:disc;">
-                    <li class="fw-bold">{{hotel[0].characteristic[0].title}}
-                        </li>
-                    <p>{{hotel[0].characteristic[0].content}}</p>
-                    <li  class="fw-bold">{{hotel[0].characteristic[1].title}}</li>
-                    <p>{{hotel[0].characteristic[1].content}}</p>
-                   
+                    <li class="fw-bold">{{hotel.characteristic[0].title}}
+                    </li>
+                    <p>{{hotel.characteristic[0].content}}</p>
+                    <li class="fw-bold">{{hotel.characteristic[1].title}}</li>
+                    <p>{{hotel.characteristic[1].content}}</p>
+
                 </ul>
                 <hr>
             </div>
             <div class="para3">
                 <p class="text-title">
-                   Giới thiệu về chỗ ở:
+                    Giới thiệu về chỗ ở:
                 </p>
-                <p>{{hotel[0].description}}</p>
+                <p>{{hotel.description}}</p>
                 <!-- <ul style="list-style-type:disc;">
                     <li> Local, safe, cultural neighbourhood</li>
                     <li>Full of local restaurants and street food down the road</li>
@@ -141,18 +142,18 @@
                 <div class="row">
                     <div class="para2-1 col-6">
                         <ul style="list-style-type:disc;">
-                            <li> {{hotel[0].convenient[0]}}</li>
-                            <li> {{hotel[0].convenient[1]}}</li>
-                            <li> {{hotel[0].convenient[2]}}</li>
-                            <li> {{hotel[0].convenient[3]}}</li>
+                            <li> {{hotel.convenient[0]}}</li>
+                            <li> {{hotel.convenient[1]}}</li>
+                            <li> {{hotel.convenient[2]}}</li>
+                            <li> {{hotel.convenient[3]}}</li>
                         </ul>
                     </div>
-                    <div  class="para2-2 col-6">
+                    <div class="para2-2 col-6">
                         <ul style="list-style-type:disc;">
-                            <li> {{hotel[0].convenient[4]}}</li>
-                            <li>{{hotel[0].convenient[5]}}</li>
-                            <li> {{hotel[0].convenient[6]}}</li>
-                            <li>{{hotel[0].convenient[7]}}</li>
+                            <li> {{hotel.convenient[4]}}</li>
+                            <li>{{hotel.convenient[5]}}</li>
+                            <li> {{hotel.convenient[6]}}</li>
+                            <li>{{hotel.convenient[7]}}</li>
                         </ul>
                     </div>
                 </div>
@@ -160,7 +161,7 @@
             </div>
             <div class="para5">
                 <p class="text-title">
-                   Những điều cần lưu ý:
+                    Những điều cần lưu ý:
                 </p>
             </div>
             <div class="row justify-content-between">
@@ -178,24 +179,25 @@
                 <div class=" col-xl-6 col-md-12 col-12">
                     <h5>Y tế và An toàn</h5>
                     <ul style="list-style-type:disc;">
-                        <li>{{hotel[0].safety[0]}}</li>
-                        <li>{{hotel[0].safety[1]}}</li>
-                        <li>{{hotel[0].safety[2]}}</li> 
-                        <li>{{hotel[0].safety[3]}}</li>
-                        <li>{{hotel[0].safety[4]}}</li> 
+                        <li>{{hotel.safety[0]}}</li>
+                        <li>{{hotel.safety[1]}}</li>
+                        <li>{{hotel.safety[2]}}</li>
+                        <li>{{hotel.safety[3]}}</li>
+                        <li>{{hotel.safety[4]}}</li>
                     </ul>
                 </div>
                 <div class=" col-xl-3 col-md-6 col-6">
                     <h5>Chính sách hủy phòng</h5>
                     <ul style="list-style-type:disc;">
-                        <li>Thêm ngày cho chuyến đi của bạn để nhận thông tin về chính sách hủy cho đặt phòng này.</li>
+                        <li>Thêm ngày cho chuyến đi của bạn để nhận thông tin về chính sách hủy cho đặt phòng này.
+                        </li>
                     </ul>
-                
+
                 </div>
             </div>
-        
-        
-        
+
+
+
         </div>
    
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
@@ -378,66 +380,50 @@
                      
                     </div>
                 </div>
-                <!-- jQuery Code (to Show Modal on Page Load) -->
-              
-            </div>   
+            </div>
         </div>
     </div>
-     <hr>
+    <hr>
 </div>
 
-<div class="section3 ">
+<p class="text-title"> Những gợi ý khác</p>
+<div class="d-flex flex-wrap flex-sm-row justify-content-evenly">
+    <ng-container *ngFor="let s of sameCityArray; let i = index ">
+        <div *ngIf="i<3">
+            <div class="card m-3" style="width: 250px;" (click)="onSelect(s)">
+                <img src="{{s.image[0]}}" class="" width="250" height="150">
+                <div class="card-body m-2">
+                    <h3 class="card-title text-truncate">{{s.name}}</h3>
+                    <div class="d-flex justify-content-between">
+                        <h3><span style="color: yellow;">&#9733;</span> {{s.rating.rate}} ({{s.rating.count}} đánh giá)
+                        </h3>
+                        <span class="h3">${{s.price}}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </ng-container>
+
+</div>
+
+<!-- <div class="section3">
     <p class="text-title"> Những gợi ý khác</p>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Carousel indicators -->
-    
-    
-        <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active ">
                 <div class="row justify-content-around">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
+                    <div class="col-lg-3 p-3 mt-2" *ngFor="let s of sameCityArray; let i = index">
+                        <a href="" *ngIf="i<3">
+                            <div class="card m-3">
+                                <img src="{{s.image[0]}}" class="" width="250" height="150">
+                                <div class="card-body m-2">
+                                    <h3 class="card-title text-truncate">{{s.name}}</h3>
                                     <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2 ">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>   
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2  ">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
+                                        <h3><span style="color: yellow;">&#9733;</span> {{s.rating.rate}}
+                                            ({{s.rating.count}} đánh giá)</h3>
+                                        <span class="h3">${{s.price}}</span>
                                     </div>
                                     <p class="h4 text-danger">$1900</p>
                                 </div>
@@ -446,241 +432,39 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item  ">
-                <div class="row justify-content-around">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2 ">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>   
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2  ">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            <div class="carousel-item  ">
-                <div class="row justify-content-around">
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2 ">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>   
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-10 p-3 mt-2  ">
-                        <a href="">
-                            <div class="card  shadow-sm">
-                                <span class="text-center">
-                                    <img src="./assets/img/booking_site/khachSan3.jpg" class="align-center" width="250" height="250"> 
-                                </span>
-                                <div class="card-body p-3">
-                                    <h4 class="card-title text-truncate fs-2">Mango Bay Resort 1</h4>
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-star text-warning fs-3"> 4</i>
-                                    </div>
-                                    <p class="h4 text-danger">$1900</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            
         </div>
-    
-        <!-- Carousel controls -->
-       
-            <a class="carousel-control-prev" href="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-      <div class="control">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-        </ol>
-      </div>
-    </div>
-</div>
 
-
-<!-- footer -->
-<footer class="wide mt-5">
-    <div class="row">
-        <div class="col-xl-3	col-md-6 text-center footer-logo">
-            <div class=""> <a href="./index.html"><img class="logo-img" src="./assets/img/EASYGO_logo.png" alt=""></a></div>
-            <div class="fs-5">
-            <p class="text-wrap" >Book your trip in minute, get full control for much longer</p>
-            </div>
-        </div>
-        <div class="col-xl-6 col-lg-8 col-md-8">
-            <div class="row">
-                <div class="col-4">
-                    <ul class="footer__ul fs-3" >
-                        <li><h3 class="fw-bold ">Company</h3></li>
-                        <li>
-                            <a href="#"> About </a>
-                        </li>
-                        <li>
-                            <a href="#"> Careers </a>
-                        </li>
-                        <li><a href="#"> Mobile</a></li>
-                    </ul>
-                </div>
-               
-                <div class="col-4">
-                    <ul class="footer__ul fs-3">
-                        <li><h3 class="fw-bold ">Contact</h3></li>
-                        <li>
-                            <a href="#"> Help/FQA </a>
-                        </li>
-                        <li>
-                            <a href="#"> Press </a>
-                        </li>
-                        <li><a href="#"> Affiliate</a></li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <ul class="footer__ul fs-3" >
-                        <li><h3 class="fw-bold ">More</h3></li>
-                        <li>
-                            <a href="#"> AirlineFees</a>
-                        </li>
-                        <li>
-                            <a href="#"> Airlines </a>
-                        </li>
-                        <li><a href="#"> Low fare tips</a></li>
-                    </ul>
-                </div>
-            </div>
-          
-        </div>
-        <div class="col-xl-3 col-lg-4 col-md-4">
-           <div class="footer__media--socialIcon">
-                <a href="#">
-                    <i class="fa fa-facebook" ></i> 
-                </a>
-                <a href="#">
-                    <i class="fa fa-instagram" ></i> 
-                </a>
-                <a href="#">
-                    <i class="fa fa-twitter" ></i> 
-                </a>
-                 <a href="#">
-                    <i class="fa fa-youtube" ></i> 
-                </a>
-           </div>
-           <div class="footer__media--discover">
-               <p class="fw-bold fs-2">Discover our app</p>
-               <div class="row">
-                   <div class="col-6">
-                        <a href="#" class="footer__img--discover">
-                            <img src="./assets/img/AppStore.PNG" alt="">
-                        </a>
-                   </div>
-                   <div class="col-6">
-                        <a href="#" class="footer__img--discover">
-                            <img src="./assets/img/CHplay.PNG" alt="">
-        
-                        </a>
-                   </div>
-               </div>
-               
-               
-            </div>
-        </div>
     </div>
-    
-    <div class="text-center mt-15 font-weight-bold fs-5">
-        <p>All rights Reserved @easygo.com</p>
-    </div>
-</footer>
+</div> -->
 
+<app-footer></app-footer>
 
 <script>
-    $(document).ready(function() {
-        $("#myBtn").click(function() {
-            var modal = bootstrap.Modal.getOrCreateInstance($("#myModal")[0]);
-            console.log(modal);
-            // {_element: div#myModal.modal.fade, _config: {…}, _dialog: div.modal-dialog, _backdrop: ke, _isShown: false, …}
-        });
-    });
-    </script>>
-<script>
-    $(document).ready(function(){
-        $("#myBtn").click(function(){
+    $(document).ready(function () {
+        $("#myBtn").click(function () {
             $("#myCarousel").carousel("cycle");
         });
     });
 </script>
+<!-- <script>
+    $(document).ready(function(){
+        $("#myCarousel").carousel({
+            interval: false
+        });
+    });
+    </script> -->
+<!-- <script>
+        $(document).ready(function(){
+            $("#myCarousel").carousel({
+                wrap: false
+            });
+        });
+        </script> -->
+<!-- Center alignment using text alignment classes -->
 
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $("#myCarousel").carousel("nextWhenVisible");
     });
     </script>

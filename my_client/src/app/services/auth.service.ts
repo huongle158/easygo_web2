@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { TokenizeResult } from '@angular/compiler/src/ml_parser/lexer';
 import { Injectable } from '@angular/core';
 // import {Http, Headers } from '@angular/http';
 // import 'rxjs/add/operator/map';
@@ -8,7 +9,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   authToken: any;
-  user: any;
+  admin: any;
   baseURL = 'http://localhost:3000/admin'
 
   constructor(private http: HttpClient) { }
@@ -18,9 +19,22 @@ export class AuthService {
   //   headers.append('Content-Type','application/json');
   //   return this.http.post(`${baseURL}/register`, admin, {headers: headers}).map(res=>res.json);
   // }
-  
-  authenticateAdmin(admin: any){
+
+  authenticateAdmin(admin: any) {
     return this.http.post(`${this.baseURL}/authenticate`, admin);
+  }
+
+  storeAdminData(token, admin) {
+    localStorage.setItem('id_token', token);
+    localStorage.setItem('admin', JSON.stringify(admin))
+    this.authToken = token;
+    this.admin = admin;
+  }
+
+  logOut() {
+    this.authToken = null;
+    this.admin = null;
+    localStorage.clear();
   }
 
 }

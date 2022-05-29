@@ -30,7 +30,7 @@ app.use("/upload", uploadRouter);
 
 //Import Routes
 const hotelRouter = require('./routes/hotel.router')
-app.use("/", hotelRouter)
+app.use("/hotel", hotelRouter)
 
 //User Route
 const admin = require('./routes/admin.router')

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForgotPwdComponent } from './forgot-pwd.component';
+import { AllroomComponent } from './allroom.component';
 
-describe('ForgotPwdComponent', () => {
-  let component: ForgotPwdComponent;
-  let fixture: ComponentFixture<ForgotPwdComponent>;
+describe('AllroomComponent', () => {
+  let component: AllroomComponent;
+  let fixture: ComponentFixture<AllroomComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForgotPwdComponent ]
+      declarations: [ AllroomComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ForgotPwdComponent);
+    fixture = TestBed.createComponent(AllroomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

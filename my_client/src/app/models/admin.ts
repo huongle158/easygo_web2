@@ -1,6 +1,4 @@
- class Admin {
-    "_id": number;
-    "name": string;
+export class Admin {
     "username": string;
    "password": string;
    "email": string;

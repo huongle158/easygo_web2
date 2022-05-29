@@ -51,15 +51,4 @@ router.get('/uploadedFile', async(req, res) => {
     }
 })
 
-// router.get('/uploadedFile', function (req, res) {
-//     Upload.find({}, function (err, data) {
-//         if (err) {
-//             res.json({ message: err.message })
-//         }
-//         else {
-//             res.json(data)
-//         }
-//     })
-// })
-
 module.exports = router;
