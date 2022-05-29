@@ -61,7 +61,8 @@
   font-weight: bold;
 }
 .room-detail{
-  max-height: 700px;
+  height: auto;
+  max-height: 900px;
   width: 800px;
   /* overflow-y:; */
 

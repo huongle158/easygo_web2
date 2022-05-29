@@ -231,7 +231,7 @@
                 <div id="myModal" class="modal fade" tabindex="-1">
                     <div class="modal-dialog">
                         <div class=" room-detail bg-white">
-                            <div class="modal-content ">
+                            <div class="modal-content">
                                 <div class="header-room text-start cl-bg text-light lh-lg">
                                     <p class="text-white fs-2 fw-bold text-center">Request</p>
                                    </div> 
@@ -356,7 +356,7 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="cl-text" for="number">Number of People *</label>
-                                                    <input type="text" id="number" class="form-control" formControlName="number" [class.is-invalid]=" numberInput.invalid &&  numberInput.touched ">
+                                                    <input type="text" id="number" class="form-control" formControlName="number" [class.is-invalid]=" numberInput.invalid &&  numberInput.touched " placeholder="2">
                                                     <div *ngIf="numberInput.invalid &&  numberInput.touched">
                                                         <small class="text-danger" *ngIf="numberInput.errors?.['required']">Address không được để trống</small>
     
