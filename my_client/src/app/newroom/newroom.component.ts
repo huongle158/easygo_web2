@@ -9,18 +9,30 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class NewroomComponent implements OnInit {
   file:any=null;
 
-  public testForm = this._formBuilder.group({
+  private _testForm = this._formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
-    description:['',[Validators.required, Validators.minLength(20)]],
+    description: ['', [Validators.required, Validators.minLength(20)]],
     address: ['', [Validators.required, Validators.minLength(10)]],
-    email: ['', [Validators.required],Validators.email],
+    email: ['', [Validators.required], Validators.email],
     phone: ['', [Validators.required]],
-     price:['', [Validators.required]],
-     number:['', [Validators.required]],
-     rule: ['', [Validators.required, Validators.minLength(3)]],
-     safety: ['', [Validators.required, Validators.minLength(3)]],
+    price: ['', [Validators.required]],
+    number: ['', [Validators.required]],
+    rule: ['', [Validators.required, Validators.minLength(3)]],
+    safety: ['', [Validators.required, Validators.minLength(3)]],
     file: ['']
-  })
+  });
+  public get testForm_1() {
+    return this._testForm;
+  }
+  public set testForm_1(value) {
+    this._testForm = value;
+  }
+  public get testForm() {
+    return this._testForm;
+  }
+  public set testForm(value) {
+    this._testForm = value;
+  }
 
   constructor(private _formBuilder:FormBuilder) { }
 
