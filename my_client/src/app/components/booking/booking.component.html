@@ -339,8 +339,8 @@
                                             </div>
                                             <div class="form_booking-right col-lg-3 col-md-12 p-3">
                                                 <div class="mb-3">
-                                                    <label class="cl-text" for="address">Room Type *</label>
-                                                    <select class="form-control">
+                                                    <label class="cl-text" for="type">Room Type *</label>
+                                                    <select class="form-control" name="type">
                                                         <option>Standard</option>
                                                         <option>Large</option>
                                                         <option>Small</option>
@@ -349,10 +349,9 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label class="cl-text" for="price">Price *</label>
-                                                    <input type="text" id="price" class="form-control" formControlName="price" [class.is-invalid]=" priceInput.invalid &&  priceInput.touched " placeholder="USD">
+                                                    <input type="text" id="price" name="name" class="form-control" formControlName="price" [class.is-invalid]=" priceInput.invalid &&  priceInput.touched " placeholder="USD">
                                                     <div *ngIf="priceInput.invalid &&  priceInput.touched">
                                                         <small class="text-danger" *ngIf="priceInput.errors?.['required']">Price không được để trống</small>
-                        
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
