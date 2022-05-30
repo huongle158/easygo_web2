@@ -70,7 +70,7 @@
     <p class="fs-1 fw-bold"> {{hotel.name}}</p>
     <div class="row hotel-quality ">
         <div class=" col-6 text-warning">
-            <i class="fa fa-star"></i> {{hotel.rating.rate}}
+            <i class="fa fa-star"></i> {{hotel.city}}
         </div>
         <div class=" col-6  text-end ">
             <i class="fa fa-gift"></i>
@@ -81,18 +81,20 @@
 
     <div class="container hotel_img">
         <div class="row justify-content-around ">
-            <div class="col-xl-3 p-2 ">
-                <img src="{{hotel.image[0]}}" alt="5">
+            <!-- <img src="http://localhost:3000/{{hotel.image[0]}}"> -->
+            <div class="col-xl-3 p-2 overflow-hidden" style="height: 160px">
+                <img src="http://localhost:3000/{{ hotel.image[0]}}" alt="{{hotel.name}}">
             </div>
-            <div class="col-xl-3 p-2 ">
-                <img src="{{hotel.image[1]}}" alt="5">
+            <div class="col-xl-3 p-2 overflow-hidden" style="height: 160px">
+                <img src="http://localhost:3000/{{ hotel.image[1]}}" alt="{{hotel.name}}">
             </div>
-            <div class="col-xl-3  p-2 ">
-                <img src="{{hotel.image[2]}}" alt="5">
+            <div class="col-xl-3 p-2 overflow-hidden" style="height: 160px">
+                <img src="http://localhost:3000/{{ hotel.image[2]}}" alt="{{hotel.name}}">
             </div>
-            <div class="col-sm-3 p-2">
-                <img src="{{hotel.image[3]}}" alt="5">
+            <div class="col-xl-3 p-2 overflow-hidden" style="height: 160px">
+                <img src="http://localhost:3000/{{ hotel.image[3]}}" alt="{{hotel.name}}">
             </div>
+            
         </div>
     </div>
 
@@ -106,11 +108,10 @@
                 <p class="text-title">
                     Toàn bộ căn hộ cho thuê
                 </p>
-                <p>{{hotel.numberofpeople}} người, {{hotel.bed}} phòng ngủ, {{hotel.bathroom}} phòng tắm</p>
-                <p>{{hotel.city}}, {{hotel.place.province}}, {{hotel.place.country}}</p>
+                <p>{{hotel.numberofpeople}} người</p>
                 <hr>
             </div>
-            <div class="para2">
+            <!-- <div class="para2">
                 <p class="text-title">
                     Ưu điểm:
                 </p>
@@ -123,7 +124,7 @@
 
                 </ul>
                 <hr>
-            </div>
+            </div> -->
             <div class="para3">
                 <p class="text-title">
                     Giới thiệu về chỗ ở:
@@ -172,22 +173,13 @@
                 <div class="col-4">
                     <h5>Nội quy nhà</h5>
                     <ul style="list-style-type:disc;">
-                        <li>{{hotel.rule[0]}}</li>
-                        <li>{{hotel.rule[1]}}</li>
-                        <li> {{hotel.rule[2]}}</li>
-                        <li>{{hotel.rule[3]}}</li>
-                        <li> {{hotel.rule[4]}}</li>
-                        <li>{{hotel.rule[5]}}</li>y
+                        <li>{{hotel.rule}}</li>
                     </ul>
                 </div>
                 <div class="col-5 ">
                     <h5>Y tế và An toàn</h5>
                     <ul style="list-style-type:disc;">
-                        <li>{{hotel.safety[0]}}</li>
-                        <li>{{hotel.safety[1]}}</li>
-                        <li>{{hotel.safety[2]}}</li>
-                        <li>{{hotel.safety[3]}}</li>
-                        <li>{{hotel.safety[4]}}</li>
+                        <li>{{hotel.safety}}</li>
                     </ul>
                 </div>
                 <div class="col-3">
@@ -206,7 +198,7 @@
 
         <div class="col-xl-4">
             <div class="section2-right shadow p-3 mb-5 bg-white rounded">
-                <p><span class="font-weight-bold">From 2.000VND</span>/day</p>
+                <p><span class="font-weight-bold">From ${{hotel.price}}</span>/day</p>
                 <div class=" booking-inf row flex  booking--border ">
                     <div class=" row m-3">
                         <label for="Check_in" class="col-5">Check in</label>
@@ -287,8 +279,8 @@
 <div class="d-flex flex-wrap flex-sm-row justify-content-evenly">
     <ng-container *ngFor="let s of sameCityArray; let i = index ">
         <div *ngIf="i<3">
-            <div class="card m-3" style="width: 250px;" (click)="onSelect(s)">
-                <img src="{{s.image[0]}}" class="" width="250" height="150">
+            <div class="card m-3" style="width: 250px; height: 250px;" (click)="onSelect(s)">
+                <img src="http://localhost:3000/{{s.image[0]}}" width="auto" height="150" class="overflow-hidden">
                 <div class="card-body m-2">
                     <h3 class="card-title text-truncate">{{s.name}}</h3>
                     <div class="d-flex justify-content-between">

@@ -28,13 +28,17 @@ app.use("/upload", uploadRouter);
 //   res.json({msg: "Welcome to my easygo!!"})
 // })
 
-//Import Routes
+//Import Hotel Routes
 const hotelRouter = require('./routes/hotel.router')
 app.use("/hotel", hotelRouter)
 
-//User Route
+//Admin Route
 const admin = require('./routes/admin.router')
 app.use('/admin', admin)
+
+//Booking Route
+const booking = require('./routes/booking.router')
+app.use('/booking', booking)
 
 //Passport Middleware
 app.use(passport.initialize());
@@ -51,7 +55,6 @@ app.use((err, req, res, next) => {
     
   }
 })
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

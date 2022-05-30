@@ -11,11 +11,11 @@
 <div class="container">
     <div class="d-flex flex-wrap flex-sm-row">
         <div class="card m-3" *ngFor="let hotel of hotelArray | paginate: { itemsPerPage: 9, currentPage: p }" style="width: 350px;" (click)="onSelect(hotel)">
-            <img src="{{hotel.image[0]}}" class="" width="350" height="250">
+            <img src="http://localhost:3000/{{hotel.image[0]}}" class="" width="350" height="250">
             <div class="card-body m-2">
                 <h3 class="card-title text-truncate">{{hotel.name}}</h3>
                 <div class="d-flex justify-content-between">
-                    <h3><span style="color: yellow;">&#9733;</span> {{hotel.rating.rate}} ({{hotel.rating.count}} đánh giá)</h3>
+                    <h3><span style="color: yellow;">&#11088;</span> {{hotel.city}}</h3>
                     <span class="h3">${{hotel.price}}</span>
                 </div>
             </div>

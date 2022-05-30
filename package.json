@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "nodemon": "^2.0.16"
-  },
-  "dependencies": {
-    "angular-responsive-carousel": "^2.1.2"
-  }
-}

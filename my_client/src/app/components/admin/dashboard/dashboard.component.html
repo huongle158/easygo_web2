@@ -240,7 +240,7 @@
         </carousel> -->
 
         <!-- Table Customer -->
-        <nz-table #basicTable [nzData]="listOfCustomer" [nzPageSize]="5">
+        <nz-table #basicTable [nzData]="bookings" [nzPageSize]="5">
           <thead>
             <tr>
               <th>Guests</th>
@@ -252,8 +252,8 @@
           </thead>
           <tbody>
             <tr *ngFor="let data of basicTable.data">
-              <td>{{ data.guest }}</td>
-              <td>{{ data.roomId }}</td>
+              <td>{{ data.guest_name }}</td>
+              <td>{{ data.roomid }}</td>
               <td>{{ data.date }}</td>
               <td>{{ data.payment }}</td>
               <td>

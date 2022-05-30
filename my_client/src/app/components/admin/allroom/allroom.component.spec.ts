@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AllroomComponent } from './allroom.component';
@@ -8,7 +9,9 @@ describe('AllroomComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AllroomComponent ]
+      declarations: [ AllroomComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
     })
     .compileComponents();
   });

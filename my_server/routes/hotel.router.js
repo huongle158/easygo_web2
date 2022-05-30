@@ -17,7 +17,45 @@ var upload = multer({
   limits: {
     fileSize: maxSize
   }
-}).single("file")
+}).array("file", 10)
+
+//Post new hotel
+router.post("/", (req, res) => {
+  upload(req, res, async (err) => {
+    if (err) {
+      res.json({ message: err.message })
+    }
+    else {
+      let uploadfiles = [];
+      for (let i = 0; i < req.files.length; i++) {
+        uploadfiles.push(req.files[i].filename)
+      }
+      let hotel = new Hotel({
+        name: req.body.name,
+        price: req.body.price,
+        roomid: req.body.roomid,
+        available: req.body.available,
+        image: uploadfiles,
+        rating: req.body.rating,
+        city: req.body.city,
+        place: req.body.place,
+        type: req.body.type,
+        numberofpeople: req.body.numberofpeople,
+        bed: req.body.bed,
+        bathroom: req.body.bathroom,
+        characteristic: req.body.characteristic,
+        description: req.body.description,
+        convenient: req.body.convenient,
+        rule: req.body.rule,
+        safety: req.body.safety
+
+      });
+      await hotel.save();
+      res.json({ message: "success" })
+
+    }
+  })
+})
 
 //Get all hotels
 router.get('/', function (req, res) {
@@ -57,39 +95,21 @@ router.get('/:id', function (req, res) {
     .catch(err => console.log(err))
 })
 
-//Insert new hotel
-router.post("/", (req, res) => {
-  upload(req, res, async (err) => {
+// Get Hotel by ROOMID
+router.get('/roomid/:roomid', function (req, res) {
+  var roomidReq = req.params.roomid
+  Hotel.find({ roomid: `#${roomidReq}` }, function (err, data) {
     if (err) {
       res.json({ message: err.message })
     }
     else {
-      let hotel = new Hotel({
-        name: req.body.name,
-        price: req.body.price,
-        roomid: req.body.roomid,
-        available: req.body.available,
-        // image: req.file.filename,
-        rating: req.body.rating,
-        city: req.body.city,
-        place: req.body.place,
-        type: req.body.type,
-        numberofpeople: req.body.numberofpeople,
-        bed: req.body.bed,
-        bathroom: req.body.bathroom,
-        characteristic: req.body.characteristic,
-        description: req.body.description,
-        convenient: req.body.convenient,
-        rule: req.body.rule,
-        safety: req.body.safety
-
-      });
-      await hotel.save();
-      res.json({ message: "success" })
-
+      res.json(data);
     }
   })
+
 })
+
+
 
 //Delete Hotel
 router.delete('/:id', async (req, res) => {
@@ -106,7 +126,7 @@ router.delete('/:id', async (req, res) => {
 router.patch('/:id', async (req, res) => {
   try {
     await Hotel.updateOne({ _id: req.params.id }, {
-      $set: { 
+      $set: {
         name: req.body.name,
         price: req.body.price,
         roomid: req.body.roomid,
@@ -124,7 +144,7 @@ router.patch('/:id', async (req, res) => {
         convenient: req.body.convenient,
         rule: req.body.rule,
         safety: req.body.safety
-       }
+      }
     })
     res.json({ status: 'success' });
   } catch (err) {

@@ -3,13 +3,9 @@ const router = require('express').Router();
 //Import model
 const Booking = require('../models/Booking');
 
-router.route('/')
-  .get((req, res) => {
-    res.json({ msg: "Get in booking router" })
-  })
 
-router.get('/booking', function (req, res) {
-    Booking.find({}, function (err, data) {
+router.get('/', function (req, res) {
+  Booking.find({}, function (err, data) {
     if (err) {
       res.json({ message: err.message })
     }
@@ -20,19 +16,32 @@ router.get('/booking', function (req, res) {
 })
 
 //Insert new booking
-router.post("/booking", async function(req,res){
+router.post("/", async function (req, res) {
   let booking = new Booking({
-      name: req.body.name,
-      price: req.body.price
+    bookingid: req.body.bookingid,
+    date: req.body.date,
+    status: req.body.status,
+    payment: req.body.payment,
+    price: req.body.price,
+    guest_name: req.body.guest_name,
+    numberofpeople: req.body.numberofpeople,
+    roomid: req.body.roomid,
+    roomname: req.body.roomname,
+    address: req.body.address,
+    checkin: req.body.checkin,
+    requires: req.body.requires,
+    phone: req.body.phone,
+    email: req.body.email
+
   })
-  try{
-      p = await booking.save();
-      res.json({message:"success"})
+  try {
+    p = await booking.save();
+    res.json({ message: "success" })
   }
-  catch(err){
-      res.json({message: err.message})
+  catch (err) {
+    res.json({ message: err.message })
   }
-  
+
 })
 
 module.exports = router;

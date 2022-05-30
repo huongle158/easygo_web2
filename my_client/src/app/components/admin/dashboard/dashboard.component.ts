@@ -1,13 +1,8 @@
+import { DemoNgZorroAntdModule } from 'src/app/ng-zorro-antd.module';
 import { Component, OnInit } from '@angular/core';
-
-interface Customer {
-  guest: string;
-  roomId: string;
-  date: string;
-  payment: string;
-  contactMail: string;
-  contactPhone: string;
-}
+import { BookingService } from 'src/app/services/booking.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,83 +12,19 @@ interface Customer {
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  bookings: any
+
+  constructor(private _bookService: BookingService, private _authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    this._authService.getDashboard().subscribe(dash =>{
+      
+    })
+    this.getAllBooking();
   }
-  listOfCustomer: Customer[] = [
-    {
-      guest: 'Tony Soop',
-      roomId: 'JNO1',
-      date: 'March 28,2021',
-      payment: 'Unpaid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-    {
-      guest: 'Karan Adka',
-      roomId: 'JNO2',
-      date: 'March 28,2021',
-      payment: 'Paid',
-      contactMail: '',
-      contactPhone: '',
-   },
-  ]
+  
+  getAllBooking(){
+    this._bookService.getBookings().subscribe(res => this.bookings = res)
+  }
 
 }

@@ -25,26 +25,11 @@ router.post('/register', (req, res, next) => {
                 return next(err);
         }
     })
-
-    // Admin.addAdmin(newAdmin, (err, admin) => {
-    //     if (!err) {
-    //         res.send(admin);
-    //         res.json({ success: true, msg: 'User registered' })
-    //     }
-    //     else {
-    //         if (err.code == 11000) {
-    //             res.send(['Dupicate username found']);
-    //         }
-    //         else
-    //             return next(err);
-    //     }
-    // })
 });
 
 
 // Authenticate
 router.post('/authenticate', (req, res, next) => {
-    
     const username = req.body.username;
     const password = req.body.password;
 
@@ -53,7 +38,6 @@ router.post('/authenticate', (req, res, next) => {
         if (!admin) {
             return res.json({ success: false, msg: 'Admin not found' })
         }
-
         Admin.comparePassword(password, admin.password, (err, isMatch) => {
             if (err) throw err;
             if (isMatch) {

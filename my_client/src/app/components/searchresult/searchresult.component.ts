@@ -22,22 +22,15 @@ export class SearchresultComponent implements OnInit {
   constructor(private _hotelService: HotelService, private _filterService: FilterService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getAllHotels();
-    
-    this.activatedRoute.paramMap.subscribe((param) => {
-      console.log(param)
-      // let id = param.get('id');
-      // if (id != null)
-      //   this.city = id
-    })
+    this.getAllHotels()
 
     this.filterList = this._filterService.getFilterList();
 
   }
 
   getAllHotels() {
-    this._hotelService.getHotels().subscribe({
-      next: data => {this.hotelArray = data; this.arrays = data },
+     this._hotelService.getHotels().subscribe({
+      next: data => {this.hotelArray = data; this.arrays = data , console.log(this.hotelArray)},
       error: err => this.eMessage = err
     })
   }

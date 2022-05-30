@@ -9,7 +9,6 @@ export class FilterService {
 
   getFilterList() {
     return [
-      { "id": 1, "inputID": "all", "name": "Tất cả", "inputValue": "" },
       { "id": 2, "inputID": "wifi", "name": "Wi-fi", "inputValue": "Wi-fi" },
       { "id": 3, "inputID": "bep", "name": "Bếp", "inputValue": "Bếp" },
       { "id": 4, "inputID": "thangmay", "name": "Thang máy", "inputValue": "Thang máy" },
