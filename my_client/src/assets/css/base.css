@@ -48,11 +48,11 @@ a{
     flex-shrink: 0;
 }
 
-input,
+/* input,
 button {
     outline: none;
     border: none;
-}
+} */
 
 button:hover {
     opacity: 1;

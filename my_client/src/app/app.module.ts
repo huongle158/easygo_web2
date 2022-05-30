@@ -17,7 +17,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { ToastrModule } from 'ngx-toastr';
+import * as ngxToastr from 'ngx-toastr';
 import { UploadComponent } from './components/upload/upload.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -35,8 +35,11 @@ import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.com
     FooterComponent,
     AllroomComponent,
     NewroomComponent,
+<<<<<<< HEAD
     AdminMenuComponent,
 
+=======
+>>>>>>> 5fb4f4ca8ea1adccac147aec3aed2597d37e034b
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.com
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
+    ngxToastr.ToastrModule.forRoot({
       timeOut: 3000,
       preventDuplicates: true
     }),
