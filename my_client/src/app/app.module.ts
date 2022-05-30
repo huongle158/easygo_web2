@@ -21,9 +21,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { UploadComponent } from './components/upload/upload.component';
 import { RegisterComponent } from './components/admin/register/register.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
-import { NewroomComponent } from './newroom/newroom.component';
+import { NewroomComponent } from './components/admin/newroom/newroom.component';
 
 import { AllroomComponent } from './components/admin/allroom/allroom.component';
+import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { AllroomComponent } from './components/admin/allroom/allroom.component';
     FooterComponent,
     AllroomComponent,
     NewroomComponent,
+    AdminMenuComponent,
 
   ],
   imports: [

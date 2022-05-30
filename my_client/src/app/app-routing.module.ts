@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookingComponent } from './components/booking/booking.component';
 import { CityDetailComponentComponent } from './components/city-detail-component/city-detail-component.component';
-// import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocalhostComponent } from './components/localhost/localhost.component';
@@ -14,6 +13,7 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
 import { UploadComponent } from './components/upload/upload.component';
 // import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { AllroomComponent } from './components/admin/allroom/allroom.component';
+import { NewroomComponent } from './components/admin/newroom/newroom.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'admin/register', component: RegisterComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
   { path: 'admin/allroom', component: AllroomComponent },
+  { path: 'admin/newroom', component: NewroomComponent },
 
 
 
@@ -50,6 +51,6 @@ export const RoutingComponents = [
 
   BookingComponent, DiscoverComponent, HomeComponent,LocalhostComponent,PrivatesiteComponent,SearchresultComponent, LoginComponent, UploadComponent, CityDetailComponentComponent,
   RegisterComponent,
-  DashboardComponent,AllroomComponent
+  DashboardComponent,AllroomComponent,NewroomComponent
 
 ]

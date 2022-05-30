@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import Admin from '../models/admin';
-import { AuthService } from '../services/auth.service';
+import Admin from '../../../models/admin';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-newroom',

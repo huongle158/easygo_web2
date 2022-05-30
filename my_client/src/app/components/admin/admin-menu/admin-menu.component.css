@@ -24,6 +24,7 @@ p {
 table {
     font-family: "Poppins";
 }
+
 .wide {
     background-color: #E5E5E5;
 }
@@ -79,6 +80,7 @@ table {
     color: #ffff;
 
 }
+
 .active {
     color: #0800f083;
 }
