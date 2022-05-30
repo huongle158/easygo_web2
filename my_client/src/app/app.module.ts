@@ -35,11 +35,8 @@ import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.com
     FooterComponent,
     AllroomComponent,
     NewroomComponent,
-<<<<<<< HEAD
     AdminMenuComponent,
 
-=======
->>>>>>> 5fb4f4ca8ea1adccac147aec3aed2597d37e034b
   ],
   imports: [
     BrowserModule,

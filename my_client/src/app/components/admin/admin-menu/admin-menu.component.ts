@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-menu.component.css']
 })
 export class AdminMenuComponent implements OnInit {
+  // Check coi đã ấn nút hay chưa
+  public press = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  changePress(): void {
+    //show box msg
+    this.press = !this.press;
+    //wait 3 Seconds and hide
+    
   }
 
 }

@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-<<<<<<< HEAD:my_client/src/app/components/admin/newroom/newroom.component.ts
 import Admin from '../../../models/admin';
 import { AuthService } from '../../../services/auth.service';
-=======
->>>>>>> 5fb4f4ca8ea1adccac147aec3aed2597d37e034b:my_client/src/app/newroom/newroom.component.ts
 
 @Component({
   selector: 'app-newroom',
