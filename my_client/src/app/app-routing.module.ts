@@ -16,6 +16,7 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 const routes: Routes = [
   { path: '', redirectTo: '/hotel', pathMatch: "full" },
   { path: 'home', component: HomeComponent },
@@ -31,29 +32,10 @@ const routes: Routes = [
   //Admin
   { path: 'admin/upload', component: UploadComponent },
   { path: 'admin/login', component: LoginComponent },
-  // { path: 'admin/register', component: RegisterComponent },
-  // { path: 'admin/dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
-  // { path: 'admin/allroom', component: AllroomComponent, canActivate:[AuthGuard]},
-  // { path: 'admin/newroom', component: NewroomComponent, canActivate:[AuthGuard]}
-
-  {
-    path: "admin",
-    component: DashboardComponent,
-    children: [
-        {
-            path: "",
-            component: DashboardComponent,
-            canActivateChild: [AuthGuard],
-            children: [
-                { path: "", redirectTo: "dashboard", pathMatch: "full" },
-                { path: "dashboard", component: DashboardComponent },
-                { path: "allroom", component: AllroomComponent },
-                { path: "newroom", component: NewroomComponent }
-                
-            ]
-        }
-    ]
-  }
+  { path: 'admin/register', component: RegisterComponent },
+  { path: 'admin/dashboard', component: DashboardComponent },
+  { path: 'admin/allroom', component: AllroomComponent },
+  { path: 'admin/newroom', component: NewroomComponent },
 
 
 

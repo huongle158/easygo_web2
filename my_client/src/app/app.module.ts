@@ -14,6 +14,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ToastrModule } from 'ngx-toastr';
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 import { RouterModule } from '@angular/router';
+import * as ngxToastr from 'ngx-toastr';
+import { AdminMenuComponent } from './components/admin/admin-menu/admin-menu.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     RoutingComponents,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AdminMenuComponent,
 
   ],
   imports: [
@@ -33,7 +36,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
+    ngxToastr.ToastrModule.forRoot({
       timeOut: 3000,
       preventDuplicates: true
     }),

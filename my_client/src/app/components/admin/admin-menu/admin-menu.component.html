@@ -1,0 +1,74 @@
+
+ <div class="admin-menu">
+      <!-- Logo -->
+      <div class="logo text-center mb-5">
+        <img
+          class="mw-100"
+          [style]="{ width: '70%', 'margin-left': '-25%' }"
+          src="./assets/img/EASYGO_logo.png"
+          alt=""
+        />
+      </div>
+
+      <!-- Chức năng -->
+      <div class="d-flex flex-column mx-5" [style]="{ 'margin-top': '80px'}">
+        <div class="booking my-3">
+          <p class="font-weight-bold">
+            <a routerLink="/admin/dashboard" routerLinkActive="active" href="#" class="pe-auto">
+              <i class="fa fa-calendar-plus"></i>
+              <span> Booking Analyst</span>
+            </a>
+          </p>
+        </div>
+        <div class="booking my-3">
+          <p (click)="changePress()" class="font-weight-bold">
+            <a class="pe-auto">
+              <i class="fa fa-cog"></i>
+              <span> Room Detail</span>
+            </a>
+          </p>
+          <!--  -->
+           <div [hidden]="!press"  class="room-extend">
+              <p class="mb-3 mx-5 cl-left">
+                 <a routerLink="/admin/allroom" routerLinkActive="active" href="#" class="pe-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+              </svg>
+              <span>All rooms</span>
+            </a>
+        </p>
+        <!-- New room -->
+         <p class="mb-3 mx-5 cl-left">
+                 <a routerLink="/admin/newroom" routerLinkActive="active" href="#" class="pe-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+              </svg>
+              <span>New rooms</span>
+            </a>
+        </p>
+            
+           
+           </div>
+         
+
+
+          <!--  -->
+        </div>
+        <!-- Info avatar -->
+        <div class="admin-ava my-3 d-flex">
+          <img
+            [style]="{ width: '50px' }"
+            class="mw-100 img-profile rounded-circle"
+            src="./assets/img/admin.png"
+            alt=""
+          />
+          <div class="name d-flex flex-column mx-2">
+            <h5>Thanh Lam</h5>
+            <span>Chủ phòng</span>
+          </div>
+          <span class="my-auto" [style]="{ 'font-size': '14px' }"
+            ><i class="glyphicon glyphicon-log-out"></i
+          ></span>
+        </div>
+      </div>
+    </div>

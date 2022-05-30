@@ -1,52 +1,8 @@
 <div class="container-fulid">
   <div class="wrapprt d-flex py-5">
     <!-- Cột  admin menu-->
-    <div class="col-3 admin-menu">
-      <!-- Logo -->
-      <div class="logo text-center mb-5">
-        <img
-          class="mw-100"
-          [style]="{ width: '70%', 'margin-left': '-25%' }"
-          src="./assets/img/EASYGO_logo.png"
-          alt=""
-        />
-      </div>
-
-      <!-- Chức năng -->
-      <div class="d-flex flex-column mx-5" [style]="{ 'margin-top': '80px' }">
-        <div class="booking my-3">
-          <p class="font-weight-bold">
-            <a href="#" class="pe-auto">
-              <i class="fa fa-calendar-plus"></i>
-              <span> Booking Analyst</span>
-            </a>
-          </p>
-        </div>
-        <div class="booking my-3">
-          <p class="font-weight-bold">
-            <a href="#" class="pe-auto">
-              <i class="fa fa-cog"></i>
-              <span> Room Detail</span>
-            </a>
-          </p>
-        </div>
-        <!-- Info avatar -->
-        <div class="admin-ava my-3 d-flex">
-          <img
-            [style]="{ width: '50px' }"
-            class="mw-100 img-profile rounded-circle"
-            src="./assets/img/admin.png"
-            alt=""
-          />
-          <div class="name d-flex flex-column mx-2">
-            <h5>Thanh Lam</h5>
-            <span>Chủ phòng</span>
-          </div>
-          <span class="my-auto" [style]="{ 'font-size': '14px' }"
-            ><i class="glyphicon glyphicon-log-out"></i
-          ></span>
-        </div>
-      </div>
+    <div class="col-3 ">
+    <app-admin-menu></app-admin-menu>
     </div>
 
     <!-- Cột dashboard -->
